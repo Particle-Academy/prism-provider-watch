@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Prism\ProviderWatch\Console\RunCommand;
+use Prism\ProviderWatch\Support\DotEnv;
+use Symfony\Component\Console\Application;
+
+$home = dirname(__DIR__);
+
+$autoload = $home.'/vendor/autoload.php';
+if (! is_file($autoload)) {
+    fwrite(STDERR, "Dependencies not installed. Run: composer install\n");
+    exit(1);
+}
+
+require $autoload;
+
+// Local convenience: pick up provider keys / dir overrides from .env if present.
+DotEnv::load($home.'/.env');
+
+$app = new Application('prism-provider-watch', '0.1.0');
+$run = new RunCommand($home);
+$app->add($run);
+$app->setDefaultCommand($run->getName() ?? 'run');
+
+exit($app->run());

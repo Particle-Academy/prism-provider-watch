@@ -1,0 +1,95 @@
+# prism-provider-watch
+
+A tiny workstation microservice that keeps **[prism](https://github.com/particle-academy/prism)**
+current with the AI providers it wraps. It watches the authoritative,
+machine-readable signals each provider emits, diffs them against a committed
+baseline, and reports **drift** — new models, deprecations, spec/SDK changes —
+so schema and feature updates get filed the day upstream ships them, not weeks
+later when something breaks.
+
+## Why polling, not "subscribe"
+
+No major provider offers a push feed for "our API changed." So the honest,
+reliable design is a **scheduled watch-and-diff**, plus the one genuinely
+push-adjacent signal that does exist: the public, no-auth **GitHub Atom feeds**
+on each provider's spec / SDK repos. That's as close to a subscription as
+reality allows — and it needs no keys.
+
+## What it watches
+
+| Source type | Catches | Needs a key? |
+|---|---|---|
+| `models` — the provider's *list models* endpoint | new / removed model IDs | yes (skipped without one) |
+| `github-atom` — a repo's `releases`/`commits`/`tags` `.atom` feed | spec + SDK changes (new params, features, versions) | no |
+
+Registered providers (phase 1): **OpenAI, Anthropic, Google Gemini**. Add more
+by editing [`config/providers.php`](config/providers.php) — it's data-only.
+
+## How drift maps back to prism
+
+prism doesn't hardcode model lists (models are free strings), so its staleness
+lives in **`src/Enums/Provider.php`**, the per-provider request mappers under
+**`src/Providers/<Provider>/`**, and **`config/prism.php`**. Every drift report
+annotates each affected provider with exactly those paths (`prism_hints`) to
+scope the follow-up — the watcher **reports**, it never edits prism.
+
+Model-roster drift also doubles as an early-warning signal for the sandbox
+Prism Lab test matrix and the docs benchmarks.
+
+## Install & run
+
+```bash
+composer install
+cp .env.example .env      # add provider keys (optional; Atom sources work without)
+
+# One full pass: poll → snapshot → diff → persist baseline → report
+php bin/prism-watch run
+
+# Restrict to some providers; open a prism issue on drift; fail non-zero on drift
+php bin/prism-watch run --only openai,anthropic --issues --fail-on-drift
+```
+
+- **Baselines** are committed JSON under [`state/`](state) — one file per
+  provider. Their git diff *is* the provider changelog.
+- **Reports** are written to `reports/latest.{md,json}`. Point
+  `PRISM_WATCH_REPORT_DIR` at the envelope's `.ai/knowledge/provider-watch/` to
+  make each report durable, agent-readable shared knowledge.
+- Exit code: `0` normally, `20` with `--fail-on-drift` when drift is found (so a
+  scheduler can branch into a follow-up).
+
+## Autonomy (phase 1: detect → report)
+
+On drift the run **writes a knowledge report** (always) and, with `--issues`
+(or `PRISM_WATCH_OPEN_ISSUES=1`), **opens a `provider-watch` issue** on prism —
+idempotent per day, so re-runs don't spam. A human triages and drives the
+prism update. Nothing is auto-merged, ever.
+
+The **Tynn story** half of the contract is filed by the triaging agent (the CLI
+is a cron process and can't reach MCP); see the Genie wiring below. Phase 2 —
+once the differ has earned trust — a Genie cron can dispatch a coding agent to
+draft the prism patch on a branch, gated by the `pr-security-review` skill
+before any human merge.
+
+## Genie wiring (the "microservice" part)
+
+This is a poller, so it needs no HTTP surface — a **Genie cron** is the whole
+service:
+
+- **CronCreate** → `php bin/prism-watch run --issues` daily (feeds/specs) and,
+  if you want, `--only openai,anthropic,gemini` hourly for the model rosters.
+- On a `--fail-on-drift` non-zero exit, a follow-up trigger can **runAgent** an
+  agent that reads `reports/latest.md`, opens the Tynn story, and (phase 2)
+  drafts the prism patch.
+- Point `PRISM_WATCH_REPORT_DIR` at `.ai/knowledge/provider-watch/` so every
+  agent on the workstation can read the current provider state.
+
+## Test
+
+```bash
+composer test     # Pest — differ, drift report, dispatcher, snapshot store
+composer types    # PHPStan
+composer format   # Pint
+```
+
+The differ, report renderer, and dispatchers are pure logic — the whole suite
+runs with no network and no live keys.

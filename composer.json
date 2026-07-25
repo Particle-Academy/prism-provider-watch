@@ -1,0 +1,42 @@
+{
+    "name": "particle-academy/prism-provider-watch",
+    "description": "Watches AI provider APIs (model rosters, OpenAPI specs, SDK releases) for drift and reports what prism needs to keep current.",
+    "type": "project",
+    "license": "MIT",
+    "keywords": ["prism", "llm", "openai", "anthropic", "gemini", "schema-drift", "watcher"],
+    "autoload": {
+        "psr-4": {
+            "Prism\\ProviderWatch\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Prism\\ProviderWatch\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "ext-simplexml": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.8",
+        "symfony/console": "^7.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "laravel/pint": "^1.14",
+        "phpstan/phpstan": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    },
+    "bin": ["bin/prism-watch"],
+    "scripts": {
+        "watch": "@php bin/prism-watch run",
+        "test": "@php vendor/bin/pest",
+        "format": "@php vendor/bin/pint --ansi",
+        "types": "@php vendor/bin/phpstan analyse --no-progress"
+    }
+}

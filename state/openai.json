@@ -1,0 +1,263 @@
+{
+    "provider": "openai",
+    "sources": {
+        "models": {
+            "ok": true,
+            "note": "",
+            "data": {
+                "count": 131,
+                "models": [
+                    "babbage-002",
+                    "chat-latest",
+                    "chatgpt-image-latest",
+                    "computer-use-preview",
+                    "computer-use-preview-2025-03-11",
+                    "davinci-002",
+                    "gpt-3.5-turbo",
+                    "gpt-3.5-turbo-0125",
+                    "gpt-3.5-turbo-1106",
+                    "gpt-3.5-turbo-16k",
+                    "gpt-3.5-turbo-instruct",
+                    "gpt-3.5-turbo-instruct-0914",
+                    "gpt-4",
+                    "gpt-4-0613",
+                    "gpt-4-turbo",
+                    "gpt-4-turbo-2024-04-09",
+                    "gpt-4.1",
+                    "gpt-4.1-2025-04-14",
+                    "gpt-4.1-mini",
+                    "gpt-4.1-mini-2025-04-14",
+                    "gpt-4.1-nano",
+                    "gpt-4.1-nano-2025-04-14",
+                    "gpt-4o",
+                    "gpt-4o-2024-05-13",
+                    "gpt-4o-2024-08-06",
+                    "gpt-4o-2024-11-20",
+                    "gpt-4o-mini",
+                    "gpt-4o-mini-2024-07-18",
+                    "gpt-4o-mini-search-preview",
+                    "gpt-4o-mini-search-preview-2025-03-11",
+                    "gpt-4o-mini-transcribe",
+                    "gpt-4o-mini-transcribe-2025-03-20",
+                    "gpt-4o-mini-transcribe-2025-12-15",
+                    "gpt-4o-mini-tts",
+                    "gpt-4o-mini-tts-2025-03-20",
+                    "gpt-4o-mini-tts-2025-12-15",
+                    "gpt-4o-search-preview",
+                    "gpt-4o-search-preview-2025-03-11",
+                    "gpt-4o-transcribe",
+                    "gpt-4o-transcribe-diarize",
+                    "gpt-5",
+                    "gpt-5-2025-08-07",
+                    "gpt-5-chat-latest",
+                    "gpt-5-codex",
+                    "gpt-5-mini",
+                    "gpt-5-mini-2025-08-07",
+                    "gpt-5-nano",
+                    "gpt-5-nano-2025-08-07",
+                    "gpt-5-pro",
+                    "gpt-5-pro-2025-10-06",
+                    "gpt-5-search-api",
+                    "gpt-5-search-api-2025-10-14",
+                    "gpt-5.1",
+                    "gpt-5.1-2025-11-13",
+                    "gpt-5.1-chat-latest",
+                    "gpt-5.1-codex",
+                    "gpt-5.1-codex-max",
+                    "gpt-5.1-codex-mini",
+                    "gpt-5.2",
+                    "gpt-5.2-2025-12-11",
+                    "gpt-5.2-chat-latest",
+                    "gpt-5.2-codex",
+                    "gpt-5.2-pro",
+                    "gpt-5.2-pro-2025-12-11",
+                    "gpt-5.3-chat-latest",
+                    "gpt-5.3-codex",
+                    "gpt-5.4",
+                    "gpt-5.4-2026-03-05",
+                    "gpt-5.4-mini",
+                    "gpt-5.4-mini-2026-03-17",
+                    "gpt-5.4-nano",
+                    "gpt-5.4-nano-2026-03-17",
+                    "gpt-5.4-pro",
+                    "gpt-5.4-pro-2026-03-05",
+                    "gpt-5.5",
+                    "gpt-5.5-2026-04-23",
+                    "gpt-5.5-pro",
+                    "gpt-5.5-pro-2026-04-23",
+                    "gpt-5.6-luna",
+                    "gpt-5.6-sol",
+                    "gpt-5.6-terra",
+                    "gpt-audio",
+                    "gpt-audio-1.5",
+                    "gpt-audio-2025-08-28",
+                    "gpt-audio-mini",
+                    "gpt-audio-mini-2025-10-06",
+                    "gpt-audio-mini-2025-12-15",
+                    "gpt-image-1",
+                    "gpt-image-1-mini",
+                    "gpt-image-1.5",
+                    "gpt-image-2",
+                    "gpt-image-2-2026-04-21",
+                    "gpt-realtime",
+                    "gpt-realtime-1.5",
+                    "gpt-realtime-2",
+                    "gpt-realtime-2.1",
+                    "gpt-realtime-2.1-mini",
+                    "gpt-realtime-2025-08-28",
+                    "gpt-realtime-mini",
+                    "gpt-realtime-mini-2025-10-06",
+                    "gpt-realtime-mini-2025-12-15",
+                    "gpt-realtime-translate",
+                    "gpt-realtime-whisper",
+                    "o1",
+                    "o1-2024-12-17",
+                    "o1-pro",
+                    "o1-pro-2025-03-19",
+                    "o3",
+                    "o3-2025-04-16",
+                    "o3-deep-research",
+                    "o3-deep-research-2025-06-26",
+                    "o3-mini",
+                    "o3-mini-2025-01-31",
+                    "o3-pro",
+                    "o3-pro-2025-06-10",
+                    "o4-mini",
+                    "o4-mini-2025-04-16",
+                    "o4-mini-deep-research",
+                    "o4-mini-deep-research-2025-06-26",
+                    "omni-moderation-2024-09-26",
+                    "omni-moderation-latest",
+                    "sora-2",
+                    "sora-2-pro",
+                    "text-embedding-3-large",
+                    "text-embedding-3-small",
+                    "text-embedding-ada-002",
+                    "tts-1",
+                    "tts-1-1106",
+                    "tts-1-hd",
+                    "tts-1-hd-1106",
+                    "whisper-1"
+                ]
+            }
+        },
+        "openapi-spec": {
+            "ok": true,
+            "note": "",
+            "data": {
+                "latest": "Add organization and project hard spend limit management endpoints",
+                "entries": [
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/5c044be3bf3a42854e99e34616564eeb2124a317",
+                        "title": "Add organization and project hard spend limit management endpoints"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/f9400172ebe08522ab228b771d885e3bd5456e42",
+                        "title": "Re-add and rename API to create project service account API keys"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/db3e53198a66732cfe161339ea63bf36fc0137ad",
+                        "title": "Sync OpenAPI spec from ce8c9bed912f"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/bcb644949593744091c6cef593fd8d9e45b37eaa",
+                        "title": "Sync OpenAPI spec from ad819d76799f"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/d08964108c2dc10e83f5228f08a1c3e69829ef14",
+                        "title": "Sync OpenAPI spec from ad819d76799f"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/535f5dc976320130d7fbf8ecc4eda17177bf59e5",
+                        "title": "Sync OpenAPI spec from 8ae6baf66f20"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/a3276900e58b8b2a92e0cb087cd2e6e005f58458",
+                        "title": "Refresh the OpenAPI repository README (#559)"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/5162af98d3147432c14680df789e8e12d4891e6b",
+                        "title": "Add complete OpenAPI spec"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/e1cb7a86ad53bb818c106ac7875e2a78182bb120",
+                        "title": "link to generated apec"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/498c71ddf6f1c45b983f972ccabca795da211a3e",
+                        "title": "Update openapi.yaml"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/76489c0d59a688c2116307e9941fd01f6caacb94",
+                        "title": "Merge pull request #432 from openai/2025-03-21"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/bf2a3402d170eb972899a2acb3a9f1e62d8d5f3e",
+                        "title": "Update openapi.yaml"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/1ff8b6428a7915426eb2fd932537c342535ba3ce",
+                        "title": "Update openapi.yaml"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/ec54f8876168475efa70effa31d4e6cff122c053",
+                        "title": "Merge pull request #429 from openai/2025-03-11"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/085bababf94525ed0c8f9e000c956d0fc740a457",
+                        "title": "Update openapi.yaml"
+                    }
+                ]
+            }
+        },
+        "sdk-python": {
+            "ok": true,
+            "note": "",
+            "data": {
+                "latest": "v2.48.0",
+                "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.48.0",
+                        "title": "v2.48.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.47.0",
+                        "title": "v2.47.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.46.0",
+                        "title": "v2.46.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.45.0",
+                        "title": "v2.45.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.44.0",
+                        "title": "v2.44.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.43.0",
+                        "title": "v2.43.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.42.0",
+                        "title": "v2.42.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.41.1",
+                        "title": "v2.41.1"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.41.0",
+                        "title": "v2.41.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.40.0",
+                        "title": "v2.40.0"
+                    }
+                ]
+            }
+        }
+    }
+}
