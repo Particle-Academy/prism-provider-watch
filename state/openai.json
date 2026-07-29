@@ -145,8 +145,12 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Add organization and project hard spend limit management endpoints",
+                "latest": "Add live.call.incoming webhook event for live SIP session acceptance",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/b9fc3bcfd692e77853137f9dfd99e77063f8190c",
+                        "title": "Add live.call.incoming webhook event for live SIP session acceptance"
+                    },
                     {
                         "id": "tag:github.com,2008:Grit::Commit/5c044be3bf3a42854e99e34616564eeb2124a317",
                         "title": "Add organization and project hard spend limit management endpoints"
@@ -202,10 +206,6 @@
                     {
                         "id": "tag:github.com,2008:Grit::Commit/ec54f8876168475efa70effa31d4e6cff122c053",
                         "title": "Merge pull request #429 from openai/2025-03-11"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/085bababf94525ed0c8f9e000c956d0fc740a457",
-                        "title": "Update openapi.yaml"
                     }
                 ]
             }
@@ -214,8 +214,12 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v2.48.0",
+                "latest": "v2.49.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.49.0",
+                        "title": "v2.49.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v2.48.0",
                         "title": "v2.48.0"
@@ -251,10 +255,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v2.41.0",
                         "title": "v2.41.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.40.0",
-                        "title": "v2.40.0"
                     }
                 ]
             }
