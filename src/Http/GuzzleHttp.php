@@ -36,4 +36,16 @@ final class GuzzleHttp implements Http
             return new HttpResponse(0, $e->getMessage());
         }
     }
+
+    /** @param array<string, string> $headers */
+    public function post(string $url, string $body, array $headers = []): HttpResponse
+    {
+        try {
+            $response = $this->client->post($url, ['headers' => $headers, 'body' => $body]);
+
+            return new HttpResponse($response->getStatusCode(), (string) $response->getBody());
+        } catch (GuzzleException $e) {
+            return new HttpResponse(0, $e->getMessage());
+        }
+    }
 }

@@ -6,9 +6,13 @@ namespace Prism\ProviderWatch\Console;
 
 use Prism\ProviderWatch\Diff\Differ;
 use Prism\ProviderWatch\Dispatch\FileDriftDispatcher;
+use Prism\ProviderWatch\Dispatch\GenieKnowledgeDispatcher;
 use Prism\ProviderWatch\Dispatch\GitHubIssueDispatcher;
+use Prism\ProviderWatch\Dispatch\TynnStoryDispatcher;
 use Prism\ProviderWatch\GitHub\ProcessGitHubCli;
 use Prism\ProviderWatch\Http\GuzzleHttp;
+use Prism\ProviderWatch\Mcp\McpClient;
+use Prism\ProviderWatch\Mcp\McpEndpoints;
 use Prism\ProviderWatch\Providers\ProviderRegistry;
 use Prism\ProviderWatch\Providers\SourceFactory;
 use Prism\ProviderWatch\Snapshot\SnapshotStore;
@@ -36,6 +40,8 @@ final class RunCommand extends Command
             ->setDescription('Poll watched providers, diff against the baseline, and report drift.')
             ->addOption('only', null, InputOption::VALUE_REQUIRED, 'Comma-separated provider keys to restrict to (e.g. openai,anthropic).')
             ->addOption('issues', null, InputOption::VALUE_NONE, 'Open a GitHub issue on prism when drift is found.')
+            ->addOption('genie', null, InputOption::VALUE_NONE, 'Record drift as a Genie knowledge node (via the local Genie MCP).')
+            ->addOption('tynn', null, InputOption::VALUE_NONE, 'File a Tynn backlog story per drifted provider (via the Tynn MCP).')
             ->addOption('repo', null, InputOption::VALUE_REQUIRED, 'Target repo for issues.', getenv('PRISM_WATCH_REPO') ?: 'particle-academy/prism')
             ->addOption('fail-on-drift', null, InputOption::VALUE_NONE, 'Exit non-zero when drift is found (lets cron trigger a follow-up).');
     }
@@ -62,13 +68,31 @@ final class RunCommand extends Command
 
         $report = $result->report;
 
-        // Dispatch: file/knowledge always; GitHub issue opt-in.
+        // Dispatch: file report always; GitHub issue + Genie + Tynn opt-in.
         $dispatchers = [new FileDriftDispatcher($reportDir)];
+
         $issuesOn = (bool) $input->getOption('issues') || getenv('PRISM_WATCH_OPEN_ISSUES') === '1';
         $dispatchers[] = new GitHubIssueDispatcher(
             new ProcessGitHubCli,
             (string) $input->getOption('repo'),
             $issuesOn,
+        );
+
+        // Workflow integration (hybrid last mile): Genie knowledge + Tynn stories
+        // over the stateless MCP tools/call. Endpoints come from the envelope's
+        // .mcp.json (+ $GENIE_MCP_URL); any secret is read at runtime, never stored.
+        $mcp = new McpClient($http, McpEndpoints::load(
+            getenv('PRISM_WATCH_MCP_CONFIG') ?: $this->home.'/../../.mcp.json',
+            getenv('GENIE_MCP_URL') ?: null,
+        ));
+        $dispatchers[] = new GenieKnowledgeDispatcher(
+            $mcp,
+            (bool) $input->getOption('genie') || getenv('PRISM_WATCH_GENIE') === '1',
+        );
+        $dispatchers[] = new TynnStoryDispatcher(
+            $mcp,
+            (bool) $input->getOption('tynn') || getenv('PRISM_WATCH_TYNN') === '1',
+            getenv('PRISM_WATCH_TYNN_VERSION') ?: null,
         );
 
         foreach ($dispatchers as $dispatcher) {

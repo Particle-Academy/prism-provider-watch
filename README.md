@@ -83,6 +83,35 @@ service:
 - Point `PRISM_WATCH_REPORT_DIR` at `.ai/knowledge/provider-watch/` so every
   agent on the workstation can read the current provider state.
 
+## Workflow integration — Genie + Tynn (hybrid)
+
+On drift, the watcher can route the change straight into the workstation's
+tools. It supports **both** ways a Genie cron might fire it:
+
+**Shell mode (the cron runs a command).** The watcher POSTs a stateless MCP
+`tools/call` to each server — endpoints (and any auth token) are read at runtime
+from the envelope's `.mcp.json` and `$GENIE_MCP_URL`, never hardcoded:
+
+```bash
+php bin/prism-watch run --issues --genie --tynn
+```
+- `--genie` → records a **Genie knowledge** node (current provider state + what
+  changed), readable by every agent on the workstation.
+- `--tynn` → files a **Tynn backlog story** per drifted provider, titled
+  "Provider drift: <provider> …", with the change list and the prism source
+  files to review. Stories attach to `PRISM_WATCH_TYNN_VERSION`, else the active
+  version (resolved live via Tynn `next`).
+
+**Agent mode (the cron fires an agent turn).** Run the watcher plain — it always
+writes the structured `reports/latest.json` — then have the agent read that file
+and call the `mcp__genie__knowledge` / `mcp__tynn__create` tools directly. Same
+outcome, richer judgement (the agent can dedupe, map to exact prism symbols, or
+draft the patch). No flags needed; the JSON report is the contract.
+
+The heavy lifting stays third-party: point the OpenAI diff at **oasdiff**
+(`openai-openapi`) for exact breaking-change detail; this layer owns only the
+last mile into your workflow.
+
 ## Test
 
 ```bash

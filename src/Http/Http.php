@@ -14,4 +14,7 @@ interface Http
 {
     /** @param array<string, string> $headers */
     public function get(string $url, array $headers = []): HttpResponse;
+
+    /** @param array<string, string> $headers */
+    public function post(string $url, string $body, array $headers = []): HttpResponse;
 }
