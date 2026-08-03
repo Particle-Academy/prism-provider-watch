@@ -1,143 +1,59 @@
 {
     "provider": "openai",
     "sources": {
-        "models": {
+        "models-dev": {
             "ok": true,
             "note": "",
             "data": {
-                "count": 131,
+                "count": 47,
                 "models": [
-                    "babbage-002",
-                    "chat-latest",
                     "chatgpt-image-latest",
-                    "computer-use-preview",
-                    "computer-use-preview-2025-03-11",
-                    "davinci-002",
                     "gpt-3.5-turbo",
-                    "gpt-3.5-turbo-0125",
-                    "gpt-3.5-turbo-1106",
-                    "gpt-3.5-turbo-16k",
-                    "gpt-3.5-turbo-instruct",
-                    "gpt-3.5-turbo-instruct-0914",
                     "gpt-4",
-                    "gpt-4-0613",
                     "gpt-4-turbo",
-                    "gpt-4-turbo-2024-04-09",
                     "gpt-4.1",
-                    "gpt-4.1-2025-04-14",
                     "gpt-4.1-mini",
-                    "gpt-4.1-mini-2025-04-14",
                     "gpt-4.1-nano",
-                    "gpt-4.1-nano-2025-04-14",
                     "gpt-4o",
                     "gpt-4o-2024-05-13",
                     "gpt-4o-2024-08-06",
                     "gpt-4o-2024-11-20",
                     "gpt-4o-mini",
-                    "gpt-4o-mini-2024-07-18",
-                    "gpt-4o-mini-search-preview",
-                    "gpt-4o-mini-search-preview-2025-03-11",
-                    "gpt-4o-mini-transcribe",
-                    "gpt-4o-mini-transcribe-2025-03-20",
-                    "gpt-4o-mini-transcribe-2025-12-15",
-                    "gpt-4o-mini-tts",
-                    "gpt-4o-mini-tts-2025-03-20",
-                    "gpt-4o-mini-tts-2025-12-15",
-                    "gpt-4o-search-preview",
-                    "gpt-4o-search-preview-2025-03-11",
-                    "gpt-4o-transcribe",
-                    "gpt-4o-transcribe-diarize",
                     "gpt-5",
-                    "gpt-5-2025-08-07",
-                    "gpt-5-chat-latest",
-                    "gpt-5-codex",
                     "gpt-5-mini",
-                    "gpt-5-mini-2025-08-07",
                     "gpt-5-nano",
-                    "gpt-5-nano-2025-08-07",
                     "gpt-5-pro",
-                    "gpt-5-pro-2025-10-06",
-                    "gpt-5-search-api",
-                    "gpt-5-search-api-2025-10-14",
                     "gpt-5.1",
-                    "gpt-5.1-2025-11-13",
-                    "gpt-5.1-chat-latest",
-                    "gpt-5.1-codex",
-                    "gpt-5.1-codex-max",
-                    "gpt-5.1-codex-mini",
                     "gpt-5.2",
-                    "gpt-5.2-2025-12-11",
                     "gpt-5.2-chat-latest",
-                    "gpt-5.2-codex",
                     "gpt-5.2-pro",
-                    "gpt-5.2-pro-2025-12-11",
                     "gpt-5.3-chat-latest",
                     "gpt-5.3-codex",
+                    "gpt-5.3-codex-spark",
                     "gpt-5.4",
-                    "gpt-5.4-2026-03-05",
                     "gpt-5.4-mini",
-                    "gpt-5.4-mini-2026-03-17",
                     "gpt-5.4-nano",
-                    "gpt-5.4-nano-2026-03-17",
                     "gpt-5.4-pro",
-                    "gpt-5.4-pro-2026-03-05",
                     "gpt-5.5",
-                    "gpt-5.5-2026-04-23",
                     "gpt-5.5-pro",
-                    "gpt-5.5-pro-2026-04-23",
+                    "gpt-5.6",
                     "gpt-5.6-luna",
                     "gpt-5.6-sol",
                     "gpt-5.6-terra",
-                    "gpt-audio",
-                    "gpt-audio-1.5",
-                    "gpt-audio-2025-08-28",
-                    "gpt-audio-mini",
-                    "gpt-audio-mini-2025-10-06",
-                    "gpt-audio-mini-2025-12-15",
                     "gpt-image-1",
                     "gpt-image-1-mini",
                     "gpt-image-1.5",
                     "gpt-image-2",
-                    "gpt-image-2-2026-04-21",
-                    "gpt-realtime",
-                    "gpt-realtime-1.5",
-                    "gpt-realtime-2",
                     "gpt-realtime-2.1",
-                    "gpt-realtime-2.1-mini",
-                    "gpt-realtime-2025-08-28",
-                    "gpt-realtime-mini",
-                    "gpt-realtime-mini-2025-10-06",
-                    "gpt-realtime-mini-2025-12-15",
-                    "gpt-realtime-translate",
-                    "gpt-realtime-whisper",
                     "o1",
-                    "o1-2024-12-17",
                     "o1-pro",
-                    "o1-pro-2025-03-19",
                     "o3",
-                    "o3-2025-04-16",
-                    "o3-deep-research",
-                    "o3-deep-research-2025-06-26",
                     "o3-mini",
-                    "o3-mini-2025-01-31",
                     "o3-pro",
-                    "o3-pro-2025-06-10",
                     "o4-mini",
-                    "o4-mini-2025-04-16",
-                    "o4-mini-deep-research",
-                    "o4-mini-deep-research-2025-06-26",
-                    "omni-moderation-2024-09-26",
-                    "omni-moderation-latest",
-                    "sora-2",
-                    "sora-2-pro",
                     "text-embedding-3-large",
                     "text-embedding-3-small",
-                    "text-embedding-ada-002",
-                    "tts-1",
-                    "tts-1-1106",
-                    "tts-1-hd",
-                    "tts-1-hd-1106",
-                    "whisper-1"
+                    "text-embedding-ada-002"
                 ]
             }
         },
@@ -145,8 +61,28 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Add live.call.incoming webhook event for live SIP session acceptance",
+                "latest": "Add endpoint to check content for OpenAI provenance signals",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/117ce5680e4269f6656a4fd70d28f9755630d938",
+                        "title": "Add endpoint to check content for OpenAI provenance signals"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/ef05a7d18e8361205342aa6c5bb9d77404c2c3ce",
+                        "title": "Add name and namespace fields to function tool call outputs"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/0410f5a7988e0b4c7413b06a856c7c024f5ddedb",
+                        "title": "Add 'fast' service tier and rename conversation schemas"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/d2f04809d7961f01e94031e1f31617394599dbdd",
+                        "title": "Add 'fast' service tier option to service_tier parameter"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/db14b6e1712aaf5265cf5a6871adff7a9c61d31c",
+                        "title": "Add new transcription models with multi-language and keyword support"
+                    },
                     {
                         "id": "tag:github.com,2008:Grit::Commit/b9fc3bcfd692e77853137f9dfd99e77063f8190c",
                         "title": "Add live.call.incoming webhook event for live SIP session acceptance"
@@ -186,26 +122,6 @@
                     {
                         "id": "tag:github.com,2008:Grit::Commit/e1cb7a86ad53bb818c106ac7875e2a78182bb120",
                         "title": "link to generated apec"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/498c71ddf6f1c45b983f972ccabca795da211a3e",
-                        "title": "Update openapi.yaml"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/76489c0d59a688c2116307e9941fd01f6caacb94",
-                        "title": "Merge pull request #432 from openai/2025-03-21"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/bf2a3402d170eb972899a2acb3a9f1e62d8d5f3e",
-                        "title": "Update openapi.yaml"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/1ff8b6428a7915426eb2fd932537c342535ba3ce",
-                        "title": "Update openapi.yaml"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/ec54f8876168475efa70effa31d4e6cff122c053",
-                        "title": "Merge pull request #429 from openai/2025-03-11"
                     }
                 ]
             }
@@ -214,8 +130,20 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v2.49.0",
+                "latest": "v2.52.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.52.0",
+                        "title": "v2.52.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.51.0",
+                        "title": "v2.51.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.50.0",
+                        "title": "v2.50.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v2.49.0",
                         "title": "v2.49.0"
@@ -243,18 +171,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v2.43.0",
                         "title": "v2.43.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.42.0",
-                        "title": "v2.42.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.41.1",
-                        "title": "v2.41.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.41.0",
-                        "title": "v2.41.0"
                     }
                 ]
             }

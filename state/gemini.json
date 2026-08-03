@@ -1,17 +1,70 @@
 {
     "provider": "gemini",
     "sources": {
-        "models": {
-            "ok": false,
-            "note": "No API key set — export the provider key to include Gemini model roster.",
-            "data": []
+        "models-dev": {
+            "ok": true,
+            "note": "",
+            "data": {
+                "count": 41,
+                "models": [
+                    "deep-research-max-preview-04-2026",
+                    "deep-research-preview-04-2026",
+                    "gemini-2.0-flash",
+                    "gemini-2.0-flash-lite",
+                    "gemini-2.5-computer-use-preview-10-2025",
+                    "gemini-2.5-flash",
+                    "gemini-2.5-flash-image",
+                    "gemini-2.5-flash-lite",
+                    "gemini-2.5-flash-preview-tts",
+                    "gemini-2.5-pro",
+                    "gemini-2.5-pro-preview-tts",
+                    "gemini-3-flash-preview",
+                    "gemini-3-pro-image",
+                    "gemini-3-pro-image-preview",
+                    "gemini-3-pro-preview",
+                    "gemini-3.1-flash-image",
+                    "gemini-3.1-flash-image-preview",
+                    "gemini-3.1-flash-lite",
+                    "gemini-3.1-flash-lite-image",
+                    "gemini-3.1-flash-lite-preview",
+                    "gemini-3.1-flash-live-preview",
+                    "gemini-3.1-flash-tts-preview",
+                    "gemini-3.1-pro-preview",
+                    "gemini-3.1-pro-preview-customtools",
+                    "gemini-3.5-flash",
+                    "gemini-3.5-flash-lite",
+                    "gemini-3.5-live-translate-preview",
+                    "gemini-3.6-flash",
+                    "gemini-embedding-001",
+                    "gemini-embedding-2",
+                    "gemini-flash-latest",
+                    "gemini-flash-lite-latest",
+                    "gemini-omni-flash-preview",
+                    "gemini-robotics-er-1.6-preview",
+                    "gemma-4-26b-a4b-it",
+                    "gemma-4-31b-it",
+                    "lyria-3-clip-preview",
+                    "lyria-3-pro-preview",
+                    "veo-3.1-fast-generate-preview",
+                    "veo-3.1-generate-preview",
+                    "veo-3.1-lite-generate-preview"
+                ]
+            }
         },
         "sdk-python": {
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v2.14.0",
+                "latest": "v2.16.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.16.0",
+                        "title": "v2.16.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.15.0",
+                        "title": "v2.15.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.14.0",
                         "title": "v2.14.0"
@@ -43,14 +96,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.9.0-rc1",
                         "title": "v2.9.0-rc1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.9.0-rc0",
-                        "title": "v2.9.0-rc0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.8.0",
-                        "title": "v2.8.0"
                     }
                 ]
             }
