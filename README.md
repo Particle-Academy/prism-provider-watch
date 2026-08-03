@@ -19,11 +19,20 @@ reality allows — and it needs no keys.
 
 | Source type | Catches | Needs a key? |
 |---|---|---|
-| `models` — the provider's *list models* endpoint | new / removed model IDs | yes (skipped without one) |
+| `models-dev` — a provider's roster from the shared **[models.dev](https://models.dev)** catalog | new / removed models (across every provider, one keyless fetch) | no |
 | `github-atom` — a repo's `releases`/`commits`/`tags` `.atom` feed | spec + SDK changes (new params, features, versions) | no |
+| `models` — *(legacy)* the provider's own `/models` endpoint | new / removed model IDs | yes |
 
-Registered providers (phase 1): **OpenAI, Anthropic, Google Gemini**. Add more
-by editing [`config/providers.php`](config/providers.php) — it's data-only.
+Model rosters come from **models.dev** — a public, keyless catalog of ~180
+providers / 6,000+ models — fetched **once per run** and shared across every
+provider. That replaced per-provider `/models` polling, so the watcher needs
+**no API keys**. The `models` endpoint source is kept for any provider models.dev
+doesn't cover.
+
+Registered providers: **OpenAI, Anthropic, Google Gemini, Mistral, Groq, xAI,
+DeepSeek, OpenRouter, Perplexity, Qwen** — every provider prism supports that
+models.dev catalogs. Add more by editing
+[`config/providers.php`](config/providers.php) — it's data-only.
 
 ## How drift maps back to prism
 
@@ -40,7 +49,7 @@ Prism Lab test matrix and the docs benchmarks.
 
 ```bash
 composer install
-cp .env.example .env      # add provider keys (optional; Atom sources work without)
+cp .env.example .env      # optional — rosters (models.dev) + Atom feeds are keyless
 
 # One full pass: poll → snapshot → diff → persist baseline → report
 php bin/prism-watch run

@@ -7,6 +7,8 @@ namespace Prism\ProviderWatch\Providers;
 use InvalidArgumentException;
 use Prism\ProviderWatch\Http\Http;
 use Prism\ProviderWatch\Sources\GitHubAtomSource;
+use Prism\ProviderWatch\Sources\ModelsDevCatalog;
+use Prism\ProviderWatch\Sources\ModelsDevSource;
 use Prism\ProviderWatch\Sources\ModelsEndpointSource;
 use Prism\ProviderWatch\Sources\Source;
 
@@ -18,6 +20,8 @@ use Prism\ProviderWatch\Sources\Source;
  */
 final class SourceFactory
 {
+    private ?ModelsDevCatalog $modelsDev = null;
+
     /** @param callable(string): (string|false) $env */
     public function __construct(
         private readonly Http $http,
@@ -30,6 +34,12 @@ final class SourceFactory
         $type = (string) ($descriptor['type'] ?? '');
 
         return match ($type) {
+            'models-dev' => new ModelsDevSource(
+                catalog: $this->modelsDevCatalog(),
+                id: (string) $descriptor['id'],
+                label: (string) ($descriptor['label'] ?? $descriptor['id']),
+                providerId: (string) $descriptor['md_provider'],
+            ),
             'models' => new ModelsEndpointSource(
                 http: $this->http,
                 id: (string) $descriptor['id'],
@@ -49,6 +59,12 @@ final class SourceFactory
             ),
             default => throw new InvalidArgumentException("Unknown source type: {$type}"),
         };
+    }
+
+    /** One shared catalog across every models-dev source, so models.dev is fetched once per run. */
+    private function modelsDevCatalog(): ModelsDevCatalog
+    {
+        return $this->modelsDev ??= new ModelsDevCatalog($this->http);
     }
 
     /** @param string|list<string> $keyEnv */
