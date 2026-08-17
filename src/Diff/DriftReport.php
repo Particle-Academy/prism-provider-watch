@@ -13,12 +13,16 @@ final readonly class DriftReport
 {
     /**
      * @param  list<Change>  $changes
-     * @param  array<string, list<string>>  $prismHints  provider => source paths in repos/prism
+     * @param  array<string, list<string>>  $prismHints  target key => source paths in repos/prism
+     * @param  array<string, string>  $labels  target key => display label. Headings fall back to
+     *                                         the key, which reads fine for `openai` and badly for
+     *                                         a non-provider target like `mcp`.
      */
     public function __construct(
         public array $changes,
         public array $prismHints = [],
         public string $generatedAt = '',
+        public array $labels = [],
     ) {}
 
     public function hasDrift(): bool
@@ -58,12 +62,12 @@ final readonly class DriftReport
         $lines = [
             '# Provider watch — drift detected',
             '',
-            "_Generated at {$this->generatedAt}. ".count($this->changes).' change(s) across '.count($this->byProvider()).' provider(s)._',
+            "_Generated at {$this->generatedAt}. ".count($this->changes).' change(s) across '.count($this->byProvider()).' watch target(s)._',
             '',
         ];
 
         foreach ($this->byProvider() as $provider => $changes) {
-            $lines[] = '## '.$provider;
+            $lines[] = '## '.($this->labels[$provider] ?? $provider);
             $lines[] = '';
             foreach ($changes as $change) {
                 $detail = $change->detail !== '' ? " — {$change->detail}" : '';

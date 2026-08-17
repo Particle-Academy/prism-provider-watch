@@ -28,6 +28,7 @@ final class WatchRun
     {
         $allChanges = [];
         $prismHints = [];
+        $labels = [];
         $notes = [];
 
         foreach ($this->registry->all() as $provider) {
@@ -48,6 +49,7 @@ final class WatchRun
             if ($changes !== []) {
                 $allChanges = array_merge($allChanges, $changes);
                 $prismHints[$provider->key] = $provider->prismHints;
+                $labels[$provider->key] = $provider->label;
             }
 
             // Persist the new baseline so the next run diffs against today.
@@ -55,7 +57,7 @@ final class WatchRun
         }
 
         return new WatchResult(
-            new DriftReport($allChanges, $prismHints, $generatedAt),
+            new DriftReport($allChanges, $prismHints, $generatedAt, $labels),
             $notes,
         );
     }

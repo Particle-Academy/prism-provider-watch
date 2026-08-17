@@ -105,4 +105,24 @@ return [
             ['type' => 'models-dev', 'id' => 'models-dev', 'label' => 'Qwen model roster (models.dev)', 'md_provider' => 'alibaba'],
         ],
     ],
+
+    /*
+     * Not an LLM provider — a protocol prism speaks. It is watched here because
+     * this registry is a watch-target registry that happens to be named after
+     * its first inhabitants, and MCP drift is the more dangerous kind: a new
+     * model id is a string prism passes through untouched, while a protocol
+     * revision breaks integrations outright.
+     *
+     * prism exposes tools through Laravel MCP (Tools/LaravelMcpTool bridging
+     * Laravel\Mcp\Server\Tool) and suggests laravel/mcp in composer.json, so
+     * both the spec and that package are live dependencies of ours.
+     */
+    'mcp' => [
+        'label' => 'MCP (spec + laravel/mcp)',
+        'prism_hints' => ['src/Tools/LaravelMcpTool.php', 'src/Tool.php', 'composer.json'],
+        'sources' => [
+            ['type' => 'github-atom', 'id' => 'spec', 'label' => 'modelcontextprotocol spec releases', 'url' => 'https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom'],
+            ['type' => 'github-atom', 'id' => 'laravel-mcp', 'label' => 'laravel/mcp releases', 'url' => 'https://github.com/laravel/mcp/releases.atom'],
+        ],
+    ],
 ];
