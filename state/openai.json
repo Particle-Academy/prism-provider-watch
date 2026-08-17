@@ -61,67 +61,67 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Add endpoint to check content for OpenAI provenance signals",
+                "latest": "Add new event type for ads account onboarding redemption",
                 "entries": [
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/117ce5680e4269f6656a4fd70d28f9755630d938",
-                        "title": "Add endpoint to check content for OpenAI provenance signals"
+                        "id": "tag:github.com,2008:Grit::Commit/2186421dca0cca7c1e67caa7739005e8b1ccc4dd",
+                        "title": "Add new event type for ads account onboarding redemption"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/ef05a7d18e8361205342aa6c5bb9d77404c2c3ce",
-                        "title": "Add name and namespace fields to function tool call outputs"
+                        "id": "tag:github.com,2008:Grit::Commit/9b457ac5f046540f15a82b36a5f3ada201bc4277",
+                        "title": "Add new streaming events for shell command execution and output"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/0410f5a7988e0b4c7413b06a856c7c024f5ddedb",
-                        "title": "Add 'fast' service tier and rename conversation schemas"
+                        "id": "tag:github.com,2008:Grit::Commit/2329a6633e7ae625ef191dd01fec1db86026f994",
+                        "title": "Add image metadata fields to partial image data responses"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/d2f04809d7961f01e94031e1f31617394599dbdd",
-                        "title": "Add 'fast' service tier option to service_tier parameter"
+                        "id": "tag:github.com,2008:Grit::Commit/b6c1beca353286bbb0d61302f0ce057e4b632e63",
+                        "title": "Add metadata field to chat completion response"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/db14b6e1712aaf5265cf5a6871adff7a9c61d31c",
-                        "title": "Add new transcription models with multi-language and keyword support"
+                        "id": "tag:github.com,2008:Grit::Commit/c09464730ad6c1a8a8ede868bb199ea53029853b",
+                        "title": "Remove deprecated string error type from tool call responses"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/b9fc3bcfd692e77853137f9dfd99e77063f8190c",
-                        "title": "Add live.call.incoming webhook event for live SIP session acceptance"
+                        "id": "tag:github.com,2008:Grit::Commit/23e6f5b4641b7e0a62e879de867c8bac98cf8bd7",
+                        "title": "Add shutdown_date field to model object"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/5c044be3bf3a42854e99e34616564eeb2124a317",
-                        "title": "Add organization and project hard spend limit management endpoints"
+                        "id": "tag:github.com,2008:Grit::Commit/ca34204c10947bb0c821c24c8736b7a119abe298",
+                        "title": "Add 429 Too Many Requests response to all endpoints"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/f9400172ebe08522ab228b771d885e3bd5456e42",
-                        "title": "Re-add and rename API to create project service account API keys"
+                        "id": "tag:github.com,2008:Grit::Commit/aa588811dc8bf9ed15a93ae50d6be255179314fa",
+                        "title": "Add ResponseWsError event for WebSocket error reporting"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/db3e53198a66732cfe161339ea63bf36fc0137ad",
-                        "title": "Sync OpenAPI spec from ce8c9bed912f"
+                        "id": "tag:github.com,2008:Grit::Commit/061d7d09913b8e9b609cb2402dff98a32dcc2479",
+                        "title": "Clarify handling of reasoning item content in streaming responses"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/bcb644949593744091c6cef593fd8d9e45b37eaa",
-                        "title": "Sync OpenAPI spec from ad819d76799f"
+                        "id": "tag:github.com,2008:Grit::Commit/a2726e048ed05ede63d68e843cdd26a0d1289c23",
+                        "title": "Allow null annotations and update example annotation type"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/d08964108c2dc10e83f5228f08a1c3e69829ef14",
-                        "title": "Sync OpenAPI spec from ad819d76799f"
+                        "id": "tag:github.com,2008:Grit::Commit/7348a5313622a8403a7181d564e6c39894ba1a13",
+                        "title": "Add detailed token usage fields and structured error schemas"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/535f5dc976320130d7fbf8ecc4eda17177bf59e5",
-                        "title": "Sync OpenAPI spec from 8ae6baf66f20"
+                        "id": "tag:github.com,2008:Grit::Commit/c6d56281af688d522bb6baf6fc8fb3daae273820",
+                        "title": "Add external_web_access flag to control live web search access"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/a3276900e58b8b2a92e0cb087cd2e6e005f58458",
-                        "title": "Refresh the OpenAPI repository README (#559)"
+                        "id": "tag:github.com,2008:Grit::Commit/855e5d410f58cb19bd936eaab95695d959ed00f7",
+                        "title": "Add service_tier property to responses with new enum and documentation"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/5162af98d3147432c14680df789e8e12d4891e6b",
-                        "title": "Add complete OpenAPI spec"
+                        "id": "tag:github.com,2008:Grit::Commit/9382a8355d51a3dc4e9fc4fe56130faed25744fc",
+                        "title": "Clarify file content endpoint response and add new GPT-5.5 models"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/e1cb7a86ad53bb818c106ac7875e2a78182bb120",
-                        "title": "link to generated apec"
+                        "id": "tag:github.com,2008:Grit::Commit/bc61c5299f7f6fdd6061ccad0ac7e4ec0f659098",
+                        "title": "Add descriptions to ResponseStreamEvent and BetaResponseStreamEvent"
                     }
                 ]
             }
@@ -130,8 +130,28 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v2.52.0",
+                "latest": "v3.1.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.1.0",
+                        "title": "v3.1.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.0.0",
+                        "title": "v3.0.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.54.0",
+                        "title": "v2.54.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.53.0",
+                        "title": "v2.53.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v2.52.1",
+                        "title": "v2.52.1"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v2.52.0",
                         "title": "v2.52.0"
@@ -151,26 +171,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v2.48.0",
                         "title": "v2.48.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.47.0",
-                        "title": "v2.47.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.46.0",
-                        "title": "v2.46.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.45.0",
-                        "title": "v2.45.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.44.0",
-                        "title": "v2.44.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.43.0",
-                        "title": "v2.43.0"
                     }
                 ]
             }

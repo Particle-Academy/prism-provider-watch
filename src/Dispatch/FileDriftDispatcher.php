@@ -12,6 +12,12 @@ use RuntimeException;
  * Point the report dir at the envelope's .ai/knowledge/provider-watch/ and the
  * report becomes a durable, agent-readable knowledge entry — satisfying the
  * "knowledge entry" half of the phase-1 autonomy contract with zero network.
+ *
+ * A drift report is ALSO archived under a timestamp. `latest.*` alone is
+ * destroyed by the next run, and since a run re-baselines as it reports, the
+ * following run finds no drift and overwrites the only record of what changed
+ * with "no drift" — which is exactly what happened once a daily cron started
+ * firing. The archive is the history; `latest.*` is just the pointer.
  */
 final class FileDriftDispatcher implements Dispatcher
 {
@@ -25,12 +31,30 @@ final class FileDriftDispatcher implements Dispatcher
         }
 
         $base = rtrim($this->reportDir, '/\\').DIRECTORY_SEPARATOR;
-        file_put_contents($base.'latest.md', $report->toMarkdown());
-        file_put_contents(
-            $base.'latest.json',
-            json_encode($report->toArray(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE).PHP_EOL,
-        );
+        $markdown = $report->toMarkdown();
+        $json = json_encode($report->toArray(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE).PHP_EOL;
 
-        return ["Wrote drift report to {$base}latest.md"];
+        file_put_contents($base.'latest.md', $markdown);
+        file_put_contents($base.'latest.json', $json);
+
+        $written = ["Wrote drift report to {$base}latest.md"];
+
+        // Only drift is worth keeping — archiving every clean run would bury
+        // the reports that matter under a file a day saying nothing happened.
+        if ($report->hasDrift()) {
+            $archive = $base.'archive'.DIRECTORY_SEPARATOR;
+
+            if (! is_dir($archive) && ! @mkdir($archive, 0o755, true) && ! is_dir($archive)) {
+                throw new RuntimeException("Cannot create archive dir: {$archive}");
+            }
+
+            $stamp = gmdate('Y-m-d\THis\Z');
+            file_put_contents($archive.$stamp.'.md', $markdown);
+            file_put_contents($archive.$stamp.'.json', $json);
+
+            $written[] = "Archived drift to {$archive}{$stamp}.md";
+        }
+
+        return $written;
     }
 }

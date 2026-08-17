@@ -5,8 +5,10 @@
             "ok": true,
             "note": "",
             "data": {
-                "count": 51,
+                "count": 54,
                 "models": [
+                    "deepseek-v4-flash-0731",
+                    "glm-5.2",
                     "qvq-max",
                     "qwen-flash",
                     "qwen-max",
@@ -57,6 +59,7 @@
                     "qwen3.6-plus",
                     "qwen3.7-max",
                     "qwen3.7-plus",
+                    "qwen3.8-max",
                     "qwq-plus"
                 ]
             }
