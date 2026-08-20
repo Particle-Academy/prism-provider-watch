@@ -7,6 +7,7 @@ namespace Prism\ProviderWatch\Providers;
 use InvalidArgumentException;
 use Prism\ProviderWatch\Http\Http;
 use Prism\ProviderWatch\Sources\GitHubAtomSource;
+use Prism\ProviderWatch\Sources\GitHubIssuesSource;
 use Prism\ProviderWatch\Sources\ModelsDevCatalog;
 use Prism\ProviderWatch\Sources\ModelsDevSource;
 use Prism\ProviderWatch\Sources\ModelsEndpointSource;
@@ -56,6 +57,15 @@ final class SourceFactory
                 label: (string) ($descriptor['label'] ?? $descriptor['id']),
                 url: (string) $descriptor['url'],
                 max: (int) ($descriptor['max'] ?? 15),
+            ),
+            'github-issues' => new GitHubIssuesSource(
+                http: $this->http,
+                id: (string) $descriptor['id'],
+                label: (string) ($descriptor['label'] ?? $descriptor['id']),
+                repo: (string) $descriptor['repo'],
+                kind: (string) ($descriptor['kind'] ?? GitHubIssuesSource::KIND_ISSUES),
+                token: $this->resolveKey(['GITHUB_TOKEN', 'GH_TOKEN']) ?: null,
+                max: (int) ($descriptor['max'] ?? 30),
             ),
             default => throw new InvalidArgumentException("Unknown source type: {$type}"),
         };

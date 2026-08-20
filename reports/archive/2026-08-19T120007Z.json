@@ -1,0 +1,35 @@
+{
+    "generated_at": "2026-08-19T12:00:03Z",
+    "has_drift": true,
+    "change_count": 4,
+    "changes": [
+        {
+            "provider": "openai",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v3.3.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "liquid/lfm-2.5-2.6b:free",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "z-ai/glm-5.2:free",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "z-ai/glm-5.3",
+            "detail": "new model exposed by the provider"
+        }
+    ]
+}

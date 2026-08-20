@@ -14,6 +14,9 @@ declare(strict_types=1);
  *                  source — no API keys required.
  *   github-atom  — a public GitHub .atom feed (releases/commits/tags; no key).
  *                  Carries the request/response *schema* signal models.dev lacks.
+ *   github-issues — open issues or pull requests on a repo, via the REST API.
+ *                  GitHub has no Atom for these (issues.atom/pulls.atom answer
+ *                  406). `repo` is owner/name, `kind` is issues|pulls.
  *   models       — (legacy) a provider's own /models endpoint (needs an API
  *                  key). Superseded by models-dev; kept available for providers
  *                  models.dev doesn't cover.
@@ -123,6 +126,25 @@ return [
         'sources' => [
             ['type' => 'github-atom', 'id' => 'spec', 'label' => 'modelcontextprotocol spec releases', 'url' => 'https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom'],
             ['type' => 'github-atom', 'id' => 'laravel-mcp', 'label' => 'laravel/mcp releases', 'url' => 'https://github.com/laravel/mcp/releases.atom'],
+        ],
+    ],
+
+    /*
+     * The fork's own upstream. Not a provider and not a protocol — the source
+     * of the community work this fork exists to absorb, and the one signal the
+     * watcher was blind to while everything it carried came from upstream in
+     * the first place.
+     *
+     * GitHub publishes Atom for commits, releases and tags but not for issues
+     * or pulls (both answer 406), so these read the REST API. A token lifts the
+     * rate limit from 60/hour to 5000 and is used when GITHUB_TOKEN is set.
+     */
+    'upstream' => [
+        'label' => 'Upstream prism-php/prism',
+        'prism_hints' => ['src/', 'tests/', 'docs/'],
+        'sources' => [
+            ['type' => 'github-issues', 'id' => 'issues', 'label' => 'prism-php/prism open issues', 'repo' => 'prism-php/prism', 'kind' => 'issues'],
+            ['type' => 'github-issues', 'id' => 'pulls', 'label' => 'prism-php/prism open pull requests', 'repo' => 'prism-php/prism', 'kind' => 'pulls'],
         ],
     ],
 ];
