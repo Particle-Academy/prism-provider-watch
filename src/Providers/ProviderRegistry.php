@@ -43,6 +43,8 @@ final class ProviderRegistry
                 label: (string) ($spec['label'] ?? $key),
                 sources: $sources,
                 prismHints: array_values(array_map('strval', (array) ($spec['prism_hints'] ?? []))),
+                category: (string) ($spec['category'] ?? ProviderDefinition::CATEGORY_PROVIDER),
+                why: (string) ($spec['why'] ?? ''),
             );
         }
 
