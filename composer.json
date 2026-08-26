@@ -27,6 +27,9 @@
         "phpstan/phpstan": "^2.0"
     },
     "config": {
+        "platform": {
+            "php": "8.3.0"
+        },
         "allow-plugins": {
             "pestphp/pest-plugin": true
         },
