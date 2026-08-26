@@ -1,6 +1,9 @@
 /vendor/
 /.env
 /.phpunit.cache/
+# The latest report is regenerated on every run — it is a view, not a record.
+# reports/archive/ is deliberately NOT ignored: the drift history is the point
+# of watching, and history that lives on one machine is not history.
 /reports/latest.md
 /reports/latest.json
 *.log

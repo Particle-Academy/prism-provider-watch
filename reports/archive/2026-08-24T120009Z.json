@@ -1,0 +1,28 @@
+{
+    "generated_at": "2026-08-24T12:00:05Z",
+    "has_drift": true,
+    "change_count": 3,
+    "changes": [
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "inclusionai/ling-2.6-1t",
+            "detail": "model no longer listed (possible deprecation)"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "inclusionai/ling-2.6-flash",
+            "detail": "model no longer listed (possible deprecation)"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "inclusionai/ring-2.6-1t",
+            "detail": "model no longer listed (possible deprecation)"
+        }
+    ]
+}

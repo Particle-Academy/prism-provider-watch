@@ -1,0 +1,63 @@
+{
+    "generated_at": "2026-08-22T12:00:05Z",
+    "has_drift": true,
+    "change_count": 8,
+    "changes": [
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add 'residency' field for project data residency configuration",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add quantity_unit field to organization costs results",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "deepseek",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "deepseek-v4-flash-vision-exp",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "meta/muse-spark-1.2-contributor",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "thinkingmachines/inkling-small:free",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "thinkingmachines/inkling:free",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "deepcogito/cogito-v2.1-671b",
+            "detail": "model no longer listed (possible deprecation)"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "openai/gpt-oss-20b:free",
+            "detail": "model no longer listed (possible deprecation)"
+        }
+    ]
+}
