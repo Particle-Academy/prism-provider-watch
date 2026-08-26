@@ -7,6 +7,11 @@ baseline, and reports **drift** — new models, deprecations, spec/SDK changes �
 so schema and feature updates get filed the day upstream ships them, not weeks
 later when something breaks.
 
+> **Working on this package?** Read **[`AGENTS.md`](AGENTS.md)** first — the boundary
+> this package has to hold, the gates that must be green, and the traps that have
+> already caught someone.
+> `@link AGENTS.md`
+
 ## Why polling, not "subscribe"
 
 No major provider offers a push feed for "our API changed." So the honest,
