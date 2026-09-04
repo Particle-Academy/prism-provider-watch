@@ -1,0 +1,77 @@
+{
+    "generated_at": "2026-08-21T16:42:57Z",
+    "has_drift": true,
+    "change_count": 10,
+    "changes": [
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Clarify transparent background support for GPT image models",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Clarify variable length of output audio deltas in translation event",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add chatgpt-image-latest as a new image generation model option",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "anthropic",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v1.0.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "deepseek/deepseek-v4-flash-vision-exp",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "mancer/weaver",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "mistralai/ministral-8b",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "stealth/ox-alpha",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "tencent/hy-mt2-1.8b",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "tencent/hy-mt2-30b-a3b",
+            "detail": "new model exposed by the provider"
+        }
+    ]
+}

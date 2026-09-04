@@ -1,0 +1,175 @@
+{
+    "provider": "upstream",
+    "sources": {
+        "issues": {
+            "ok": true,
+            "note": "",
+            "data": {
+                "latest": "#1034 Prism drops streamed content deltas equal to `\"0\"` (@moaines)",
+                "entries": [
+                    {
+                        "id": "1034",
+                        "title": "#1034 Prism drops streamed content deltas equal to `\"0\"` (@moaines)"
+                    },
+                    {
+                        "id": "1031",
+                        "title": "#1031 Thinking mode on DeepSeek can't be disabled. (@leobeal)"
+                    },
+                    {
+                        "id": "1017",
+                        "title": "#1017 Usage counts for Gemini vs. OpenAI are inconsistent in completionTokens. (@williamjulianvicary)"
+                    },
+                    {
+                        "id": "1016",
+                        "title": "#1016 Feature request: auto-convert string values to BackedEnum instances when tool handler parameters are typed as enums (@Ahrengot)"
+                    },
+                    {
+                        "id": "1015",
+                        "title": "#1015 feat(openai):  add support for the “text_verbosity” parameter in structured output (@Jimerson21)"
+                    },
+                    {
+                        "id": "1010",
+                        "title": "#1010 Ollama embeddings: `dimensions` provider option is sent twice, triggering \"invalid option\" warning (@timmcleod)"
+                    },
+                    {
+                        "id": "1007",
+                        "title": "#1007 Systemic tool-call normalization bug: multiple providers crash with raw TypeError on missing or scalar arguments (@ruttydm)"
+                    },
+                    {
+                        "id": "1006",
+                        "title": "#1006 OpenRouter ToolCallMap throws TypeError on malformed JSON arguments instead of a handled provider error (@ruttydm)"
+                    }
+                ]
+            }
+        },
+        "pulls": {
+            "ok": true,
+            "note": "",
+            "data": {
+                "latest": "#1037 fix(openai): support GPT-5.6 Luna structured mode (@johnmccombs1)",
+                "entries": [
+                    {
+                        "id": "1037",
+                        "title": "#1037 fix(openai): support GPT-5.6 Luna structured mode (@johnmccombs1)"
+                    },
+                    {
+                        "id": "1036",
+                        "title": "#1036 fix(deepseek): don't drop streamed content deltas equal to \"0\" (@moaines)"
+                    },
+                    {
+                        "id": "1032",
+                        "title": "#1032 Forward provider options in the DeepSeek handlers. Fixes #1031 (@leobeal)"
+                    },
+                    {
+                        "id": "1030",
+                        "title": "#1030 fix(audio): map webm and mp4 container mime types to audio extensions (@mrmorgan-i)"
+                    },
+                    {
+                        "id": "1029",
+                        "title": "#1029 feat(openai): support GPT-5.6 structured output (@bradleybernard)"
+                    },
+                    {
+                        "id": "1028",
+                        "title": "#1028 Carrying the torch: 48 community PRs merged + fork fixes (v0.101.0-v0.109.0) (@wishborn)"
+                    },
+                    {
+                        "id": "1026",
+                        "title": "#1026 Add Requesty as a provider (@Thibaultjaigu)"
+                    },
+                    {
+                        "id": "1025",
+                        "title": "#1025 fix(prism): avoid requiring full laravel framework (@MiddleSokilAI)"
+                    },
+                    {
+                        "id": "1024",
+                        "title": "#1024 Fix: Nullable Enum Schema (@yiedpozi)"
+                    },
+                    {
+                        "id": "1022",
+                        "title": "#1022 docs: show OpenAI-compatible gateway setup (@cerebrixos)"
+                    },
+                    {
+                        "id": "1021",
+                        "title": "#1021 fix(deepseek): extract prompt_cache_hit_tokens and reasoning_tokens from usage (@Lintume)"
+                    },
+                    {
+                        "id": "1020",
+                        "title": "#1020 fix(deepseek): preserve reasoning_content in thinking mode for tool calls (@tlotli)"
+                    },
+                    {
+                        "id": "1018",
+                        "title": "#1018 feat: add provider-agnostic withReasoning() request method (@ChrisThompsonTLDR)"
+                    },
+                    {
+                        "id": "1014",
+                        "title": "#1014 feat(fim): add FIM request and response handling for Mistral AI (@mssayari)"
+                    },
+                    {
+                        "id": "1013",
+                        "title": "#1013 fix(ollama): exclude top-level keys from nested options in embeddings request (@sv-LayZ)"
+                    },
+                    {
+                        "id": "1012",
+                        "title": "#1012 fix: cast empty tool properties to object for Mistral API compatibility (@afiktahirov)"
+                    },
+                    {
+                        "id": "1009",
+                        "title": "#1009 Fix: concurrent tool execution fails with ProcessDriver due to $this capture and circular references (@vinitkadam03)"
+                    },
+                    {
+                        "id": "1008",
+                        "title": "#1008 feat(gemini): extracting rate limit violations and retry-after information  (@cutlope)"
+                    },
+                    {
+                        "id": "1005",
+                        "title": "#1005 fix: streaming tool call arguments silently drop '0' characters (@JuanmaMingot)"
+                    },
+                    {
+                        "id": "1004",
+                        "title": "#1004 fix(ToolMap): remove static duplicate parameters handling in mapping openrouter (@Aldiwildan77)"
+                    },
+                    {
+                        "id": "1003",
+                        "title": "#1003 feat(anthropic): handle pause_turn and refusal stop reasons (@adamthehutt)"
+                    },
+                    {
+                        "id": "1002",
+                        "title": "#1002 feat(gemini): add service_tier support for Flex Inference (@smittie2000)"
+                    },
+                    {
+                        "id": "1001",
+                        "title": "#1001 fix(Media): normalize mimeType for audio/wav (@barryvdh)"
+                    },
+                    {
+                        "id": "1000",
+                        "title": "#1000 fix(Gemini): Add `Usage` to `StepFinishEvent` (@Plytas)"
+                    },
+                    {
+                        "id": "999",
+                        "title": "#999 feat(OpenAI): Enable structured output support for OpenAI gpt-5.4 mini and nano models (@aivis)"
+                    },
+                    {
+                        "id": "998",
+                        "title": "#998 Anthropic adaptive thinking (@GrahamCampbell)"
+                    },
+                    {
+                        "id": "997",
+                        "title": "#997 fix(gemini): normalize array-type nullable notation in SchemaMap prop… (@yondifon)"
+                    },
+                    {
+                        "id": "996",
+                        "title": "#996 fix: handle unknown finish reasons gracefully (@cainydev)"
+                    },
+                    {
+                        "id": "995",
+                        "title": "#995 feat(audio): Allow diarization with Mistral (@NoelDeMartin)"
+                    },
+                    {
+                        "id": "994",
+                        "title": "#994 fix(gemini,groq): include finish reason in unhandled finish reason exceptions (@datashaman)"
+                    }
+                ]
+            }
+        }
+    }
+}

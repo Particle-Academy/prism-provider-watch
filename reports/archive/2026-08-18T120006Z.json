@@ -1,0 +1,28 @@
+{
+    "generated_at": "2026-08-18T12:00:03Z",
+    "has_drift": true,
+    "change_count": 3,
+    "changes": [
+        {
+            "provider": "openai",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v3.2.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "liquid/lfm-2.5-2.6b:free",
+            "detail": "model no longer listed (possible deprecation)"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "z-ai/glm-5.2:free",
+            "detail": "model no longer listed (possible deprecation)"
+        }
+    ]
+}
