@@ -1,9 +1,17 @@
 /vendor/
 /.env
 /.phpunit.cache/
-# The latest report is regenerated on every run — it is a view, not a record.
-# reports/archive/ is deliberately NOT ignored: the drift history is the point
-# of watching, and history that lives on one machine is not history.
-/reports/latest.md
-/reports/latest.json
+# Nothing the watcher WRITES is tracked — not the reports, not the provider
+# state they are diffed against. The cron rewrites both on every run, so
+# tracking them leaves the working tree permanently dirty and fills history
+# with machine noise rather than decisions.
+#
+# The cost, stated so nobody rediscovers it: a fresh clone starts with no
+# baseline, so its first run reports every model and release as new. That is
+# one noisy report, not lost data — the second run is accurate.
+#
+# Both directories are recreated on demand (SnapshotStore, FileDriftDispatcher
+# both mkdir recursively), so neither needs to exist in the repo.
+/reports/
+/state/
 *.log
