@@ -61,8 +61,24 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Remove deprecated compute_units field from token usage objects",
+                "latest": "Add 'incomplete' status to web search call enums",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/3278f89c64fa5ad0227a612781ff6330087f1eed",
+                        "title": "Add 'incomplete' status to web search call enums"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/cf79040afd73deda323d2cc869199d4f463bd7ad",
+                        "title": "Upgrade chat completions model to gpt-6-astra and add steering support"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/b60c665790380f8413ecd1666ddfd6fc1a429c94",
+                        "title": "Add new prompt caching options and detailed diagnostics"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/e81fb6665768ea2c174559fa08653bfc1424e52f",
+                        "title": "Clarify service_tier parameter behavior for Fast mode"
+                    },
                     {
                         "id": "tag:github.com,2008:Grit::Commit/18a43ed13461a01fce5b9cc93c86843c550734a3",
                         "title": "Remove deprecated compute_units field from token usage objects"
@@ -106,22 +122,6 @@
                     {
                         "id": "tag:github.com,2008:Grit::Commit/a0a969c1f51254ff5c0393933787c76e2576912a",
                         "title": "Deprecate geography field in project schema in favor of residency"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/f85dbe223d40e1a31cba812ab2d755c7e98a92a3",
-                        "title": "Add 'residency' field for project data residency configuration"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/13c6a94fca988f8be3c5de09d73f012709985d10",
-                        "title": "Add quantity_unit field to organization costs results"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/010421dcbd0475277ea8c3e6c1e1cbca4659c4bd",
-                        "title": "Clarify transparent background support for GPT image models"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/b0da4eabb0db581f5a5f8dcde6e3997409b2e4c6",
-                        "title": "Clarify variable length of output audio deltas in translation event"
                     }
                 ]
             }
@@ -130,8 +130,12 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v3.7.0",
+                "latest": "v3.8.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.8.0",
+                        "title": "v3.8.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.7.0",
                         "title": "v3.7.0"
@@ -167,10 +171,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.0.0",
                         "title": "v3.0.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.54.0",
-                        "title": "v2.54.0"
                     }
                 ]
             }

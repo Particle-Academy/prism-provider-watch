@@ -1,0 +1,56 @@
+{
+    "generated_at": "2026-09-04T12:00:03Z",
+    "has_drift": true,
+    "change_count": 7,
+    "changes": [
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add 'incomplete' status to web search call enums",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Upgrade chat completions model to gpt-6-astra and add steering support",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add new prompt caching options and detailed diagnostics",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Clarify service_tier parameter behavior for Fast mode",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v3.8.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "inclusionai/ling-3.0-flash-fin",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "nvidia/nemotron-3.5-content-safety",
+            "detail": "new model exposed by the provider"
+        }
+    ]
+}
