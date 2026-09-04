@@ -61,8 +61,48 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Deprecate geography field in project schema in favor of residency",
+                "latest": "Remove deprecated compute_units field from token usage objects",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/18a43ed13461a01fce5b9cc93c86843c550734a3",
+                        "title": "Remove deprecated compute_units field from token usage objects"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/eb63963e81ca084ad7c0d897bc2263d741f78951",
+                        "title": "Add 'max_messages' as a new reason for incomplete responses"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/0e74b20318a8cc90b6b058049c752a726d558538",
+                        "title": "Upgrade model references from gpt-4o to gpt-5 and introduce gpt-5.6-sol"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/eb06de8fc2415ab17e5ff9579eabd66aaed4221d",
+                        "title": "Add optional line_items filter to costs query endpoint"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/690521b1753dce0c6d6b275f583d22537679cff9",
+                        "title": "Remove deprecated prompt_cache_breakpoint fields from tool definitions"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/6c8481caaefded47a5348a031f8e16c7b89de045",
+                        "title": "Add new webhooks for safety alert notifications"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/2929dd85eb799bd308460bfe4a439cabd0eb74c8",
+                        "title": "Add prompt_cache_breakpoint property to tool definition objects"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/172101000e7be21103c405aa8bedf918039f886f",
+                        "title": "Add compute_units field to token usage objects"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/ecbf3ace93065f90a1e0d0b73a81b11fc084ad52",
+                        "title": "Add new tenant trusted access webhook event types"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/1665a18fe20217c989c66dd73888345c6e4eb63c",
+                        "title": "Add optional 'id' field to CompactionTriggerItemParam schema"
+                    },
                     {
                         "id": "tag:github.com,2008:Grit::Commit/a0a969c1f51254ff5c0393933787c76e2576912a",
                         "title": "Deprecate geography field in project schema in favor of residency"
@@ -82,46 +122,6 @@
                     {
                         "id": "tag:github.com,2008:Grit::Commit/b0da4eabb0db581f5a5f8dcde6e3997409b2e4c6",
                         "title": "Clarify variable length of output audio deltas in translation event"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/e68e9beb1a8545ed91d687b90d4c4cd8ed4329a9",
-                        "title": "Add chatgpt-image-latest as a new image generation model option"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/b8d775d82e8c0e8543b091cb10927fffdd0dc55b",
-                        "title": "Add gpt-image-2 models to image generation and editing APIs"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/5fd39db8df739ad5438627998e7e88e1bd9e24c6",
-                        "title": "Add obfuscation field to chat completion chunk responses"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/06a9404ee8f78a2adb549d8e9545c5d0de8e5c3a",
-                        "title": "Increase max length for encrypted_content in compaction summaries"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/2186421dca0cca7c1e67caa7739005e8b1ccc4dd",
-                        "title": "Add new event type for ads account onboarding redemption"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/9b457ac5f046540f15a82b36a5f3ada201bc4277",
-                        "title": "Add new streaming events for shell command execution and output"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/2329a6633e7ae625ef191dd01fec1db86026f994",
-                        "title": "Add image metadata fields to partial image data responses"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/b6c1beca353286bbb0d61302f0ce057e4b632e63",
-                        "title": "Add metadata field to chat completion response"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/c09464730ad6c1a8a8ede868bb199ea53029853b",
-                        "title": "Remove deprecated string error type from tool call responses"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/23e6f5b4641b7e0a62e879de867c8bac98cf8bd7",
-                        "title": "Add shutdown_date field to model object"
                     }
                 ]
             }
@@ -130,8 +130,24 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v3.3.1",
+                "latest": "v3.7.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.7.0",
+                        "title": "v3.7.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.6.0",
+                        "title": "v3.6.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.5.0",
+                        "title": "v3.5.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.4.0",
+                        "title": "v3.4.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.3.1",
                         "title": "v3.3.1"
@@ -155,22 +171,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v2.54.0",
                         "title": "v2.54.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.53.0",
-                        "title": "v2.53.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.52.1",
-                        "title": "v2.52.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.52.0",
-                        "title": "v2.52.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v2.51.0",
-                        "title": "v2.51.0"
                     }
                 ]
             }

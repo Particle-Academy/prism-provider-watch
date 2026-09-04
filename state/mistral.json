@@ -5,7 +5,7 @@
             "ok": true,
             "note": "",
             "data": {
-                "count": 33,
+                "count": 34,
                 "models": [
                     "codestral-latest",
                     "devstral-2512",
@@ -39,7 +39,8 @@
                     "pixtral-large-latest",
                     "voxtral-mini-latest",
                     "voxtral-mini-tts-latest",
-                    "voxtral-small-latest"
+                    "voxtral-small-latest",
+                    "zai-glm-5-2"
                 ]
             }
         }

@@ -57,10 +57,6 @@
                         "title": "#1036 fix(deepseek): don't drop streamed content deltas equal to \"0\" (@moaines)"
                     },
                     {
-                        "id": "1033",
-                        "title": "#1033 fix: convert backed enum tool arguments (@mikemikimike)"
-                    },
-                    {
                         "id": "1032",
                         "title": "#1032 Forward provider options in the DeepSeek handlers. Fixes #1031 (@leobeal)"
                     },
@@ -167,6 +163,10 @@
                     {
                         "id": "995",
                         "title": "#995 feat(audio): Allow diarization with Mistral (@NoelDeMartin)"
+                    },
+                    {
+                        "id": "994",
+                        "title": "#994 fix(gemini,groq): include finish reason in unhandled finish reason exceptions (@datashaman)"
                     }
                 ]
             }

@@ -33,12 +33,12 @@
                     "gemini-3.5-live-translate-preview",
                     "gemini-3.6-flash",
                     "gemini-3.7-flash",
+                    "gemini-3.8-flash",
                     "gemini-embedding-001",
                     "gemini-embedding-2",
                     "gemini-flash-latest",
                     "gemini-flash-lite-latest",
                     "gemini-omni-flash-preview",
-                    "gemini-robotics-er-1.6-preview",
                     "gemma-4-26b-a4b-it",
                     "gemma-4-31b-it",
                     "lyria-3-clip-preview",
@@ -53,8 +53,20 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v2.19.0",
+                "latest": "v2.22.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.22.0",
+                        "title": "v2.22.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.21.0",
+                        "title": "v2.21.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.20.0",
+                        "title": "v2.20.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.19.0",
                         "title": "v2.19.0"
@@ -82,18 +94,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.14.0",
                         "title": "v2.14.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.13.0",
-                        "title": "v2.13.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.12.1",
-                        "title": "v2.12.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.12.0",
-                        "title": "v2.12.0"
                     }
                 ]
             }
