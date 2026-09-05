@@ -71,6 +71,24 @@ php bin/prism-watch run --only openai,anthropic --issues --fail-on-drift
 - Exit code: `0` normally, `20` with `--fail-on-drift` when drift is found (so a
   scheduler can branch into a follow-up).
 
+### `--issues` has a precondition, and it fails quietly without it
+
+Issues are filed with the label **`provider-watch`**, and `gh issue create`
+refuses outright when the label does not exist on the target repo. The
+dispatcher reports `gh issue create returned no URL (check auth/labels)` and
+carries on, so a scheduled run drops the finding and still exits 0.
+
+Create it once per target repo:
+
+```bash
+gh label create provider-watch -R <owner>/<repo> --color FBCA04   --description "Filed by prism-provider-watch: upstream provider API drift"
+```
+
+This bit 2026-09-05: `--issues` was switched on for the daily run against
+`particle-academy/prism`, where the label had never been created. Every finding
+would have been detected correctly, formatted correctly, and thrown away — the
+same shape as the rest of this tool's failure modes, one layer further out.
+
 ## Autonomy (phase 1: detect → report)
 
 On drift the run **writes a knowledge report** (always) and, with `--issues`
