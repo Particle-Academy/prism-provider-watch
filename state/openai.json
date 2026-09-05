@@ -5,7 +5,7 @@
             "ok": true,
             "note": "",
             "data": {
-                "count": 47,
+                "count": 48,
                 "models": [
                     "chatgpt-image-latest",
                     "gpt-3.5-turbo",
@@ -40,6 +40,7 @@
                     "gpt-5.6-luna",
                     "gpt-5.6-sol",
                     "gpt-5.6-terra",
+                    "gpt-6-astra",
                     "gpt-image-1",
                     "gpt-image-1-mini",
                     "gpt-image-1.5",
@@ -61,8 +62,24 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Add 'incomplete' status to web search call enums",
+                "latest": "docs: clarify OpenAPI contribution workflow SDK-267 (#569)",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/b53b169f44dc0fbf878db3f9a1d3b66f43831f8d",
+                        "title": "docs: clarify OpenAPI contribution workflow SDK-267 (#569)"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/91cc0564f0e7ea0c53890061f1847162cf93cea7",
+                        "title": "Remove 'name' property from function call argument events"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/e5faa1727bf70800411aa2d837b6ff2bf2e266d6",
+                        "title": "Add expiration fields to API key objects"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/49968e11ccbe0a101f61efc48c5070f7e7db4bf6",
+                        "title": "Clarify default behavior of response data storage parameter"
+                    },
                     {
                         "id": "tag:github.com,2008:Grit::Commit/3278f89c64fa5ad0227a612781ff6330087f1eed",
                         "title": "Add 'incomplete' status to web search call enums"
@@ -106,22 +123,6 @@
                     {
                         "id": "tag:github.com,2008:Grit::Commit/2929dd85eb799bd308460bfe4a439cabd0eb74c8",
                         "title": "Add prompt_cache_breakpoint property to tool definition objects"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/172101000e7be21103c405aa8bedf918039f886f",
-                        "title": "Add compute_units field to token usage objects"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/ecbf3ace93065f90a1e0d0b73a81b11fc084ad52",
-                        "title": "Add new tenant trusted access webhook event types"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/1665a18fe20217c989c66dd73888345c6e4eb63c",
-                        "title": "Add optional 'id' field to CompactionTriggerItemParam schema"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/a0a969c1f51254ff5c0393933787c76e2576912a",
-                        "title": "Deprecate geography field in project schema in favor of residency"
                     }
                 ]
             }

@@ -1,0 +1,91 @@
+{
+    "generated_at": "2026-09-05T12:00:03Z",
+    "has_drift": true,
+    "change_count": 12,
+    "changes": [
+        {
+            "provider": "openai",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "gpt-6-astra",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "docs: clarify OpenAPI contribution workflow SDK-267 (#569)",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Remove 'name' property from function call argument events",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add expiration fields to API key objects",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Clarify default behavior of response data storage parameter",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "anthropic",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v1.4.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "inclusionai/ling-3.0-flash-sante:free",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "openai/gpt-6-astra",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "openai/gpt-6-astra-pro",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "qwen/qwen3.8-max-0902",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "ibm-granite/granite-4.1-8b",
+            "detail": "model no longer listed (possible deprecation)"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "qwen/qwen3.8-max",
+            "detail": "model no longer listed (possible deprecation)"
+        }
+    ]
+}
