@@ -1,0 +1,21 @@
+{
+    "generated_at": "2026-09-06T12:00:03Z",
+    "has_drift": true,
+    "change_count": 2,
+    "changes": [
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Clarify session ID format in live.call.incoming events",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add maxItems limit to input item arrays",
+            "detail": "new release/commit/tag upstream"
+        }
+    ]
+}

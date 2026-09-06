@@ -62,8 +62,16 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "docs: clarify OpenAPI contribution workflow SDK-267 (#569)",
+                "latest": "Clarify session ID format in live.call.incoming events",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/b61ced96515cb6e73794ff459e9e12ca57596c72",
+                        "title": "Clarify session ID format in live.call.incoming events"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/737397823478a9823937fe4ddf442a0446c379a8",
+                        "title": "Add maxItems limit to input item arrays"
+                    },
                     {
                         "id": "tag:github.com,2008:Grit::Commit/b53b169f44dc0fbf878db3f9a1d3b66f43831f8d",
                         "title": "docs: clarify OpenAPI contribution workflow SDK-267 (#569)"
@@ -115,14 +123,6 @@
                     {
                         "id": "tag:github.com,2008:Grit::Commit/690521b1753dce0c6d6b275f583d22537679cff9",
                         "title": "Remove deprecated prompt_cache_breakpoint fields from tool definitions"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/6c8481caaefded47a5348a031f8e16c7b89de045",
-                        "title": "Add new webhooks for safety alert notifications"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/2929dd85eb799bd308460bfe4a439cabd0eb74c8",
-                        "title": "Add prompt_cache_breakpoint property to tool definition objects"
                     }
                 ]
             }
