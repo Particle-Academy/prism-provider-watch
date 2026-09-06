@@ -119,12 +119,37 @@ return [
      * prism exposes tools through Laravel MCP (Tools/LaravelMcpTool bridging
      * Laravel\Mcp\Server\Tool) and suggests laravel/mcp in composer.json, so
      * both the spec and that package are live dependencies of ours.
+     *
+     * THE OFFICIAL SDKs ARE WATCHED TOO, and for a reason that does not apply to
+     * any other target in this file. Every other family here treats the PHP
+     * package as the reference and the ports as things that must agree with it.
+     * MCP cannot work that way: it is somebody else's protocol, so the SPEC and
+     * the reference SDKs are the source of truth, and all three of our packages
+     * are ports of THAT. A change in the TypeScript SDK is not a competitor
+     * shipping something — it is the definition moving underneath us.
+     *
+     * Watched as the definition rather than as a dependency: we vendor neither
+     * SDK (prism-mcp-ts has zero dependencies and implements the wire format
+     * itself). They are read for what the protocol now says, and for how far
+     * the deployed ecosystem has actually moved — which is the gap that
+     * matters. As of 2026-09-06 the spec's latest release is 2026-07-28, which
+     * our client speaks, while servers in the wild are still on 2024-11-05
+     * through 2025-06-18. We are ahead of the deployment, not behind the spec,
+     * and those are opposite problems with opposite fixes.
      */
     'mcp' => [
-        'label' => 'MCP (spec + laravel/mcp)',
-        'prism_hints' => ['src/Tools/LaravelMcpTool.php', 'src/Tool.php', 'composer.json'],
+        'label' => 'MCP (spec + official SDKs + laravel/mcp)',
+        'prism_hints' => [
+            'repos/prism-mcp/src/',
+            'repos/prism-mcp-ts/src/index.ts',
+            'repos/prism-mcp-py/src/prism_mcp/__init__.py',
+            'src/Tools/LaravelMcpTool.php',
+            'composer.json',
+        ],
         'sources' => [
             ['type' => 'github-atom', 'id' => 'spec', 'label' => 'modelcontextprotocol spec releases', 'url' => 'https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom'],
+            ['type' => 'github-atom', 'id' => 'sdk-typescript', 'label' => 'MCP TypeScript SDK releases', 'url' => 'https://github.com/modelcontextprotocol/typescript-sdk/releases.atom'],
+            ['type' => 'github-atom', 'id' => 'sdk-python', 'label' => 'MCP Python SDK releases', 'url' => 'https://github.com/modelcontextprotocol/python-sdk/releases.atom'],
             ['type' => 'github-atom', 'id' => 'laravel-mcp', 'label' => 'laravel/mcp releases', 'url' => 'https://github.com/laravel/mcp/releases.atom'],
         ],
     ],
