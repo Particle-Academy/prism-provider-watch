@@ -43,7 +43,12 @@ final class RunCommand extends Command
             ->addOption('issues', null, InputOption::VALUE_NONE, 'Open a GitHub issue on prism when drift is found.')
             ->addOption('genie', null, InputOption::VALUE_NONE, 'Record drift as a Genie knowledge node (via the local Genie MCP).')
             ->addOption('tynn', null, InputOption::VALUE_NONE, 'File a Tynn backlog story per drifted provider (via the Tynn MCP).')
-            ->addOption('inbox', null, InputOption::VALUE_NONE, "DM the drift to an agent's AgentInbox (recipient from PRISM_WATCH_INBOX_AGENT).")
+            ->addOption('inbox', null, InputOption::VALUE_NONE, "DM the drift to an agent's AgentInbox.")
+            // An OPTION as well as an env var, because the scheduled task that
+            // actually runs this is a single command string on Windows, where
+            // `VAR=x php ...` is not a thing. A fix that the daily run cannot
+            // carry is a fix that never fires.
+            ->addOption('inbox-agent', null, InputOption::VALUE_REQUIRED, 'AgentInbox agent id to DM.', getenv('PRISM_WATCH_INBOX_AGENT') ?: '')
             ->addOption('repo', null, InputOption::VALUE_REQUIRED, 'Target repo for issues.', getenv('PRISM_WATCH_REPO') ?: 'particle-academy/prism')
             ->addOption('fail-on-drift', null, InputOption::VALUE_NONE, 'Exit non-zero when drift is found (lets cron trigger a follow-up).');
     }
@@ -107,7 +112,7 @@ final class RunCommand extends Command
 
         $dispatchers[] = new AgentInboxDispatcher(
             $mcp,
-            getenv('PRISM_WATCH_INBOX_AGENT') ?: '',
+            (string) $input->getOption('inbox-agent'),
             (bool) $input->getOption('inbox') || getenv('PRISM_WATCH_INBOX') === '1',
         );
 
