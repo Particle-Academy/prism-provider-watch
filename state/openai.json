@@ -62,8 +62,44 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Clarify session ID format in live.call.incoming events",
+                "latest": "Refine image generation schema and remove duplicates",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/158e8f62213e99133188f49fb17e7abf35adc814",
+                        "title": "Refine image generation schema and remove duplicates"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/b5362da020b772e9f6feffe8f4e94b5e6c07de3f",
+                        "title": "Add detailed image generation call schema and related enums"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/ceee51ee76be9a40bd29de5b968a1e8ba3109d6a",
+                        "title": "Deprecate live.call.incoming webhook and add live.transport.incoming"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/2c5215a6a7c08f01cf8c9f8c76a7df5f34a8b30d",
+                        "title": "Add size and quality parameters to image generation API"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/6ed23195a8122a0dfd026467bd9d701410d3f52a",
+                        "title": "Update API URLs to full https links and enhance documentation links"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/b924add54fb1800c07fab70002306399620e8815",
+                        "title": "Add optional expiration fields to project API key objects"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/e0514a7052b20e8a795ce9d26ba9016c890e3842",
+                        "title": "Clarify SIP INVITE headers description and update examples"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/21cb7e98d8166a691a0eb8679a90419eb816cf35",
+                        "title": "Add GPT Image 2.5 models and extend image generation options"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/e1953b32a0cea5887a4d9bb91d430109ef2cd6cd",
+                        "title": "Add 503 Service Unavailable response to inference-related endpoints"
+                    },
                     {
                         "id": "tag:github.com,2008:Grit::Commit/b61ced96515cb6e73794ff459e9e12ca57596c72",
                         "title": "Clarify session ID format in live.call.incoming events"
@@ -87,42 +123,6 @@
                     {
                         "id": "tag:github.com,2008:Grit::Commit/49968e11ccbe0a101f61efc48c5070f7e7db4bf6",
                         "title": "Clarify default behavior of response data storage parameter"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/3278f89c64fa5ad0227a612781ff6330087f1eed",
-                        "title": "Add 'incomplete' status to web search call enums"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/cf79040afd73deda323d2cc869199d4f463bd7ad",
-                        "title": "Upgrade chat completions model to gpt-6-astra and add steering support"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/b60c665790380f8413ecd1666ddfd6fc1a429c94",
-                        "title": "Add new prompt caching options and detailed diagnostics"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/e81fb6665768ea2c174559fa08653bfc1424e52f",
-                        "title": "Clarify service_tier parameter behavior for Fast mode"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/18a43ed13461a01fce5b9cc93c86843c550734a3",
-                        "title": "Remove deprecated compute_units field from token usage objects"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/eb63963e81ca084ad7c0d897bc2263d741f78951",
-                        "title": "Add 'max_messages' as a new reason for incomplete responses"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/0e74b20318a8cc90b6b058049c752a726d558538",
-                        "title": "Upgrade model references from gpt-4o to gpt-5 and introduce gpt-5.6-sol"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/eb06de8fc2415ab17e5ff9579eabd66aaed4221d",
-                        "title": "Add optional line_items filter to costs query endpoint"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/690521b1753dce0c6d6b275f583d22537679cff9",
-                        "title": "Remove deprecated prompt_cache_breakpoint fields from tool definitions"
                     }
                 ]
             }
@@ -131,8 +131,20 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v3.8.0",
+                "latest": "v3.11.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.11.0",
+                        "title": "v3.11.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.10.0",
+                        "title": "v3.10.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.9.0",
+                        "title": "v3.9.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.8.0",
                         "title": "v3.8.0"
@@ -160,18 +172,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.3.0",
                         "title": "v3.3.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.2.0",
-                        "title": "v3.2.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.1.0",
-                        "title": "v3.1.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.0.0",
-                        "title": "v3.0.0"
                     }
                 ]
             }

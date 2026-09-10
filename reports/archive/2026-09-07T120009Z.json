@@ -1,0 +1,14 @@
+{
+    "generated_at": "2026-09-07T12:00:03Z",
+    "has_drift": true,
+    "change_count": 1,
+    "changes": [
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "z-ai/glm-5.2:free",
+            "detail": "model no longer listed (possible deprecation)"
+        }
+    ]
+}

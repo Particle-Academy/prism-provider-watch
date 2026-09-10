@@ -1,0 +1,63 @@
+{
+    "generated_at": "2026-09-08T16:56:40Z",
+    "has_drift": true,
+    "change_count": 8,
+    "changes": [
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add 503 Service Unavailable response to inference-related endpoints",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v3.9.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "minimax/minimax-m2.7:free",
+            "detail": "model no longer listed (possible deprecation)"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "minimax/minimax-m3:free",
+            "detail": "model no longer listed (possible deprecation)"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "nex-agi/nex-n2-mini",
+            "detail": "model no longer listed (possible deprecation)"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "removed",
+            "subject": "nex-agi/nex-n2-pro",
+            "detail": "model no longer listed (possible deprecation)"
+        },
+        {
+            "provider": "mcp",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v2.2.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "mcp",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v1.30.0",
+            "detail": "new release/commit/tag upstream"
+        }
+    ]
+}
