@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Prism\ProviderWatch\Console;
 
 use Prism\ProviderWatch\Diff\Differ;
+use Prism\ProviderWatch\Dispatch\AgentInboxDispatcher;
 use Prism\ProviderWatch\Dispatch\FileDriftDispatcher;
 use Prism\ProviderWatch\Dispatch\GenieKnowledgeDispatcher;
 use Prism\ProviderWatch\Dispatch\GitHubIssueDispatcher;
@@ -42,6 +43,7 @@ final class RunCommand extends Command
             ->addOption('issues', null, InputOption::VALUE_NONE, 'Open a GitHub issue on prism when drift is found.')
             ->addOption('genie', null, InputOption::VALUE_NONE, 'Record drift as a Genie knowledge node (via the local Genie MCP).')
             ->addOption('tynn', null, InputOption::VALUE_NONE, 'File a Tynn backlog story per drifted provider (via the Tynn MCP).')
+            ->addOption('inbox', null, InputOption::VALUE_NONE, "DM the drift to an agent's AgentInbox (recipient from PRISM_WATCH_INBOX_AGENT).")
             ->addOption('repo', null, InputOption::VALUE_REQUIRED, 'Target repo for issues.', getenv('PRISM_WATCH_REPO') ?: 'particle-academy/prism')
             ->addOption('fail-on-drift', null, InputOption::VALUE_NONE, 'Exit non-zero when drift is found (lets cron trigger a follow-up).');
     }
@@ -68,8 +70,16 @@ final class RunCommand extends Command
 
         $report = $result->report;
 
-        // Dispatch: file report always; GitHub issue + Genie + Tynn opt-in.
-        $dispatchers = [new FileDriftDispatcher($reportDir)];
+        // Dispatch: GitHub issue + Genie + Tynn + inbox opt-in, THEN the file
+        // report last so it can record what the others did.
+        //
+        // The file dispatcher used to run FIRST, which is why the archive could
+        // say what changed and never what was done about it — every other
+        // dispatcher reported after the JSON had already been written. When
+        // gpt-6-astra was detected on 2026-09-04 and no issue exists for that
+        // day, nothing on disk could say whether the issue failed, was skipped
+        // as a duplicate, or was never attempted.
+        $dispatchers = [];
 
         $issuesOn = (bool) $input->getOption('issues') || getenv('PRISM_WATCH_OPEN_ISSUES') === '1';
         $dispatchers[] = new GitHubIssueDispatcher(
@@ -95,10 +105,25 @@ final class RunCommand extends Command
             getenv('PRISM_WATCH_TYNN_VERSION') ?: null,
         );
 
+        $dispatchers[] = new AgentInboxDispatcher(
+            $mcp,
+            getenv('PRISM_WATCH_INBOX_AGENT') ?: '',
+            (bool) $input->getOption('inbox') || getenv('PRISM_WATCH_INBOX') === '1',
+        );
+
+        $outcomes = [];
         foreach ($dispatchers as $dispatcher) {
             foreach ($dispatcher->dispatch($report) as $line) {
                 $io->writeln("<info>→ {$line}</info>");
+                $outcomes[] = $line;
             }
+        }
+
+        // Written LAST, carrying every line above. The archive is now a record
+        // of what was detected AND who was told, so "did anyone get told?" is
+        // answerable from disk instead of inferred from the absence of an issue.
+        foreach ((new FileDriftDispatcher($reportDir))->dispatch($report->withDispatch($outcomes)) as $line) {
+            $io->writeln("<info>→ {$line}</info>");
         }
 
         if (! $report->hasDrift()) {

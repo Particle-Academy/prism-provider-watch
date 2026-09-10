@@ -39,7 +39,14 @@ final class GitHubIssueDispatcher implements Dispatcher
         }
 
         $date = $this->dateFrom($report->generatedAt);
-        $title = sprintf('Provider drift: %d change(s) — %s', count($report->changes), $date);
+
+        // LEADS WITH THE CONTRACT, NOT THE COUNT. "Provider drift: 10 change(s)"
+        // is a title a reader learns to skip, and correctly so when eight of the
+        // ten are free-tier models churning at an aggregator. Then the ninth is
+        // a provider adding 503 to every inference endpoint and it is skipped
+        // with the rest — which is what happened, for a day, while Prism's
+        // OpenAI handler mapped only 529.
+        $title = sprintf('Provider drift: %s — %s', $report->headline(), $date);
 
         if ($this->cli->findOpenIssueByTitle($this->repo, $title) !== null) {
             return ["GitHub issue: an open issue titled \"{$title}\" already exists — skipped."];

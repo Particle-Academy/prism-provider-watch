@@ -29,7 +29,43 @@ final readonly class DriftReport
         public array $labels = [],
         public array $categories = [],
         public array $why = [],
+        /**
+         * What each dispatcher reported doing, one line each.
+         *
+         * EMPTY UNTIL THE DISPATCH HAS HAPPENED, which is why it is last and
+         * defaulted — see {@see self::withDispatch()}.
+         *
+         * @var list<string>
+         */
+        public array $dispatch = [],
     ) {}
+
+    /**
+     * The same report, carrying what the dispatchers reported doing.
+     *
+     * WHY THIS EXISTS. The archive recorded what CHANGED and never what was
+     * DONE about it, so "did anyone get told?" was unanswerable after the fact.
+     * That is not hypothetical: gpt-6-astra was detected on 2026-09-04 and no
+     * issue exists for that day, and nothing on disk can say whether the issue
+     * failed, was skipped as a duplicate, or was never attempted.
+     *
+     * A watcher whose delivery cannot be audited is a watcher you have to trust
+     * rather than check.
+     *
+     * @param  list<string>  $lines
+     */
+    public function withDispatch(array $lines): self
+    {
+        return new self(
+            $this->changes,
+            $this->prismHints,
+            $this->generatedAt,
+            $this->labels,
+            $this->categories,
+            $this->why,
+            $lines,
+        );
+    }
 
     /**
      * Section order, and the question each section is asking.
@@ -59,9 +95,64 @@ final readonly class DriftReport
         ],
     ];
 
+    /**
+     * Sources that describe an API CONTRACT rather than a catalogue.
+     *
+     * An `openapi-spec` change means the shape of a request or response moved,
+     * which is the only class of drift that can break a running application.
+     * `models-dev` is a catalogue: models appear and disappear constantly —
+     * 78 of them across the archive against 35 contract changes — and almost
+     * all of it is free-tier churn at an aggregator we do not ship.
+     *
+     * @var list<string>
+     */
+    private const CONTRACT_SOURCES = ['openapi-spec'];
+
     public function hasDrift(): bool
     {
         return $this->changes !== [];
+    }
+
+    /**
+     * The changes that can plausibly break something we ship.
+     *
+     * WHY THIS IS NOT JUST `changes`. A report reading "10 change(s)" where
+     * eight are free-tier models churning at an aggregator trains a reader to
+     * skip it — and then the ninth, a provider adding a 503 to every inference
+     * endpoint, is skipped with the rest. That is not hypothetical: it is
+     * exactly what happened. Prism's OpenAI handler went on mapping only 529
+     * for a day while the notice sat unread in a filed issue.
+     *
+     * So the noisy majority is still reported, still archived, and no longer
+     * decides what the title says.
+     *
+     * @return list<Change>
+     */
+    public function notable(): array
+    {
+        return array_values(array_filter(
+            $this->changes,
+            fn (Change $c): bool => in_array($c->source, self::CONTRACT_SOURCES, true),
+        ));
+    }
+
+    /**
+     * One line that says whether this run is worth opening.
+     */
+    public function headline(): string
+    {
+        $notable = count($this->notable());
+        $total = count($this->changes);
+
+        if ($notable === 0) {
+            return sprintf('%d catalogue change(s), no contract changes', $total);
+        }
+
+        return sprintf(
+            '%d contract change(s)%s',
+            $notable,
+            $total > $notable ? sprintf(' (+%d catalogue)', $total - $notable) : '',
+        );
     }
 
     /** @return array<string, list<Change>> */
@@ -84,6 +175,10 @@ final readonly class DriftReport
             'has_drift' => $this->hasDrift(),
             'change_count' => count($this->changes),
             'changes' => array_map(static fn (Change $c): array => $c->toArray(), $this->changes),
+            // What was actually done about it. Present even when empty, so an
+            // archived report with no dispatch line is distinguishable from one
+            // written before this field existed.
+            'dispatch' => $this->dispatch,
         ];
     }
 
