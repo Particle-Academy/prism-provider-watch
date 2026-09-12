@@ -28,8 +28,12 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v1.4.0",
+                "latest": "v1.5.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/590187800/v1.5.0",
+                        "title": "v1.5.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/590187800/v1.4.0",
                         "title": "v1.4.0"
@@ -65,10 +69,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/590187800/v0.122.0",
                         "title": "v0.122.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/590187800/v0.121.0",
-                        "title": "v0.121.0"
                     }
                 ]
             }

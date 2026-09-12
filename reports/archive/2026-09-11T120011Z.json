@@ -1,0 +1,111 @@
+{
+    "generated_at": "2026-09-11T12:00:03Z",
+    "has_drift": true,
+    "change_count": 14,
+    "changes": [
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Clean up and enhance API operation summaries and descriptions",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add credit_balance_exhausted error to API error codes",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add discriminator to LiveServerEvent-2 schema for better type resolution",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Introduce Managed Agents API with session and environment management",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Clarify descriptions for Live SIP call session endpoints",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "openapi-spec",
+            "type": "added",
+            "subject": "Add Live WebRTC sessions API with SIP call control and audio handling",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v3.13.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "openai",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v3.12.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "anthropic",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v1.5.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "gemini",
+            "source": "sdk-python",
+            "type": "added",
+            "subject": "v2.23.0",
+            "detail": "new release/commit/tag upstream"
+        },
+        {
+            "provider": "deepseek",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "deepseek-flash",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "inclusionai/ling-3.0-flash-vl:free",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "sakana/fugu-max",
+            "detail": "new model exposed by the provider"
+        },
+        {
+            "provider": "openrouter",
+            "source": "models-dev",
+            "type": "added",
+            "subject": "sakana/fugu-ultra-v2",
+            "detail": "new model exposed by the provider"
+        }
+    ],
+    "dispatch": [
+        "GitHub issue opened: https://github.com/Particle-Academy/prism/issues/42",
+        "Genie knowledge: genie.knowledge: Could not determine which terminal to act on. Pass `terminalId` — its value is in your GENIE_TERMINAL_ID environment variable. (This workspace has several terminals, or the id given is not one of them, so Genie will not guess.)",
+        "Tynn story: disabled (pass --tynn or set PRISM_WATCH_TYNN=1).",
+        "AgentInbox: genie.agentinbox: Could not determine which terminal to act on. Pass `terminalId` — its value is in your GENIE_TERMINAL_ID environment variable. (This workspace has several terminals, or the id given is not one of them, so Genie will not guess.)"
+    ]
+}

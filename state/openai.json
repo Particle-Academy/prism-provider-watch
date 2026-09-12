@@ -62,8 +62,32 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Refine image generation schema and remove duplicates",
+                "latest": "Clean up and enhance API operation summaries and descriptions",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/38170fdddbb6a1813eae6c6587ee17cf2987185b",
+                        "title": "Clean up and enhance API operation summaries and descriptions"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/dadb3d2ca8415b2c371690f9ba6a1c919e2e7ca3",
+                        "title": "Add credit_balance_exhausted error to API error codes"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/046a2a0f325bf11f97966f2729219f27281ba71e",
+                        "title": "Add discriminator to LiveServerEvent-2 schema for better type resolution"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/df63773f69f542ef875b9f00c3837c25ba5f4f2a",
+                        "title": "Introduce Managed Agents API with session and environment management"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/595a7b229c5fda7eb69a35ab322245a981148008",
+                        "title": "Clarify descriptions for Live SIP call session endpoints"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Grit::Commit/c8472faf30aa5b6c76711e94d2cb0c1b756e9b80",
+                        "title": "Add Live WebRTC sessions API with SIP call control and audio handling"
+                    },
                     {
                         "id": "tag:github.com,2008:Grit::Commit/158e8f62213e99133188f49fb17e7abf35adc814",
                         "title": "Refine image generation schema and remove duplicates"
@@ -99,30 +123,6 @@
                     {
                         "id": "tag:github.com,2008:Grit::Commit/e1953b32a0cea5887a4d9bb91d430109ef2cd6cd",
                         "title": "Add 503 Service Unavailable response to inference-related endpoints"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/b61ced96515cb6e73794ff459e9e12ca57596c72",
-                        "title": "Clarify session ID format in live.call.incoming events"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/737397823478a9823937fe4ddf442a0446c379a8",
-                        "title": "Add maxItems limit to input item arrays"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/b53b169f44dc0fbf878db3f9a1d3b66f43831f8d",
-                        "title": "docs: clarify OpenAPI contribution workflow SDK-267 (#569)"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/91cc0564f0e7ea0c53890061f1847162cf93cea7",
-                        "title": "Remove 'name' property from function call argument events"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/e5faa1727bf70800411aa2d837b6ff2bf2e266d6",
-                        "title": "Add expiration fields to API key objects"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Grit::Commit/49968e11ccbe0a101f61efc48c5070f7e7db4bf6",
-                        "title": "Clarify default behavior of response data storage parameter"
                     }
                 ]
             }
@@ -131,8 +131,16 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v3.11.0",
+                "latest": "v3.13.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.13.0",
+                        "title": "v3.13.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.12.0",
+                        "title": "v3.12.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.11.0",
                         "title": "v3.11.0"
@@ -164,14 +172,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.4.0",
                         "title": "v3.4.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.3.1",
-                        "title": "v3.3.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.3.0",
-                        "title": "v3.3.0"
                     }
                 ]
             }
