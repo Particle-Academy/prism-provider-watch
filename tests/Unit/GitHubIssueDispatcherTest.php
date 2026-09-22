@@ -36,9 +36,16 @@ function fakeCli(bool $available = true, ?int $existing = null): GitHubCli
     };
 }
 
+/**
+ * A day worth filing: the CONTRACT moved.
+ *
+ * The source matters. Only an `openapi-spec` change opens an issue now, so a
+ * fixture built from a catalogue source would make every test below assert the
+ * dispatcher's silence rather than the behaviour it is named for.
+ */
 function driftReport(): DriftReport
 {
-    return new DriftReport([new Change('openai', 'models', ChangeType::Added, 'gpt-5')], [], '2026-07-25T00:00:00Z');
+    return new DriftReport([new Change('openai', 'openapi-spec', ChangeType::Changed, 'POST /v1/responses')], [], '2026-07-25T00:00:00Z');
 }
 
 it('does nothing when there is no drift', function () {
@@ -84,4 +91,39 @@ it('degrades gracefully when gh is unavailable', function () {
     $dispatcher = new GitHubIssueDispatcher($cli, 'particle-academy/prism', enabled: true);
 
     expect($dispatcher->dispatch(driftReport())[0])->toContain('not available');
+});
+
+it('files nothing on a day that only moved a catalogue', function () {
+    // A day where an aggregator added and dropped some models needs no work
+    // from anyone. Filing it anyway put 22 reports-on-nothing into the product
+    // intake against one that asked for a change, which is how a channel stops
+    // being read. The catalogue is still diffed, archived and reported; it
+    // just doesn't open an issue.
+    $cli = fakeCli(existing: null);
+    $dispatcher = new GitHubIssueDispatcher($cli, 'particle-academy/prism', enabled: true);
+
+    $catalogueOnly = new DriftReport([
+        new Change('openrouter', 'models-dev', ChangeType::Added, 'some-free-model'),
+        new Change('openrouter', 'models-dev', ChangeType::Removed, 'another-free-model'),
+    ], [], '2026-07-25T00:00:00Z');
+
+    $lines = $dispatcher->dispatch($catalogueOnly);
+
+    expect($cli->created)->toBe(0)
+        ->and($lines[0])->toContain('no contract changes');
+});
+
+it('still files when a contract moved, even beside catalogue noise', function () {
+    // The control. A request or response shape moving is the one class of
+    // drift that breaks a running application, and it must still arrive.
+    $cli = fakeCli(existing: null);
+    $dispatcher = new GitHubIssueDispatcher($cli, 'particle-academy/prism', enabled: true);
+
+    $lines = $dispatcher->dispatch(new DriftReport([
+        new Change('openrouter', 'models-dev', ChangeType::Added, 'some-free-model'),
+        new Change('openai', 'openapi-spec', ChangeType::Changed, 'POST /v1/responses'),
+    ], [], '2026-07-25T00:00:00Z'));
+
+    expect($cli->created)->toBe(1)
+        ->and($lines[0])->toContain('opened');
 });

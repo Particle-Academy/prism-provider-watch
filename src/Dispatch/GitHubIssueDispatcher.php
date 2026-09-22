@@ -30,6 +30,21 @@ final class GitHubIssueDispatcher implements Dispatcher
             return [];
         }
 
+        // NOTHING IS FILED FOR A DAY THAT NEEDS NO WORK. An issue is a request
+        // for someone to do something; a catalogue that moved at an aggregator
+        // we do not ship is not one. Filing it anyway put 22 reports-on-nothing
+        // into the product intake against a single one that asked for a change,
+        // and a channel that is 22/23 noise stops being read -- including on
+        // the day it matters.
+        //
+        // The catalogue is still diffed, archived and reported. It just no
+        // longer opens an issue. A contract change -- a request or response
+        // shape moving, the one class of drift that can break a running
+        // application -- still does, catalogue noise beside it or not.
+        if ($report->notable() === []) {
+            return [sprintf('GitHub issue: none — %s, so there is nothing to act on.', $report->headline())];
+        }
+
         if (! $this->enabled) {
             return ['GitHub issue: disabled (pass --issues or set PRISM_WATCH_OPEN_ISSUES=1 to enable).'];
         }
