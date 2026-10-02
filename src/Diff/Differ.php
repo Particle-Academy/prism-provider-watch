@@ -25,13 +25,13 @@ final class Differ
         $changes = [];
 
         foreach ($new->sources as $id => $fresh) {
-            if (! $fresh->ok) {
-                continue; // skipped/failed sources never drift
-            }
-
             $prior = $old?->source($id);
-            if ($prior === null || ! $prior->ok) {
-                continue; // establish baseline silently
+
+            // The null check is spelled out rather than left to isComparable()
+            // so the narrowing is real to a static analyser instead of asserted
+            // in a docblock.
+            if ($prior === null || ! self::isComparable($prior, $fresh)) {
+                continue;
             }
 
             foreach ($this->diffSource($new->provider, $id, $prior, $fresh) as $change) {
@@ -40,6 +40,30 @@ final class Differ
         }
 
         return $changes;
+    }
+
+    /**
+     * Whether this source has real data on BOTH sides, so a comparison here
+     * means something.
+     *
+     * It is public and static because the count of comparisons made is the
+     * only thing separating "compared everything and upstream is unchanged"
+     * from "compared nothing". If the caller reimplemented this predicate the
+     * two could disagree, and the number reported to the operator would stop
+     * describing the comparison it claims to describe.
+     *
+     * A false here is one of two harmless-looking things:
+     *   - the fresh poll is skipped or failed, so there is nothing to compare;
+     *   - there is no prior OK baseline, so this is a first observation and
+     *     adopting it silently is correct (see the class docblock).
+     *
+     * Harmless per source. NOT harmless in aggregate: if this returns false for
+     * every source, the differ emits no changes, and no changes is the same
+     * value it emits when upstream genuinely has not moved.
+     */
+    public static function isComparable(?SourceResult $prior, SourceResult $fresh): bool
+    {
+        return $fresh->ok && $prior !== null && $prior->ok;
     }
 
     /** @return list<Change> */

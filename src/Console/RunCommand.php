@@ -131,8 +131,25 @@ final class RunCommand extends Command
             $io->writeln("<info>→ {$line}</info>");
         }
 
+        // Checked BEFORE the no-drift branch, because that branch used to
+        // announce "Baseline is current." on the strength of an empty change
+        // list -- which is also what a run produces when every poll failed.
+        // A watch that compared nothing has not verified anything, so it must
+        // not exit zero whatever --fail-on-drift says: a scheduler reading the
+        // status is the only thing that will ever notice.
+        if (! $report->compared()) {
+            $io->error(
+                'Nothing was compared: '.$report->uncomparedSources.' source(s) polled, 0 against a baseline. '
+                .'This is NOT a no-drift result. See the notes above for the reason.'
+            );
+
+            return 21;
+        }
+
         if (! $report->hasDrift()) {
-            $io->success('No provider drift. Baseline is current.');
+            $io->success(
+                'No provider drift. '.$report->comparedSources.' source(s) compared against the committed baseline.'
+            );
 
             return Command::SUCCESS;
         }

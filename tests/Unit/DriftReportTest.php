@@ -7,7 +7,7 @@ use Prism\ProviderWatch\Diff\ChangeType;
 use Prism\ProviderWatch\Diff\DriftReport;
 
 it('renders a clean no-drift report', function () {
-    $report = new DriftReport([], [], '2026-07-25T00:00:00Z');
+    $report = new DriftReport([], [], '2026-07-25T00:00:00Z', comparedSources: 12);
 
     expect($report->hasDrift())->toBeFalse()
         ->and($report->toMarkdown())->toContain('no drift');
@@ -193,7 +193,7 @@ it('says nothing of the sort when there is no drift', function () {
     // A no-drift report must not carry an urgent directive — a channel that
     // shouts on every run is one that stops being read, which is the failure
     // this whole file exists to avoid.
-    $report = new DriftReport([], [], '2026-07-25T00:00:00Z');
+    $report = new DriftReport([], [], '2026-07-25T00:00:00Z', comparedSources: 12);
 
     expect($report->toMarkdown())
         ->not->toContain('Do not wait for the operator')

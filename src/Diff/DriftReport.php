@@ -38,7 +38,38 @@ final readonly class DriftReport
          * @var list<string>
          */
         public array $dispatch = [],
+        /**
+         * How many sources had real data on BOTH sides, so the comparison meant
+         * something. Counted with {@see Differ::isComparable()} — the same
+         * predicate the differ gates on, deliberately shared so this number
+         * cannot drift from the work it describes.
+         *
+         * DEFAULTS TO ZERO, WHICH READS AS "NOTHING WAS COMPARED". That is the
+         * fail-closed direction and it is the point: an absent count must not
+         * render as the reassuring message. A nullable "unknown" that fell back
+         * to "no drift" would reopen exactly the hole this closes.
+         */
+        public int $comparedSources = 0,
+        /** Sources skipped, failed, or seen for the first time. */
+        public int $uncomparedSources = 0,
     ) {}
+
+    /**
+     * Whether this run actually compared anything.
+     *
+     * WHY THIS IS A SEPARATE QUESTION FROM hasDrift(). An empty change list has
+     * two causes that look identical: upstream did not move, or nothing was
+     * polled successfully. Before this existed the report asserted the first
+     * one unconditionally -- "All watched providers match the committed
+     * baseline" -- so a total network failure produced a confident no-drift
+     * report, a zero exit, and a baseline overwritten with the failures.
+     *
+     * Silence is not agreement.
+     */
+    public function compared(): bool
+    {
+        return $this->comparedSources > 0;
+    }
 
     /**
      * The same report, carrying what the dispatchers reported doing.
@@ -64,6 +95,8 @@ final readonly class DriftReport
             $this->categories,
             $this->why,
             $lines,
+            $this->comparedSources,
+            $this->uncomparedSources,
         );
     }
 
@@ -173,6 +206,12 @@ final readonly class DriftReport
         return [
             'generated_at' => $this->generatedAt,
             'has_drift' => $this->hasDrift(),
+            // Without these an archived no-drift report is unfalsifiable: a run
+            // that compared 41 sources and one that compared none both wrote
+            // has_drift:false and change_count:0.
+            'compared' => $this->compared(),
+            'compared_sources' => $this->comparedSources,
+            'uncompared_sources' => $this->uncomparedSources,
             'change_count' => count($this->changes),
             'changes' => array_map(static fn (Change $c): array => $c->toArray(), $this->changes),
             // What was actually done about it. Present even when empty, so an
@@ -184,8 +223,24 @@ final readonly class DriftReport
 
     public function toMarkdown(): string
     {
+        if (! $this->hasDrift() && ! $this->compared()) {
+            return "# Provider watch — NOTHING WAS COMPARED\n\n"
+                ."_Checked at {$this->generatedAt}. {$this->uncomparedSources} source(s) polled, "
+                ."0 compared against a baseline._\n\n"
+                ."> **This is not a no-drift result. This run cannot say whether anything changed.**\n"
+                ."> Every source was skipped, failed, or seen for the first time, so there was\n"
+                ."> nothing to compare. Read the operational notes for the reason — a network\n"
+                ."> failure, an expired credential and a renamed upstream feed all land here.\n"
+                ."> The committed baseline was left intact rather than overwritten with the\n"
+                ."> failures, so the next successful run reports the real change instead of\n"
+                ."> silently adopting it.\n";
+        }
+
         if (! $this->hasDrift()) {
-            return "# Provider watch — no drift\n\n_Checked at {$this->generatedAt}. All watched providers match the committed baseline._\n";
+            return "# Provider watch — no drift\n\n"
+                ."_Checked at {$this->generatedAt}. {$this->comparedSources} source(s) compared "
+                ."against the committed baseline, {$this->uncomparedSources} not compared. "
+                ."Every compared source matches._\n";
         }
 
         $lines = [

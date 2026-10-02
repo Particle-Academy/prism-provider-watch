@@ -51,6 +51,25 @@ final class ProviderRegistry
         return new self($definitions);
     }
 
+    /**
+     * A registry composed directly, for callers that already hold their
+     * definitions.
+     *
+     * ADDED FOR TESTABILITY, and the gap it closes is not academic. Until this
+     * existed the only way to get a registry was fromConfigFile(), which builds
+     * LIVE network sources through the SourceFactory — so WatchRun, the class
+     * that loads the baseline and decides what to persist, could not be
+     * exercised without the network and had no tests at all. The defect that
+     * prompted this (a failed poll overwriting a good baseline) lived in
+     * exactly that untested seam.
+     *
+     * @param  list<ProviderDefinition>  $definitions
+     */
+    public static function of(array $definitions): self
+    {
+        return new self($definitions);
+    }
+
     /** @return list<ProviderDefinition> */
     public function all(): array
     {

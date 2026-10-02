@@ -54,7 +54,7 @@ it('archives a drift report so the next run cannot erase it', function () {
 
     // The clean run that follows a re-baseline — it must not take the record
     // with it when it overwrites latest.md.
-    $dispatcher->dispatch(new DriftReport([], [], '2026-08-17T07:25:00Z'));
+    $dispatcher->dispatch(new DriftReport([], [], '2026-08-17T07:25:00Z', comparedSources: 12));
 
     expect(file_get_contents($this->dir.'/latest.md'))->toContain('no drift')
         ->and(glob($this->dir.'/archive/*.md'))->toHaveCount(1)
