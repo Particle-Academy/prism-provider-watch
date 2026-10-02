@@ -169,3 +169,33 @@ it('never lets triage decide what is RECORDED', function () {
     expect($report->toArray()['changes'])->toHaveCount(3)
         ->and($report->toArray()['change_count'])->toBe(3);
 });
+
+it('tells the reader to act without waiting, and says why that outranks everything else', function () {
+    // The directive lives in the ISSUE BODY, not only in an agent's memory,
+    // because the reader is whoever opens the issue and that is not reliably an
+    // agent that has read ours. Asserted here because prose nothing checks is
+    // how seven of these reports accumulated unread in the first place.
+    $report = new DriftReport(
+        [new Change('openai', 'models', ChangeType::Added, 'gpt-5')],
+        [],
+        '2026-07-25T00:00:00Z',
+    );
+
+    expect($report->toMarkdown())
+        ->toContain('Triage this now. Do not wait for the operator.')
+        ->toContain('#1 priority')
+        ->toContain('All client demands are secondary.')
+        // The triage instruction itself: a title is not evidence.
+        ->toContain('CHECK THE CLAIM AGAINST THE SOURCE');
+});
+
+it('says nothing of the sort when there is no drift', function () {
+    // A no-drift report must not carry an urgent directive — a channel that
+    // shouts on every run is one that stops being read, which is the failure
+    // this whole file exists to avoid.
+    $report = new DriftReport([], [], '2026-07-25T00:00:00Z');
+
+    expect($report->toMarkdown())
+        ->not->toContain('Do not wait for the operator')
+        ->and($report->toMarkdown())->not->toContain('#1 priority');
+});
