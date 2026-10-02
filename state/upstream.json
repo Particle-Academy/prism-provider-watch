@@ -46,8 +46,12 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "#1037 fix(openai): support GPT-5.6 Luna structured mode (@johnmccombs1)",
+                "latest": "#1038 fix: encode empty tool properties as JSON object instead of array (@zain534102)",
                 "entries": [
+                    {
+                        "id": "1038",
+                        "title": "#1038 fix: encode empty tool properties as JSON object instead of array (@zain534102)"
+                    },
                     {
                         "id": "1037",
                         "title": "#1037 fix(openai): support GPT-5.6 Luna structured mode (@johnmccombs1)"
@@ -163,10 +167,6 @@
                     {
                         "id": "995",
                         "title": "#995 feat(audio): Allow diarization with Mistral (@NoelDeMartin)"
-                    },
-                    {
-                        "id": "994",
-                        "title": "#994 fix(gemini,groq): include finish reason in unhandled finish reason exceptions (@datashaman)"
                     }
                 ]
             }

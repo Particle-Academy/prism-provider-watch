@@ -53,8 +53,24 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v2.23.0",
+                "latest": "v2.27.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.27.0",
+                        "title": "v2.27.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.26.0",
+                        "title": "v2.26.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.25.0",
+                        "title": "v2.25.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.24.0",
+                        "title": "v2.24.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.23.0",
                         "title": "v2.23.0"
@@ -78,22 +94,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.18.1",
                         "title": "v2.18.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.18.0",
-                        "title": "v2.18.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.17.0",
-                        "title": "v2.17.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.16.0",
-                        "title": "v2.16.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.15.0",
-                        "title": "v2.15.0"
                     }
                 ]
             }
