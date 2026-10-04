@@ -68,8 +68,18 @@ php bin/prism-watch run --only openai,anthropic --issues --fail-on-drift
 - **Reports** are written to `reports/latest.{md,json}`. Point
   `PRISM_WATCH_REPORT_DIR` at the envelope's `.ai/knowledge/provider-watch/` to
   make each report durable, agent-readable shared knowledge.
-- Exit code: `0` normally, `20` with `--fail-on-drift` when drift is found (so a
-  scheduler can branch into a follow-up).
+- Exit codes, so a scheduler can branch on what actually happened:
+  - `0` — sources were compared and the committed baseline is current.
+  - `20` — drift found, with `--fail-on-drift`. Takes precedence over `22`, so a
+    scheduler branching on drift never has that branch replaced by another problem.
+  - `21` — **nothing was compared.** Every source was skipped, failed, or seen for
+    the first time, so the run cannot say whether anything changed. Not a no-drift
+    result, and non-zero whatever `--fail-on-drift` says.
+  - `22` — the run was otherwise fine and the **committed baseline is stale**: state
+    files have been uncommitted for longer than
+    `PRISM_WATCH_BASELINE_MAX_AGE_DAYS` (default `2`). Every run prints the
+    baseline's age whether or not it fails on it; outside a git checkout it says so
+    rather than claiming the baseline is current.
 
 ### `--issues` has a precondition, and it fails quietly without it
 

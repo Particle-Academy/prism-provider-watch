@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Prism\ProviderWatch\Console;
 
+use DateTimeImmutable;
 use Prism\ProviderWatch\Diff\Differ;
 use Prism\ProviderWatch\Dispatch\AgentInboxDispatcher;
 use Prism\ProviderWatch\Dispatch\FileDriftDispatcher;
@@ -17,6 +18,8 @@ use Prism\ProviderWatch\Mcp\McpEndpoints;
 use Prism\ProviderWatch\Providers\ProviderRegistry;
 use Prism\ProviderWatch\Providers\SourceFactory;
 use Prism\ProviderWatch\Snapshot\SnapshotStore;
+use Prism\ProviderWatch\Vcs\BaselineFreshness;
+use Prism\ProviderWatch\Vcs\ProcessGit;
 use Prism\ProviderWatch\Watch\WatchRun;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -146,7 +149,26 @@ final class RunCommand extends Command
             return 21;
         }
 
+        // Said on EVERY run, drift or not, and before any verdict below. The
+        // rule in AGENTS.md -- that the baseline advances after someone reads
+        // what changed -- was enforced by nothing, and went nineteen days
+        // unobserved. Reporting it unconditionally is what makes it a
+        // measurement rather than a convention.
+        $freshness = BaselineFreshness::inspect(
+            new ProcessGit($this->home),
+            $stateDir,
+            new DateTimeImmutable($this->now()),
+        );
+        $stale = $freshness->isStale($this->baselineThresholdDays());
+        $io->writeln(($stale ? '<comment>· ' : '<info>· ').$freshness->describe().($stale ? '</comment>' : '</info>'));
+
         if (! $report->hasDrift()) {
+            if ($stale) {
+                $io->error('No provider drift, but the committed baseline is stale. See the line above.');
+
+                return 22;
+            }
+
             $io->success(
                 'No provider drift. '.$report->comparedSources.' source(s) compared against the committed baseline.'
             );
@@ -157,7 +179,29 @@ final class RunCommand extends Command
         $io->warning(count($report->changes).' change(s) detected across '.count($report->byProvider()).' provider(s).');
         $io->writeln($report->toMarkdown());
 
-        return $input->getOption('fail-on-drift') ? 20 : Command::SUCCESS;
+        // --fail-on-drift keeps 20 even when the baseline is also stale: a
+        // scheduler branching on "drift found" must not have that branch
+        // silently replaced by a different problem. 22 is for the run that
+        // would otherwise have reported itself fine.
+        if ($input->getOption('fail-on-drift')) {
+            return 20;
+        }
+
+        return $stale ? 22 : Command::SUCCESS;
+    }
+
+    /**
+     * Days of uncommitted baseline tolerated before the run reports a problem.
+     *
+     * A policy choice, not a measurement, which is why it is nameable: two days
+     * leaves a normal same-day watch-and-review cycle alone and still catches a
+     * baseline nobody is advancing.
+     */
+    private function baselineThresholdDays(): int
+    {
+        $configured = getenv('PRISM_WATCH_BASELINE_MAX_AGE_DAYS');
+
+        return is_string($configured) && ctype_digit($configured) ? (int) $configured : 2;
     }
 
     private function now(): string

@@ -42,6 +42,15 @@ drift" forever — the diff is against yesterday's fetch instead of against what
 was last understood. When a run reports drift, the baseline advances *after*
 someone has read what changed, not as part of the run.
 
+**That rule went nineteen days unobserved, so it is now measured.** The run prints
+how old the committed baseline is on every pass and exits `22` when state files
+have been uncommitted past `PRISM_WATCH_BASELINE_MAX_AGE_DAYS` (default 2). It
+still does not commit anything — reconciliation stays a human review step, which
+is the whole point of the rule above. What changed is that the gap between what
+the differ compares against and what was last understood can no longer be held
+without somebody being told. Outside a git checkout the check reports that it
+cannot tell, rather than that the baseline is fine.
+
 `reports/` is output. Sectioning and formatting there are read by humans and by
 the Lab; keep the structure stable enough to parse.
 
