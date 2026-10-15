@@ -67,67 +67,67 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Add new theme options to the theme enum",
+                "latest": "Extend input schema with new message and function call types",
                 "entries": [
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/145fd3b2e30e3ac87a4ed915913f6fa1217974fa",
-                        "title": "Add new theme options to the theme enum"
+                        "id": "tag:github.com,2008:Grit::Commit/2cc9e14c68e9155615b2eb2c22dfd59b075922d2",
+                        "title": "Extend input schema with new message and function call types"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/f0f75fa2dc028562a108c317e5f0d8040a9a1e28",
-                        "title": "Add `api_source` grouping to usage and cost metrics endpoints"
+                        "id": "tag:github.com,2008:Grit::Commit/aeb6a041dc56c011ca9f12127ec898f911100aa0",
+                        "title": "Add detailed description for raw audio encoding in API"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/de3a025c40f84b99d1401ee1c5fe69fbf8de789b",
-                        "title": "Add client_secret object to realtime transcription session responses"
+                        "id": "tag:github.com,2008:Grit::Commit/92e6a99ec0d7b04a467728ca43b8307046036c35",
+                        "title": "Add prompt caching support with explicit breakpoints and options"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/7985a05894663234794e47812d18d766fd300b95",
-                        "title": "Add example binary video content to video download API"
+                        "id": "tag:github.com,2008:Grit::Commit/08c3481801c51d7e427cd7265b3be04976e8a175",
+                        "title": "Add Live output audio fixture playback events"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/a9380e1e6c3b1920f51a5a889c024d1dc53f3b83",
-                        "title": "Clarify voice creation types and live-only support for prompt-based and"
+                        "id": "tag:github.com,2008:Grit::Commit/0fce13ce46465f8876e4a968a73c7bca3aa8e335",
+                        "title": "Allow updating API key scopes and add Live audio fixture events"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/de29325cd908bf16a7459a580fd63ea89de868cc",
-                        "title": "Add new agent session webhook events"
+                        "id": "tag:github.com,2008:Grit::Commit/803527048c4b4d059cee8129eac9630f2130bc75",
+                        "title": "Add detailed error and moderation info to image generation responses"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/1ad799c44f799ac80956271d19d323b6f94b70de",
-                        "title": "Allow null in state variable and additionalProperties types"
+                        "id": "tag:github.com,2008:Grit::Commit/77618e641a840768f1e58197ca53ddedffea6df9",
+                        "title": "Add endpoint to update project API key expiration"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/c300cf282956e5f29c23f00def1d68ab44f8d7ab",
-                        "title": "Allow null values for some fields and update deprecated function_call"
+                        "id": "tag:github.com,2008:Grit::Commit/e95c0fe615f45a19e8878af923a729948445a6bd",
+                        "title": "Add new endpoint for organization-wide Decisions API usage reporting"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/68c120755bed244650d23f6a6696c93d847da1dd",
-                        "title": "Update ChatKit sessions API with enhanced session details and examples"
+                        "id": "tag:github.com,2008:Grit::Commit/0ef225c4f701046f8fe88cae9d29d0df4d1a9fa9",
+                        "title": "Add new agent.environment event statuses to API"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/40496dbddd5b66bbe0a77d38bcb435884b7b8370",
-                        "title": "Add prompt-based method for creating custom voices"
+                        "id": "tag:github.com,2008:Grit::Commit/05dbd425520dc216de5dedab86bdcdaed7372097",
+                        "title": "Add new webhook events for agent environment suspended and expired"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/9615b2529642c2715c08fd4c948f19c81e40b08a",
-                        "title": "Remove 'ultrafast' service tier from model request options"
+                        "id": "tag:github.com,2008:Grit::Commit/fd15e7a8c492008db728bd079d936b7b7bf13e23",
+                        "title": "Allow HTTP(S) image URLs in decision input alongside data URLs"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/9f25f93610b782cd518d6470ccfafc614d28b079",
-                        "title": "Allow resetting or replacing agent reasoning configuration on update"
+                        "id": "tag:github.com,2008:Grit::Commit/c72241375fbe33a7192f5660b173e541b56e4b2f",
+                        "title": "Add new agent environment event types to event enum"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/cc501ffca9347cbdbfd514686ef7cf9ce8cd5b5c",
-                        "title": "Deprecate DALL·E models and default to GPT image models for generation"
+                        "id": "tag:github.com,2008:Grit::Commit/978d0571e61ab2b18b80a84d17276f05403aace7",
+                        "title": "Add OpenAI-hosted agent environments API and lifecycle webhooks"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/8ed26659b17b552ce6dffc5ae0ea12da1067fd2c",
-                        "title": "Add 'original' enum value and structured output metadata"
+                        "id": "tag:github.com,2008:Grit::Commit/f6f80b90bb96d74c22b05a68295af6e7359a48a6",
+                        "title": "Add detailed schemas for Live tool selection parameters"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/b0abb638b0577e7878190d36e66a0d499bc61709",
-                        "title": "Add new LiveSessionCreateRequest schema supporting WebRTC and SIP"
+                        "id": "tag:github.com,2008:Grit::Commit/b2751c6625493c9c64db21b1b26a4d9300e589e3",
+                        "title": "Restrict 'type' field in voice object to 'audio_sample' enum only"
                     }
                 ]
             }
@@ -136,47 +136,47 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v3.23.0",
+                "latest": "v3.31.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.31.0",
+                        "title": "v3.31.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.30.0",
+                        "title": "v3.30.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.29.0",
+                        "title": "v3.29.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.28.0",
+                        "title": "v3.28.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.27.0",
+                        "title": "v3.27.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.26.1",
+                        "title": "v3.26.1"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.26.0",
+                        "title": "v3.26.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.25.0",
+                        "title": "v3.25.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.24.0",
+                        "title": "v3.24.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.23.0",
                         "title": "v3.23.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.22.1",
-                        "title": "v3.22.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.22.0",
-                        "title": "v3.22.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.21.0",
-                        "title": "v3.21.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.20.0",
-                        "title": "v3.20.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.19.2",
-                        "title": "v3.19.2"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.19.1",
-                        "title": "v3.19.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.19.0",
-                        "title": "v3.19.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.18.0",
-                        "title": "v3.18.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.17.0",
-                        "title": "v3.17.0"
                     }
                 ]
             }

@@ -5,7 +5,7 @@
             "ok": true,
             "note": "",
             "data": {
-                "count": 12,
+                "count": 13,
                 "models": [
                     "grok-4.20-0309-non-reasoning",
                     "grok-4.20-0309-reasoning",
@@ -18,7 +18,8 @@
                     "grok-imagine-image",
                     "grok-imagine-image-quality",
                     "grok-imagine-video",
-                    "grok-imagine-video-1.5"
+                    "grok-imagine-video-1.5",
+                    "grok-imagine-video-1.5-lite"
                 ]
             }
         }

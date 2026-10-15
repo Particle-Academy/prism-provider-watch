@@ -28,16 +28,28 @@
                         "title": "#1015 feat(openai):  add support for the “text_verbosity” parameter in structured output (@Jimerson21)"
                     },
                     {
-                        "id": "1010",
-                        "title": "#1010 Ollama embeddings: `dimensions` provider option is sent twice, triggering \"invalid option\" warning (@timmcleod)"
-                    },
-                    {
                         "id": "1007",
                         "title": "#1007 Systemic tool-call normalization bug: multiple providers crash with raw TypeError on missing or scalar arguments (@ruttydm)"
                     },
                     {
                         "id": "1006",
                         "title": "#1006 OpenRouter ToolCallMap throws TypeError on malformed JSON arguments instead of a handled provider error (@ruttydm)"
+                    },
+                    {
+                        "id": "990",
+                        "title": "#990 DeepSeek streaming: HTTP client buffers full response body (missing stream option on Guzzle/Laravel HTTP) (@Jeo-Meek)"
+                    },
+                    {
+                        "id": "979",
+                        "title": "#979 Laravel MCP Tools support doesn't honor `shouldRegister` (@machour)"
+                    },
+                    {
+                        "id": "966",
+                        "title": "#966 Groq streaming: ToolCall construction crashes when tool call ID is null in stream delta (@rezaulhreza)"
+                    },
+                    {
+                        "id": "962",
+                        "title": "#962 OpenAI FineTuned models support structure mode (@danielsimkus)"
                     }
                 ]
             }
@@ -46,11 +58,15 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "#1038 fix: encode empty tool properties as JSON object instead of array (@zain534102)",
+                "latest": "#1041 fix(openrouter): handle malformed tool call arguments (@sean0407)",
                 "entries": [
                     {
+                        "id": "1041",
+                        "title": "#1041 fix(openrouter): handle malformed tool call arguments (@sean0407)"
+                    },
+                    {
                         "id": "1038",
-                        "title": "#1038 fix: encode empty tool properties as JSON object instead of array (@zain534102)"
+                        "title": "#1038 fix: encode empty tool properties as JSON object instead of array (@heyzainali)"
                     },
                     {
                         "id": "1037",
@@ -74,7 +90,7 @@
                     },
                     {
                         "id": "1028",
-                        "title": "#1028 Carrying the torch: 48 community PRs merged + fork fixes (v0.101.0-v0.109.0) (@wishborn)"
+                        "title": "#1028 The fork's complete state, v0.101.0 → v0.131.0 (@wishborn)"
                     },
                     {
                         "id": "1026",
@@ -85,20 +101,8 @@
                         "title": "#1025 fix(prism): avoid requiring full laravel framework (@MiddleSokilAI)"
                     },
                     {
-                        "id": "1024",
-                        "title": "#1024 Fix: Nullable Enum Schema (@yiedpozi)"
-                    },
-                    {
                         "id": "1022",
                         "title": "#1022 docs: show OpenAI-compatible gateway setup (@cerebrixos)"
-                    },
-                    {
-                        "id": "1021",
-                        "title": "#1021 fix(deepseek): extract prompt_cache_hit_tokens and reasoning_tokens from usage (@Lintume)"
-                    },
-                    {
-                        "id": "1020",
-                        "title": "#1020 fix(deepseek): preserve reasoning_content in thinking mode for tool calls (@tlotli)"
                     },
                     {
                         "id": "1018",
@@ -109,64 +113,72 @@
                         "title": "#1014 feat(fim): add FIM request and response handling for Mistral AI (@mssayari)"
                     },
                     {
-                        "id": "1013",
-                        "title": "#1013 fix(ollama): exclude top-level keys from nested options in embeddings request (@sv-LayZ)"
-                    },
-                    {
-                        "id": "1012",
-                        "title": "#1012 fix: cast empty tool properties to object for Mistral API compatibility (@afiktahirov)"
-                    },
-                    {
-                        "id": "1009",
-                        "title": "#1009 Fix: concurrent tool execution fails with ProcessDriver due to $this capture and circular references (@vinitkadam03)"
-                    },
-                    {
-                        "id": "1008",
-                        "title": "#1008 feat(gemini): extracting rate limit violations and retry-after information  (@cutlope)"
-                    },
-                    {
                         "id": "1005",
                         "title": "#1005 fix: streaming tool call arguments silently drop '0' characters (@JuanmaMingot)"
-                    },
-                    {
-                        "id": "1004",
-                        "title": "#1004 fix(ToolMap): remove static duplicate parameters handling in mapping openrouter (@Aldiwildan77)"
-                    },
-                    {
-                        "id": "1003",
-                        "title": "#1003 feat(anthropic): handle pause_turn and refusal stop reasons (@adamthehutt)"
-                    },
-                    {
-                        "id": "1002",
-                        "title": "#1002 feat(gemini): add service_tier support for Flex Inference (@smittie2000)"
-                    },
-                    {
-                        "id": "1001",
-                        "title": "#1001 fix(Media): normalize mimeType for audio/wav (@barryvdh)"
-                    },
-                    {
-                        "id": "1000",
-                        "title": "#1000 fix(Gemini): Add `Usage` to `StepFinishEvent` (@Plytas)"
                     },
                     {
                         "id": "999",
                         "title": "#999 feat(OpenAI): Enable structured output support for OpenAI gpt-5.4 mini and nano models (@aivis)"
                     },
                     {
-                        "id": "998",
-                        "title": "#998 Anthropic adaptive thinking (@GrahamCampbell)"
+                        "id": "994",
+                        "title": "#994 fix(gemini,groq): include finish reason in unhandled finish reason exceptions (@datashaman)"
                     },
                     {
-                        "id": "997",
-                        "title": "#997 fix(gemini): normalize array-type nullable notation in SchemaMap prop… (@yondifon)"
+                        "id": "988",
+                        "title": "#988 feat(anthropic): add fine-grained tool streaming support (@alexlampdeveloper)"
                     },
                     {
-                        "id": "996",
-                        "title": "#996 fix: handle unknown finish reasons gracefully (@cainydev)"
+                        "id": "978",
+                        "title": "#978 feature(providers): Added Vertex support (@machour)"
                     },
                     {
-                        "id": "995",
-                        "title": "#995 feat(audio): Allow diarization with Mistral (@NoelDeMartin)"
+                        "id": "960",
+                        "title": "#960 feat(xai): Add XAI image generation handler and tests (@timothymarois)"
+                    },
+                    {
+                        "id": "951",
+                        "title": "#951 Feature - Add support to batching and files API's for Anthropic and OpenAI (@joao-salomao)"
+                    },
+                    {
+                        "id": "950",
+                        "title": "#950 fix: when calling tools on xai provider with no parameters causing an api error (@ewanwalk)"
+                    },
+                    {
+                        "id": "937",
+                        "title": "#937 fix: sanitize control characters in ToolCall::arguments() before json_decode (@ruttydm)"
+                    },
+                    {
+                        "id": "932",
+                        "title": "#932 Feat: 🛠️ Add client-executed tools & human-in-the-loop tool approval flow (@vinitkadam03)"
+                    },
+                    {
+                        "id": "920",
+                        "title": "#920 Feat: 💰 Track cost in Usage value object (@vinitkadam03)"
+                    },
+                    {
+                        "id": "918",
+                        "title": "#918 feat: Add ModelsLab provider for image generation (@adhikjoshi)"
+                    },
+                    {
+                        "id": "899",
+                        "title": "#899 feat: modelslab provider integration (@devsahm)"
+                    },
+                    {
+                        "id": "897",
+                        "title": "#897 Feature/add vertex (@mdietger)"
+                    },
+                    {
+                        "id": "835",
+                        "title": "#835 add azure to prism (@Matildevoldsen)"
+                    },
+                    {
+                        "id": "810",
+                        "title": "#810 feat: Add an interface for the ability to process speech-to-text asynchronously (@dcaswel)"
+                    },
+                    {
+                        "id": "757",
+                        "title": "#757 feat(replicate): add complete Replicate provider with all features (@cemarta7)"
                     }
                 ]
             }

@@ -5,7 +5,7 @@
             "ok": true,
             "note": "",
             "data": {
-                "count": 39,
+                "count": 40,
                 "models": [
                     "deep-research-max-preview-04-2026",
                     "deep-research-preview-04-2026",
@@ -34,6 +34,7 @@
                     "gemini-3.6-flash",
                     "gemini-3.7-flash",
                     "gemini-3.8-flash",
+                    "gemini-4-argon",
                     "gemini-embedding-001",
                     "gemini-embedding-2",
                     "gemini-flash-latest",
@@ -53,8 +54,28 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v2.27.0",
+                "latest": "v2.31.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.31.0",
+                        "title": "v2.31.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.30.1",
+                        "title": "v2.30.1"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.30.0",
+                        "title": "v2.30.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.29.0",
+                        "title": "v2.29.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.28.0",
+                        "title": "v2.28.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.27.0",
                         "title": "v2.27.0"
@@ -74,26 +95,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.23.0",
                         "title": "v2.23.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.22.0",
-                        "title": "v2.22.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.21.0",
-                        "title": "v2.21.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.20.0",
-                        "title": "v2.20.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.19.0",
-                        "title": "v2.19.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.18.1",
-                        "title": "v2.18.1"
                     }
                 ]
             }
