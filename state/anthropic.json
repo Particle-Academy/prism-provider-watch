@@ -31,8 +31,36 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v1.14.0",
+                "latest": "v2.3.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/590187800/v2.3.0",
+                        "title": "v2.3.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/590187800/v2.2.0",
+                        "title": "v2.2.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/590187800/v2.1.0",
+                        "title": "v2.1.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/590187800/v2.0.0",
+                        "title": "v2.0.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/590187800/v1.17.0",
+                        "title": "v1.17.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/590187800/v1.16.0",
+                        "title": "v1.16.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/590187800/v1.15.0",
+                        "title": "v1.15.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/590187800/v1.14.0",
                         "title": "v1.14.0"
@@ -44,34 +72,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/590187800/v1.12.1",
                         "title": "v1.12.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/590187800/v1.12.0",
-                        "title": "v1.12.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/590187800/v1.11.0",
-                        "title": "v1.11.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/590187800/v1.10.0",
-                        "title": "v1.10.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/590187800/v1.9.0",
-                        "title": "v1.9.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/590187800/v1.8.0",
-                        "title": "v1.8.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/590187800/v1.7.0",
-                        "title": "v1.7.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/590187800/v1.6.0",
-                        "title": "v1.6.0"
                     }
                 ]
             }

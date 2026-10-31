@@ -5,7 +5,7 @@
             "ok": true,
             "note": "",
             "data": {
-                "count": 40,
+                "count": 36,
                 "models": [
                     "deep-research-max-preview-04-2026",
                     "deep-research-preview-04-2026",
@@ -18,9 +18,7 @@
                     "gemini-2.5-pro-preview-tts",
                     "gemini-3-flash-preview",
                     "gemini-3-pro-image",
-                    "gemini-3-pro-image-preview",
                     "gemini-3.1-flash-image",
-                    "gemini-3.1-flash-image-preview",
                     "gemini-3.1-flash-lite",
                     "gemini-3.1-flash-lite-image",
                     "gemini-3.1-flash-lite-preview",
@@ -40,13 +38,11 @@
                     "gemini-flash-latest",
                     "gemini-flash-lite-latest",
                     "gemini-omni-flash-preview",
+                    "gemini-pro-latest",
                     "gemma-4-26b-a4b-it",
                     "gemma-4-31b-it",
                     "lyria-3-clip-preview",
-                    "lyria-3-pro-preview",
-                    "veo-3.1-fast-generate-preview",
-                    "veo-3.1-generate-preview",
-                    "veo-3.1-lite-generate-preview"
+                    "lyria-3-pro-preview"
                 ]
             }
         },
@@ -54,8 +50,20 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v2.31.0",
+                "latest": "v2.34.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.34.0",
+                        "title": "v2.34.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.33.0",
+                        "title": "v2.33.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v2.32.0",
+                        "title": "v2.32.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.31.0",
                         "title": "v2.31.0"
@@ -83,18 +91,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.26.0",
                         "title": "v2.26.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.25.0",
-                        "title": "v2.25.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.24.0",
-                        "title": "v2.24.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.23.0",
-                        "title": "v2.23.0"
                     }
                 ]
             }
