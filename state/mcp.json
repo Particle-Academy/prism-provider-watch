@@ -5,8 +5,24 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v1.0.2",
+                "latest": "v1.1.2",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/984189516/v1.1.2",
+                        "title": "v1.1.2"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/984189516/v1.1.1",
+                        "title": "v1.1.1"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/984189516/v0.9.7",
+                        "title": "v0.9.7"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/984189516/v1.1.0",
+                        "title": "v1.1.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/984189516/v1.0.2",
                         "title": "v1.0.2"
@@ -30,22 +46,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/984189516/v1.0.0-beta.1",
                         "title": "v1.0.0-beta.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/984189516/v0.9.4",
-                        "title": "v0.9.4"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/984189516/v0.9.3",
-                        "title": "v0.9.3"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/984189516/v0.9.2",
-                        "title": "v0.9.2"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/984189516/v0.9.1",
-                        "title": "v0.9.1"
                     }
                 ]
             }
@@ -103,8 +103,40 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "1.32.1",
+                "latest": "1.32.2",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/862578138/1.32.2",
+                        "title": "1.32.2"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/862578138/v2.4.0",
+                        "title": "2.4.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/server-legacy@2.4.0",
+                        "title": "@modelcontextprotocol/server-legacy@2.4.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/server@2.4.0",
+                        "title": "@modelcontextprotocol/server@2.4.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/node@2.1.2",
+                        "title": "@modelcontextprotocol/node@2.1.2"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/core@2.4.0",
+                        "title": "@modelcontextprotocol/core@2.4.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/codemod@2.4.0",
+                        "title": "@modelcontextprotocol/codemod@2.4.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/client@2.4.0",
+                        "title": "@modelcontextprotocol/client@2.4.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/862578138/1.32.1",
                         "title": "1.32.1"
@@ -112,38 +144,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/862578138/v2.3.1",
                         "title": "2.3.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/server-legacy@2.3.1",
-                        "title": "@modelcontextprotocol/server-legacy@2.3.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/server@2.3.1",
-                        "title": "@modelcontextprotocol/server@2.3.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/core@2.3.1",
-                        "title": "@modelcontextprotocol/core@2.3.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/codemod@2.3.1",
-                        "title": "@modelcontextprotocol/codemod@2.3.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/client@2.3.1",
-                        "title": "@modelcontextprotocol/client@2.3.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/862578138/1.32.0",
-                        "title": "1.32.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/862578138/v2.3.0",
-                        "title": "2.3.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/862578138/@modelcontextprotocol/server-legacy@2.3.0",
-                        "title": "@modelcontextprotocol/server-legacy@2.3.0"
                     }
                 ]
             }

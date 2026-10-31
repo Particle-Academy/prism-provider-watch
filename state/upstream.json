@@ -5,8 +5,12 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "#1034 Prism drops streamed content deltas equal to `\"0\"` (@moaines)",
+                "latest": "#1052 Mistral structured output fails on reasoning models (content array with thinking part) (@AmirTahmasbii)",
                 "entries": [
+                    {
+                        "id": "1052",
+                        "title": "#1052 Mistral structured output fails on reasoning models (content array with thinking part) (@AmirTahmasbii)"
+                    },
                     {
                         "id": "1034",
                         "title": "#1034 Prism drops streamed content deltas equal to `\"0\"` (@moaines)"
@@ -34,22 +38,6 @@
                     {
                         "id": "1006",
                         "title": "#1006 OpenRouter ToolCallMap throws TypeError on malformed JSON arguments instead of a handled provider error (@ruttydm)"
-                    },
-                    {
-                        "id": "990",
-                        "title": "#990 DeepSeek streaming: HTTP client buffers full response body (missing stream option on Guzzle/Laravel HTTP) (@Jeo-Meek)"
-                    },
-                    {
-                        "id": "979",
-                        "title": "#979 Laravel MCP Tools support doesn't honor `shouldRegister` (@machour)"
-                    },
-                    {
-                        "id": "966",
-                        "title": "#966 Groq streaming: ToolCall construction crashes when tool call ID is null in stream delta (@rezaulhreza)"
-                    },
-                    {
-                        "id": "962",
-                        "title": "#962 OpenAI FineTuned models support structure mode (@danielsimkus)"
                     }
                 ]
             }
@@ -58,8 +46,36 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "#1041 fix(openrouter): handle malformed tool call arguments (@sean0407)",
+                "latest": "#1051 fix(groq): key streamed tool calls by the delta's index, not its position in the chunk (@pcbeingused333)",
                 "entries": [
+                    {
+                        "id": "1051",
+                        "title": "#1051 fix(groq): key streamed tool calls by the delta's index, not its position in the chunk (@pcbeingused333)"
+                    },
+                    {
+                        "id": "1050",
+                        "title": "#1050 feat(perplexity): send X-Pplx-Integration header (@qirh)"
+                    },
+                    {
+                        "id": "1048",
+                        "title": "#1048 fix(tool): honor shouldRegister on Laravel MCP tools (@nbullorini)"
+                    },
+                    {
+                        "id": "1047",
+                        "title": "#1047 feat(tool): decode an object or array argument a model sent as a string of JSON (@wishborn)"
+                    },
+                    {
+                        "id": "1046",
+                        "title": "#1046 fix(gemini): report a CONTINUATION finish as Length (@wishborn)"
+                    },
+                    {
+                        "id": "1045",
+                        "title": "#1045 Stop fetching media URLs implicitly; add a guarded fetch for untrusted URLs (@wishborn)"
+                    },
+                    {
+                        "id": "1044",
+                        "title": "#1044 feat(deepseek): allow disabling thinking mode via provider options (@lucascamp)"
+                    },
                     {
                         "id": "1041",
                         "title": "#1041 fix(openrouter): handle malformed tool call arguments (@sean0407)"
@@ -151,34 +167,6 @@
                     {
                         "id": "932",
                         "title": "#932 Feat: 🛠️ Add client-executed tools & human-in-the-loop tool approval flow (@vinitkadam03)"
-                    },
-                    {
-                        "id": "920",
-                        "title": "#920 Feat: 💰 Track cost in Usage value object (@vinitkadam03)"
-                    },
-                    {
-                        "id": "918",
-                        "title": "#918 feat: Add ModelsLab provider for image generation (@adhikjoshi)"
-                    },
-                    {
-                        "id": "899",
-                        "title": "#899 feat: modelslab provider integration (@devsahm)"
-                    },
-                    {
-                        "id": "897",
-                        "title": "#897 Feature/add vertex (@mdietger)"
-                    },
-                    {
-                        "id": "835",
-                        "title": "#835 add azure to prism (@Matildevoldsen)"
-                    },
-                    {
-                        "id": "810",
-                        "title": "#810 feat: Add an interface for the ability to process speech-to-text asynchronously (@dcaswel)"
-                    },
-                    {
-                        "id": "757",
-                        "title": "#757 feat(replicate): add complete Replicate provider with all features (@cemarta7)"
                     }
                 ]
             }
