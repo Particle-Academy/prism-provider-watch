@@ -65,67 +65,67 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Clarify markup image support in image editing API",
+                "latest": "Replace enums with const values for event and item types",
                 "entries": [
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/c2aecc2fbe1ddff3e7500a0eaa5c2bc4c19c5318",
-                        "title": "Clarify markup image support in image editing API"
+                        "id": "tag:github.com,2008:Grit::Commit/b100c081884af2333bf3834308213b6dc48e182f",
+                        "title": "Replace enums with const values for event and item types"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/2e9ebb365c2e8332c73f3ee8b562dca8dc0047ce",
-                        "title": "Remove redundant enumDescriptions from fixed enum properties"
+                        "id": "tag:github.com,2008:Grit::Commit/3a86853dfeda756c12b6b88aceeb196d078f9364",
+                        "title": "Add expires_in_seconds field to API key update response"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/8c668caa924f24baa77679fc6635ed56659fae06",
-                        "title": "Add optional strength parameter for realtime noise reduction"
+                        "id": "tag:github.com,2008:Grit::Commit/b50f08617fb0c9952edbba81be2e5ea78f3fa6bd",
+                        "title": "Move environment field in CreateAgentSessionParams for clarity"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/7405814c8f868f921766e7948c37b0c024e02fa9",
-                        "title": "Add 'generate' boolean flag to control output generation in responses"
+                        "id": "tag:github.com,2008:Grit::Commit/69a45a53a857c87f4d2795f0c4c248834c0896af",
+                        "title": "Replace enum fields with const for fixed string values"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/4854a49187854fd789e234c5601650df4b30f5d8",
-                        "title": "Allow updating session tools in agent session API"
+                        "id": "tag:github.com,2008:Grit::Commit/cd82ad68f3841d43d695e895fc25d31faa8eb0ec",
+                        "title": "Clarify truncation strategy description for model responses"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/b85fb6c6239c20f9c739413065c56d9831aeedad",
-                        "title": "Add action review mode to session resources and parameters"
+                        "id": "tag:github.com,2008:Grit::Commit/06c320b68e715198e7263b6d10e83a05d640b0da",
+                        "title": "Deprecate the instructions field for compaction customization"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/4d668327d2b7ef3528af62f3e45af8a91fd7c2a0",
-                        "title": "Add keywords parameter to guide audio transcription"
+                        "id": "tag:github.com,2008:Grit::Commit/c6522b4e0c48b88b95bb427e09268954d0213e31",
+                        "title": "Add new valid options to the petBreed enumeration"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/9107f19a6c66eedeb043be38daf9148b34d7d5dc",
-                        "title": "Add text output configuration to response configuration updates"
+                        "id": "tag:github.com,2008:Grit::Commit/cefe9e22a7ffe5ccdb3f8097b5286cf6728d2605",
+                        "title": "Clarify error headers description in API responses"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/089b14f36daffb267f94770535e2de56b17de785",
-                        "title": "Add experimental 'time_awareness' setting to agent configuration"
+                        "id": "tag:github.com,2008:Grit::Commit/f1510da36cbc8a37e2e170d91367f11ef3249b86",
+                        "title": "Replace enum with const for fixed string fields in webhook endpoint APIs"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/aa880040fa7b23c8a7e3618b5ca757ecec71de95",
-                        "title": "Add 'markup' property to image editing endpoints"
+                        "id": "tag:github.com,2008:Grit::Commit/59f5565459caae84f43c49a738248cf2b268a70f",
+                        "title": "Add live.transport.connected webhook for Live WebRTC session start"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/26a299159673d20d5cf0faf10e691beed3fed52d",
-                        "title": "Add context compaction settings to agent configuration APIs"
+                        "id": "tag:github.com,2008:Grit::Commit/8d845994d29ca6ded7719b1dbb7ff24a7a0f1feb",
+                        "title": "Increase maxLength for namespace fields from 64 to 128 characters"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/0757443aeccc65f8801f7431506a36e97fea076d",
-                        "title": "Add structured input types for Realtime response API"
+                        "id": "tag:github.com,2008:Grit::Commit/926a7b8133226630bac025350e84b0ca5c31d45a",
+                        "title": "Add OCI external key support in encryption key configurations"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/ff80a233ed16a05164390fd7fc92f085414a0f67",
-                        "title": "Mark /audio/translations endpoint as deprecated and update TTS model de@"
+                        "id": "tag:github.com,2008:Grit::Commit/16d16882db0f4a05716784a37e6a62f0b6ffa693",
+                        "title": "docs: consolidate AGENTS.md guidance (#595)"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/cfe1bd3dab4b742db6c955e9b77aef6523dcc51d",
-                        "title": "Add support for sending SIP DTMF keypresses via new command"
+                        "id": "tag:github.com,2008:Grit::Commit/b4bc957c6270f0eaad1ec3dc5bbf570456a0fe52",
+                        "title": "Clarify description for image generation token usage"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/b3e28b9f099b713925a6100b83cd77d96ff45a18",
-                        "title": "Add external key management endpoints for organizations"
+                        "id": "tag:github.com,2008:Grit::Commit/c6a8424b610b319ee9efd06b27b2f4e3452334ae",
+                        "title": "Add prompt cache lifetime option to agent sessions and turns"
                     }
                 ]
             }
@@ -134,8 +134,40 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v3.42.0",
+                "latest": "v3.49.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.49.0",
+                        "title": "v3.49.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.48.0",
+                        "title": "v3.48.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.47.0",
+                        "title": "v3.47.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.46.0",
+                        "title": "v3.46.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.45.0",
+                        "title": "v3.45.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.44.0",
+                        "title": "v3.44.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.43.0",
+                        "title": "v3.43.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.42.1",
+                        "title": "v3.42.1"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.42.0",
                         "title": "v3.42.0"
@@ -143,38 +175,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.41.0",
                         "title": "v3.41.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.40.0",
-                        "title": "v3.40.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.39.0",
-                        "title": "v3.39.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.38.0",
-                        "title": "v3.38.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.37.0",
-                        "title": "v3.37.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.36.1",
-                        "title": "v3.36.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.36.0",
-                        "title": "v3.36.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.35.1",
-                        "title": "v3.35.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.35.0",
-                        "title": "v3.35.0"
                     }
                 ]
             }

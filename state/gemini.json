@@ -5,7 +5,7 @@
             "ok": true,
             "note": "",
             "data": {
-                "count": 36,
+                "count": 37,
                 "models": [
                     "deep-research-max-preview-04-2026",
                     "deep-research-preview-04-2026",
@@ -33,6 +33,7 @@
                     "gemini-3.7-flash",
                     "gemini-3.8-flash",
                     "gemini-4-argon",
+                    "gemini-4-carbon",
                     "gemini-embedding-001",
                     "gemini-embedding-2",
                     "gemini-flash-latest",
@@ -50,8 +51,16 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v2.34.0",
+                "latest": "v3.1.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v3.1.0",
+                        "title": "v3.1.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/899744518/v3.0.0",
+                        "title": "v3.0.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.34.0",
                         "title": "v2.34.0"
@@ -83,14 +92,6 @@
                     {
                         "id": "tag:github.com,2008:Repository/899744518/v2.28.0",
                         "title": "v2.28.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.27.0",
-                        "title": "v2.27.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/899744518/v2.26.0",
-                        "title": "v2.26.0"
                     }
                 ]
             }
