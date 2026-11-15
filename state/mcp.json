@@ -148,6 +148,35 @@
                 ]
             }
         },
+        "server-versions": {
+            "ok": true,
+            "note": "",
+            "data": {
+                "latest": "2026-07-28",
+                "entries": [
+                    {
+                        "id": "official:2026-07-28",
+                        "title": "MCP schema 2026-07-28 is one of the 5 newest official versions"
+                    },
+                    {
+                        "id": "official:2025-11-25",
+                        "title": "MCP schema 2025-11-25 is one of the 5 newest official versions"
+                    },
+                    {
+                        "id": "official:2025-06-18",
+                        "title": "MCP schema 2025-06-18 is one of the 5 newest official versions"
+                    },
+                    {
+                        "id": "official:2025-03-26",
+                        "title": "MCP schema 2025-03-26 is one of the 5 newest official versions"
+                    },
+                    {
+                        "id": "official:2024-11-05",
+                        "title": "MCP schema 2024-11-05 is one of the 5 newest official versions"
+                    }
+                ]
+            }
+        },
         "spec": {
             "ok": true,
             "note": "",

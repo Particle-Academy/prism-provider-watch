@@ -143,6 +143,8 @@ return [
             'repos/prism-mcp/src/',
             'repos/prism-mcp-ts/src/index.ts',
             'repos/prism-mcp-py/src/prism_mcp/__init__.py',
+            'repos/prism-mcp-server-ts/src/index.ts',
+            'repos/prism-mcp-server-py/src/prism_mcp_server/__init__.py',
             'src/Tools/LaravelMcpTool.php',
             'composer.json',
         ],
@@ -151,6 +153,11 @@ return [
             ['type' => 'github-atom', 'id' => 'sdk-typescript', 'label' => 'MCP TypeScript SDK releases', 'url' => 'https://github.com/modelcontextprotocol/typescript-sdk/releases.atom'],
             ['type' => 'github-atom', 'id' => 'sdk-python', 'label' => 'MCP Python SDK releases', 'url' => 'https://github.com/modelcontextprotocol/python-sdk/releases.atom'],
             ['type' => 'github-atom', 'id' => 'laravel-mcp', 'label' => 'laravel/mcp releases', 'url' => 'https://github.com/laravel/mcp/releases.atom'],
+            // Standing rule (Wish, 2026-11-14): our MCP servers serve the five newest official schema versions.
+            ['type' => 'mcp-schema', 'id' => 'server-versions', 'label' => 'Our MCP servers against the five newest official MCP schema versions', 'keep' => 5, 'servers' => [
+                'prism-mcp-server-ts' => 'https://raw.githubusercontent.com/Particle-Academy/prism-mcp-server-ts/main/protocol-versions.json',
+                'prism-mcp-server-py' => 'https://raw.githubusercontent.com/Particle-Academy/prism-mcp-server-py/main/protocol-versions.json',
+            ]],
         ],
     ],
 
