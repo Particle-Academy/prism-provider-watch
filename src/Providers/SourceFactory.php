@@ -8,6 +8,7 @@ use InvalidArgumentException;
 use Prism\ProviderWatch\Http\Http;
 use Prism\ProviderWatch\Sources\GitHubAtomSource;
 use Prism\ProviderWatch\Sources\GitHubIssuesSource;
+use Prism\ProviderWatch\Sources\McpSchemaSource;
 use Prism\ProviderWatch\Sources\ModelsDevCatalog;
 use Prism\ProviderWatch\Sources\ModelsDevSource;
 use Prism\ProviderWatch\Sources\ModelsEndpointSource;
@@ -66,6 +67,14 @@ final class SourceFactory
                 kind: (string) ($descriptor['kind'] ?? GitHubIssuesSource::KIND_ISSUES),
                 token: $this->resolveKey(['GITHUB_TOKEN', 'GH_TOKEN']) ?: null,
                 max: (int) ($descriptor['max'] ?? 30),
+            ),
+            'mcp-schema' => new McpSchemaSource(
+                http: $this->http,
+                id: (string) $descriptor['id'],
+                label: (string) ($descriptor['label'] ?? $descriptor['id']),
+                servers: array_map('strval', (array) ($descriptor['servers'] ?? [])),
+                keep: (int) ($descriptor['keep'] ?? 5),
+                token: $this->resolveKey(['GITHUB_TOKEN', 'GH_TOKEN']) ?: null,
             ),
             default => throw new InvalidArgumentException("Unknown source type: {$type}"),
         };
