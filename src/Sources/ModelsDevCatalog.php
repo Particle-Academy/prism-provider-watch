@@ -49,6 +49,53 @@ final class ModelsDevCatalog
         return array_values(array_unique($ids));
     }
 
+    /**
+     * The price fields this watcher records, in the order they are recorded.
+     * Names are models.dev's own (`cost.input` etc.), USD per million tokens.
+     *
+     * models.dev publishes more under `cost` (reasoning, input_audio, tiers,
+     * context_over_200k). Those are deliberately not recorded: these four are
+     * what the Harness configures as its rates, so they are what a calibration
+     * check compares against. Widening the set later is a first observation for
+     * the new fields only if the differ is taught that too — see Differ.
+     */
+    public const PRICE_FIELDS = ['input', 'output', 'cache_read', 'cache_write'];
+
+    /**
+     * Per-model prices for a models.dev provider id, keyed by model id (sorted),
+     * each with exactly the {@see PRICE_FIELDS} keys in a fixed order.
+     *
+     * A field models.dev does not publish is null, NEVER 0: "free" and "unknown"
+     * are different facts, and a 0 here would make the first real price look
+     * like a price change. Values are floats so `3` and `3.0` upstream cannot
+     * produce two different snapshots of the same price.
+     *
+     * @return array<string, array<string, float|null>>|null
+     */
+    public function pricesFor(string $providerId): ?array
+    {
+        $this->ensureFetched();
+
+        $models = $this->catalog[$providerId]['models'] ?? null;
+        if (! is_array($models)) {
+            return null;
+        }
+
+        $prices = [];
+        foreach ($models as $id => $model) {
+            $cost = is_array($model) && is_array($model['cost'] ?? null) ? $model['cost'] : [];
+            $row = [];
+            foreach (self::PRICE_FIELDS as $field) {
+                $value = $cost[$field] ?? null;
+                $row[$field] = is_int($value) || is_float($value) ? (float) $value : null;
+            }
+            $prices[(string) $id] = $row;
+        }
+        ksort($prices, SORT_STRING);
+
+        return $prices;
+    }
+
     public function available(): bool
     {
         $this->ensureFetched();
