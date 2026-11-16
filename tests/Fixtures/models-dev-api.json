@@ -1,0 +1,282 @@
+{
+    "anthropic": {
+        "id": "anthropic",
+        "env": [
+            "ANTHROPIC_API_KEY"
+        ],
+        "npm": "@ai-sdk/anthropic",
+        "name": "Anthropic",
+        "doc": "https://docs.anthropic.com/en/docs/about-claude/models",
+        "models": {
+            "claude-sonnet-4-5": {
+                "id": "claude-sonnet-4-5",
+                "name": "Claude Sonnet 4.5 (latest)",
+                "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+                "family": "claude-sonnet",
+                "attachment": true,
+                "reasoning": true,
+                "reasoning_options": [
+                    {
+                        "type": "budget_tokens",
+                        "min": 1024
+                    }
+                ],
+                "tool_call": true,
+                "structured_output": true,
+                "temperature": true,
+                "knowledge": "2025-07-31",
+                "release_date": "2025-09-29",
+                "last_updated": "2025-09-29",
+                "modalities": {
+                    "input": [
+                        "text",
+                        "image",
+                        "pdf"
+                    ],
+                    "output": [
+                        "text"
+                    ]
+                },
+                "open_weights": false,
+                "limit": {
+                    "context": 200000,
+                    "output": 64000
+                },
+                "status": "deprecated",
+                "cost": {
+                    "input": 3,
+                    "output": 15,
+                    "cache_read": 0.3,
+                    "cache_write": 3.75
+                },
+                "canonical_model_id": "anthropic/claude-sonnet-4-5"
+            },
+            "claude-haiku-4-5": {
+                "id": "claude-haiku-4-5",
+                "name": "Claude Haiku 4.5 (latest)",
+                "description": "Fast Claude lane for lightweight agents, office tasks, and responsive chat",
+                "family": "claude-haiku",
+                "attachment": true,
+                "reasoning": true,
+                "reasoning_options": [
+                    {
+                        "type": "budget_tokens",
+                        "min": 1024
+                    }
+                ],
+                "tool_call": true,
+                "structured_output": true,
+                "temperature": true,
+                "knowledge": "2025-02-28",
+                "release_date": "2025-10-15",
+                "last_updated": "2025-10-15",
+                "modalities": {
+                    "input": [
+                        "text",
+                        "image",
+                        "pdf"
+                    ],
+                    "output": [
+                        "text"
+                    ]
+                },
+                "open_weights": false,
+                "limit": {
+                    "context": 200000,
+                    "output": 64000
+                },
+                "cost": {
+                    "input": 1,
+                    "output": 5,
+                    "cache_read": 0.1,
+                    "cache_write": 1.25
+                },
+                "canonical_model_id": "anthropic/claude-haiku-4-5"
+            }
+        }
+    },
+    "openai": {
+        "id": "openai",
+        "env": [
+            "OPENAI_API_KEY"
+        ],
+        "npm": "@ai-sdk/openai",
+        "name": "OpenAI",
+        "doc": "https://platform.openai.com/docs/models",
+        "models": {
+            "gpt-4o": {
+                "id": "gpt-4o",
+                "name": "GPT-4o",
+                "description": "Omni-era GPT for multimodal chat, practical coding, and general assistants",
+                "family": "gpt",
+                "attachment": true,
+                "reasoning": false,
+                "tool_call": true,
+                "structured_output": true,
+                "temperature": true,
+                "knowledge": "2023-09",
+                "release_date": "2024-05-13",
+                "last_updated": "2024-08-06",
+                "modalities": {
+                    "input": [
+                        "text",
+                        "image",
+                        "pdf"
+                    ],
+                    "output": [
+                        "text"
+                    ]
+                },
+                "open_weights": false,
+                "limit": {
+                    "context": 128000,
+                    "output": 16384
+                },
+                "experimental": {
+                    "modes": {
+                        "fast": {
+                            "cost": {
+                                "input": 4.25,
+                                "output": 17,
+                                "cache_read": 2.125
+                            },
+                            "provider": {
+                                "body": {
+                                    "service_tier": "priority"
+                                }
+                            }
+                        }
+                    }
+                },
+                "cost": {
+                    "input": 2.5,
+                    "output": 10,
+                    "cache_read": 1.25
+                }
+            },
+            "gpt-4-turbo": {
+                "id": "gpt-4-turbo",
+                "name": "GPT-4 Turbo",
+                "description": "Compact GPT model for low-latency assistance and high-volume workloads",
+                "family": "gpt",
+                "attachment": true,
+                "reasoning": false,
+                "tool_call": true,
+                "structured_output": false,
+                "temperature": true,
+                "knowledge": "2023-12",
+                "release_date": "2023-11-06",
+                "last_updated": "2024-04-09",
+                "modalities": {
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text"
+                    ]
+                },
+                "open_weights": false,
+                "limit": {
+                    "context": 128000,
+                    "output": 4096
+                },
+                "status": "deprecated",
+                "cost": {
+                    "input": 10,
+                    "output": 30
+                }
+            },
+            "gpt-image-2": {
+                "id": "gpt-image-2",
+                "type": "image",
+                "name": "gpt-image-2",
+                "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+                "family": "gpt-image",
+                "attachment": true,
+                "reasoning": false,
+                "tool_call": false,
+                "temperature": false,
+                "release_date": "2026-04-21",
+                "last_updated": "2026-04-21",
+                "modalities": {
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "image"
+                    ]
+                },
+                "open_weights": false,
+                "limit": {
+                    "context": 0,
+                    "input": 0,
+                    "output": 0
+                },
+                "canonical_model_id": "openai/gpt-image-2"
+            }
+        }
+    },
+    "deepseek": {
+        "id": "deepseek",
+        "env": [
+            "DEEPSEEK_API_KEY"
+        ],
+        "npm": "@ai-sdk/openai-compatible",
+        "api": "https://api.deepseek.com",
+        "name": "DeepSeek",
+        "doc": "https://api-docs.deepseek.com/quick_start/pricing",
+        "models": {
+            "deepseek-v4-pro": {
+                "id": "deepseek-v4-pro",
+                "name": "DeepSeek V4 Pro",
+                "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+                "family": "deepseek-thinking",
+                "attachment": false,
+                "reasoning": true,
+                "reasoning_options": [
+                    {
+                        "type": "toggle"
+                    },
+                    {
+                        "type": "effort",
+                        "values": [
+                            "low",
+                            "high",
+                            "max"
+                        ]
+                    }
+                ],
+                "tool_call": true,
+                "interleaved": {
+                    "field": "reasoning_content"
+                },
+                "structured_output": true,
+                "temperature": true,
+                "release_date": "2026-08-13",
+                "last_updated": "2026-08-22",
+                "modalities": {
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text"
+                    ]
+                },
+                "open_weights": true,
+                "limit": {
+                    "context": 1048576,
+                    "output": 393216
+                },
+                "cost": {
+                    "input": 0.66,
+                    "output": 1.98,
+                    "reasoning": 1.98,
+                    "cache_read": 0.022
+                },
+                "canonical_model_id": "deepseek/deepseek-v4-pro-0813"
+            }
+        }
+    }
+}

@@ -8,8 +8,8 @@ namespace Prism\ProviderWatch\Sources;
  * A provider's model roster, sourced from the shared {@see ModelsDevCatalog}
  * (models.dev). Keyless and uniform across every provider — one catalog fetch
  * serves them all — so it replaces per-provider /models polling. The snapshot
- * shape ({count, models}) matches the endpoint source, so the differ is
- * unchanged.
+ * shape ({count, models}) matches the endpoint source, so the roster diff is
+ * shared; `prices` (G-291) is extra and diffed only where both sides carry it.
  */
 final class ModelsDevSource implements Source
 {
@@ -44,6 +44,7 @@ final class ModelsDevSource implements Source
         return SourceResult::ok($this->id, [
             'count' => count($models),
             'models' => $models,
+            'prices' => $this->catalog->pricesFor($this->providerId) ?? [],
         ]);
     }
 }
