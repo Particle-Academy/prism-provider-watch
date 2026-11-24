@@ -13,12 +13,18 @@ final class GuzzleHttp implements Http
     private readonly Client $client;
 
     /**
+     * A redirect is followed only when it keeps the request's scheme, host and
+     * port; any other redirect answers status 0, with no request made to it.
+     *
      * @param  callable|null  $handler  the transport under the middleware stack; null for Guzzle's default
      */
     public function __construct(private readonly float $timeout = 15.0, ?callable $handler = null)
     {
+        $stack = HandlerStack::create($handler);
+        $stack->push(SameOriginRedirects::middleware(), 'same_origin_redirects');
+
         $this->client = new Client([
-            'handler' => HandlerStack::create($handler),
+            'handler' => $stack,
             'timeout' => $this->timeout,
             'connect_timeout' => 5.0,
             'http_errors' => false,
