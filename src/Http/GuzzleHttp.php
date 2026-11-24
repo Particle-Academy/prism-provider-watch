@@ -6,14 +6,19 @@ namespace Prism\ProviderWatch\Http;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\HandlerStack;
 
 final class GuzzleHttp implements Http
 {
     private readonly Client $client;
 
-    public function __construct(private readonly float $timeout = 15.0)
+    /**
+     * @param  callable|null  $handler  the transport under the middleware stack; null for Guzzle's default
+     */
+    public function __construct(private readonly float $timeout = 15.0, ?callable $handler = null)
     {
         $this->client = new Client([
+            'handler' => HandlerStack::create($handler),
             'timeout' => $this->timeout,
             'connect_timeout' => 5.0,
             'http_errors' => false,
