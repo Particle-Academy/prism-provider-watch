@@ -5,7 +5,7 @@
             "ok": true,
             "note": "",
             "data": {
-                "count": 379,
+                "count": 380,
                 "models": [
                     "aion-labs/aion-2.0",
                     "aion-labs/aion-3.0",
@@ -35,12 +35,9 @@
                     "anthropic/claude-sonnet-4.6",
                     "anthropic/claude-sonnet-5",
                     "anthropic/claude-sonnet-5.5",
-                    "baidu/ernie-5.5-flash-preview",
+                    "baidu/ernie-5.5-flash-preview:free",
                     "baidu/ernie-light-dt-1.0-intl",
-                    "bytedance-seed/seed-1.6",
-                    "bytedance-seed/seed-1.6-flash",
                     "bytedance-seed/seed-2-1-turbo",
-                    "bytedance-seed/seed-2.0-code",
                     "bytedance-seed/seed-2.0-lite",
                     "bytedance-seed/seed-2.0-mini",
                     "bytedance/ui-tars-1.5-7b",
@@ -50,7 +47,6 @@
                     "cohere/command-r-08-2024",
                     "cohere/command-r-plus-08-2024",
                     "cohere/command-r7b-12-2024",
-                    "cohere/north-mini-code:free",
                     "deepseek/deepseek-chat",
                     "deepseek/deepseek-chat-v3-0324",
                     "deepseek/deepseek-chat-v3.1",
@@ -90,6 +86,8 @@
                     "google/gemini-3.8-flash",
                     "google/gemini-4-argon",
                     "google/gemini-4-carbon",
+                    "google/gemini-4-hydrogen",
+                    "google/gemini-4-neon",
                     "google/gemini-nano-banana-2.1",
                     "google/gemini-omni-1.1-flash",
                     "google/gemini-omni-1.2-flash",
@@ -109,18 +107,16 @@
                     "inclusionai/ling-3.0-flash-vl",
                     "inclusionai/ling-3.0-tiny",
                     "inclusionai/ling-3.1-flash",
+                    "inclusionai/ling-3.2-flash:free",
                     "inference-net/schematron-v2-small",
                     "inference-net/schematron-v2-turbo",
-                    "liquid/lfm-2.5-2.6b",
-                    "liquid/lfm-2.5-2.6b:free",
+                    "kt/midm-k-3.0-pro",
                     "liquid/lfm-2.5-24b-a2b",
                     "liquid/lfm-3-1.7b",
                     "liquid/lfm-3-1.7b:free",
                     "mancer/weaver",
-                    "meituan/longcat-2.0",
                     "meta-llama/llama-3.1-70b-instruct",
                     "meta-llama/llama-3.1-8b-instruct",
-                    "meta-llama/llama-3.2-1b-instruct",
                     "meta-llama/llama-3.2-3b-instruct",
                     "meta-llama/llama-3.3-70b-instruct",
                     "meta-llama/llama-4-maverick",
@@ -159,6 +155,7 @@
                     "mistralai/mistral-small-3.1-24b-instruct",
                     "mistralai/mistral-small-3.2-24b-instruct",
                     "mistralai/mixtral-8x22b-instruct",
+                    "mistralai/pixtral-large-2502",
                     "mistralai/voxtral-small-24b-2507",
                     "moondream/moondream3-preview",
                     "moondream/moondream3.1-9b-a2b",
@@ -172,6 +169,7 @@
                     "moonshotai/kimi-k3.1-pro",
                     "morph/morph-v3-fast",
                     "morph/morph-v3-large",
+                    "motif-technologies/motif-3",
                     "nex-agi/nex-n2.5-mini",
                     "nex-agi/nex-n2.5-pro",
                     "nex-agi/nex-n2.6",
@@ -235,6 +233,10 @@
                     "openai/gpt-6.1-sol-pro",
                     "openai/gpt-6.1-terra",
                     "openai/gpt-6.1-terra-pro",
+                    "openai/gpt-6.2-astra",
+                    "openai/gpt-6.2-astra-pro",
+                    "openai/gpt-6.2-sol",
+                    "openai/gpt-6.2-sol-pro",
                     "openai/gpt-audio",
                     "openai/gpt-audio-mini",
                     "openai/gpt-chat-latest",
@@ -249,6 +251,7 @@
                     "openrouter/fusion",
                     "openrouter/pareto-code",
                     "particle-ai/particle-1",
+                    "particle-ai/particle-1:free",
                     "perceptron/perceptron-mk1",
                     "perceptron/perceptron-mk1.5",
                     "perplexity/sonar",
@@ -259,7 +262,6 @@
                     "prism-ml/ternary-bonsai-2-27b",
                     "prism-ml/ternary-bonsai-2-9b",
                     "qwen/qwen-2.5-72b-instruct",
-                    "qwen/qwen-2.5-7b-instruct",
                     "qwen/qwen-2.5-coder-32b-instruct",
                     "qwen/qwen-plus",
                     "qwen/qwen2.5-vl-72b-instruct",
@@ -276,7 +278,6 @@
                     "qwen/qwen3-next-80b-a3b-instruct",
                     "qwen/qwen3-vl-235b-a22b-instruct",
                     "qwen/qwen3-vl-30b-a3b-instruct",
-                    "qwen/qwen3-vl-30b-a3b-thinking",
                     "qwen/qwen3-vl-8b-instruct",
                     "qwen/qwen3.5-122b-a10b",
                     "qwen/qwen3.5-27b",
@@ -299,6 +300,8 @@
                     "qwen/qwen3.8-max-0902",
                     "qwen/qwen3.8-max-prime",
                     "qwen/qwen3.8-omni-flash",
+                    "qwen/qwen4-max",
+                    "radixark/daisyrose-27b",
                     "recursive/flint-v1.0:free",
                     "reflection/beam-1.0-501b-a23b",
                     "rekaai/reka-edge",
@@ -314,24 +317,24 @@
                     "sao10k/l3.1-euryale-70b",
                     "scaledown/extract",
                     "scaledown/summarize",
-                    "stepfun/step-3.5-flash",
                     "stepfun/step-3.7-flash",
                     "stepfun/step-5-preview",
-                    "tencent/hunyuan-a13b-instruct",
                     "tencent/hy-mt2-1.8b",
                     "tencent/hy-mt2-30b-a3b",
                     "tencent/hy-mt2-7b",
                     "tencent/hy3",
-                    "tencent/hy3-preview",
                     "tencent/hy4",
+                    "tencent/hy4-flash",
                     "tencent/hy4-preview",
                     "thedrummer/cydonia-24b-v4.1",
                     "thedrummer/skyfall-36b-v2",
                     "thedrummer/unslopnemo-12b",
                     "thinkingmachines/inkling",
-                    "thinkingmachines/inkling-2-small:free",
+                    "thinkingmachines/inkling-2-mini",
+                    "thinkingmachines/inkling-2-small",
                     "thinkingmachines/inkling-small",
                     "unbiased/pareto-26.10",
+                    "unbiased/pareto-26.10-preview",
                     "unbiased/pareto-26.9",
                     "undi95/remm-slerp-l2-13b",
                     "upstage/solar-mini4",
@@ -343,13 +346,11 @@
                     "x-ai/grok-4.5",
                     "x-ai/grok-4.6",
                     "x-ai/grok-4.7",
-                    "x-ai/grok-build-0.1",
                     "xiaomi/mimo-v2.5",
                     "xiaomi/mimo-v2.5-pro",
                     "xiaomi/mimo-v2.6-flash",
                     "xiaomi/mimo-v2.6-pro",
                     "xiaomi/mimo-v2.6-pro-ultraspeed",
-                    "xingchen-agi/xing4.0-29b-a4b:free",
                     "z-ai/glm-4.5",
                     "z-ai/glm-4.5-air",
                     "z-ai/glm-4.5v",
@@ -386,7 +387,2289 @@
                     "~x-ai/grok-latest",
                     "~z-ai/glm-flash-latest",
                     "~z-ai/glm-latest"
-                ]
+                ],
+                "prices": {
+                    "aion-labs/aion-2.0": {
+                        "input": 0.8,
+                        "output": 1.6,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "aion-labs/aion-3.0": {
+                        "input": 3,
+                        "output": 6,
+                        "cache_read": 0.75,
+                        "cache_write": null
+                    },
+                    "aion-labs/aion-3.0-mini": {
+                        "input": 0.7,
+                        "output": 1.4,
+                        "cache_read": 0.18,
+                        "cache_write": null
+                    },
+                    "aion-labs/aion-3.5": {
+                        "input": 3,
+                        "output": 6,
+                        "cache_read": 0.75,
+                        "cache_write": null
+                    },
+                    "aion-labs/aion-3.5-mini": {
+                        "input": 0.7,
+                        "output": 1.4,
+                        "cache_read": 0.18,
+                        "cache_write": null
+                    },
+                    "aion-labs/aion-rp-llama-3.1-8b": {
+                        "input": 0.8,
+                        "output": 1.6,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "amazon/nova-2-lite-v1": {
+                        "input": 0.3,
+                        "output": 2.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "amazon/nova-lite-v1": {
+                        "input": 0.06,
+                        "output": 0.24,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "amazon/nova-micro-v1": {
+                        "input": 0.035,
+                        "output": 0.14,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "amazon/nova-premier-v1": {
+                        "input": 2.5,
+                        "output": 12.5,
+                        "cache_read": 0.625,
+                        "cache_write": null
+                    },
+                    "amazon/nova-pro-v1": {
+                        "input": 0.8,
+                        "output": 3.2,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "anthracite-org/magnum-v4-72b": {
+                        "input": 2.5,
+                        "output": 5,
+                        "cache_read": 2.5,
+                        "cache_write": null
+                    },
+                    "anthropic/claude-fable-5": {
+                        "input": 10,
+                        "output": 50,
+                        "cache_read": 1,
+                        "cache_write": 12.5
+                    },
+                    "anthropic/claude-fable-5.1": {
+                        "input": 10,
+                        "output": 50,
+                        "cache_read": 0.25,
+                        "cache_write": 12.5
+                    },
+                    "anthropic/claude-fable-5.2": {
+                        "input": 8,
+                        "output": 40,
+                        "cache_read": 0.2,
+                        "cache_write": 10
+                    },
+                    "anthropic/claude-haiku-4.5": {
+                        "input": 1,
+                        "output": 5,
+                        "cache_read": 0.1,
+                        "cache_write": 1.25
+                    },
+                    "anthropic/claude-haiku-5.5": {
+                        "input": 0.1,
+                        "output": 0.5,
+                        "cache_read": 0.01,
+                        "cache_write": 0.125
+                    },
+                    "anthropic/claude-opus-4.1": {
+                        "input": 15,
+                        "output": 75,
+                        "cache_read": 1.5,
+                        "cache_write": 18.75
+                    },
+                    "anthropic/claude-opus-4.5": {
+                        "input": 5,
+                        "output": 25,
+                        "cache_read": 0.5,
+                        "cache_write": 6.25
+                    },
+                    "anthropic/claude-opus-4.6": {
+                        "input": 5,
+                        "output": 25,
+                        "cache_read": 0.5,
+                        "cache_write": 6.25
+                    },
+                    "anthropic/claude-opus-4.7": {
+                        "input": 5,
+                        "output": 25,
+                        "cache_read": 0.5,
+                        "cache_write": 6.25
+                    },
+                    "anthropic/claude-opus-4.8": {
+                        "input": 5,
+                        "output": 25,
+                        "cache_read": 0.5,
+                        "cache_write": 6.25
+                    },
+                    "anthropic/claude-opus-5": {
+                        "input": 5,
+                        "output": 25,
+                        "cache_read": 0.5,
+                        "cache_write": 6.25
+                    },
+                    "anthropic/claude-opus-5.5": {
+                        "input": 4,
+                        "output": 20,
+                        "cache_read": 0.2,
+                        "cache_write": 5
+                    },
+                    "anthropic/claude-sonnet-4.5": {
+                        "input": 3,
+                        "output": 15,
+                        "cache_read": 0.3,
+                        "cache_write": 3.75
+                    },
+                    "anthropic/claude-sonnet-4.6": {
+                        "input": 3,
+                        "output": 15,
+                        "cache_read": 0.3,
+                        "cache_write": 3.75
+                    },
+                    "anthropic/claude-sonnet-5": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.2,
+                        "cache_write": 2.5
+                    },
+                    "anthropic/claude-sonnet-5.5": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 2.5
+                    },
+                    "baidu/ernie-5.5-flash-preview:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "baidu/ernie-light-dt-1.0-intl": {
+                        "input": 1.13,
+                        "output": 3.94,
+                        "cache_read": 0.113,
+                        "cache_write": null
+                    },
+                    "bytedance-seed/seed-2-1-turbo": {
+                        "input": 0.5,
+                        "output": 2.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "bytedance-seed/seed-2.0-lite": {
+                        "input": 0.25,
+                        "output": 2,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "bytedance-seed/seed-2.0-mini": {
+                        "input": 0.1,
+                        "output": 0.4,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "bytedance/ui-tars-1.5-7b": {
+                        "input": 0.1,
+                        "output": 0.2,
+                        "cache_read": 0.1,
+                        "cache_write": null
+                    },
+                    "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
+                        "input": 0.2,
+                        "output": 0.9,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "cohere/command-a": {
+                        "input": 2.5,
+                        "output": 10,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "cohere/command-a-plus": {
+                        "input": 0.3,
+                        "output": 1.5,
+                        "cache_read": 0.15,
+                        "cache_write": null
+                    },
+                    "cohere/command-r-08-2024": {
+                        "input": 0.15,
+                        "output": 0.6,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "cohere/command-r-plus-08-2024": {
+                        "input": 2.5,
+                        "output": 10,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "cohere/command-r7b-12-2024": {
+                        "input": 0.0375,
+                        "output": 0.15,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-chat": {
+                        "input": 0.2574,
+                        "output": 1.0287,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-chat-v3-0324": {
+                        "input": 0.25,
+                        "output": 1,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-chat-v3.1": {
+                        "input": 0.25,
+                        "output": 0.95,
+                        "cache_read": 0.13,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-r1-0528": {
+                        "input": 0.571,
+                        "output": 2.286,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-v3.1-terminus": {
+                        "input": 0.27,
+                        "output": 1,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-v3.2": {
+                        "input": 0.26,
+                        "output": 0.38,
+                        "cache_read": 0.13,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-v3.2-exp": {
+                        "input": 0.27,
+                        "output": 0.41,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-v4-flash": {
+                        "input": 0.09,
+                        "output": 0.18,
+                        "cache_read": 0.018,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-v4-flash-0731": {
+                        "input": 0.0434,
+                        "output": 0.3,
+                        "cache_read": 0.035,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-v4-flash-vision-exp": {
+                        "input": 0.2156,
+                        "output": 0.6468,
+                        "cache_read": 0.00686,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-v4-pro": {
+                        "input": 0.9,
+                        "output": 1.5,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-v4-pro-0813": {
+                        "input": 1.32,
+                        "output": 3.96,
+                        "cache_read": 0.044,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-v4.1-flash": {
+                        "input": 0.0498,
+                        "output": 0.1992,
+                        "cache_read": 0.000996,
+                        "cache_write": null
+                    },
+                    "deepseek/deepseek-v4.1-flash-1017": {
+                        "input": 0.15,
+                        "output": 0.6,
+                        "cache_read": 0.003,
+                        "cache_write": null
+                    },
+                    "dots-studio/dots-3-note-preview:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "elorian/glimpse": {
+                        "input": 0.6,
+                        "output": 3,
+                        "cache_read": 0.06,
+                        "cache_write": null
+                    },
+                    "fireworks/ember-1": {
+                        "input": 3,
+                        "output": 15,
+                        "cache_read": 0.3,
+                        "cache_write": null
+                    },
+                    "google/gemini-2.5-flash": {
+                        "input": 0.3,
+                        "output": 2.5,
+                        "cache_read": 0.03,
+                        "cache_write": 0.083333
+                    },
+                    "google/gemini-2.5-flash-image": {
+                        "input": 0.3,
+                        "output": 2.5,
+                        "cache_read": 0.03,
+                        "cache_write": 0.083333
+                    },
+                    "google/gemini-2.5-flash-lite": {
+                        "input": 0.1,
+                        "output": 0.4,
+                        "cache_read": 0.01,
+                        "cache_write": 0.083333
+                    },
+                    "google/gemini-2.5-pro": {
+                        "input": 1.25,
+                        "output": 10,
+                        "cache_read": 0.125,
+                        "cache_write": 0.375
+                    },
+                    "google/gemini-2.5-pro-preview": {
+                        "input": 1.25,
+                        "output": 10,
+                        "cache_read": 0.125,
+                        "cache_write": 0.375
+                    },
+                    "google/gemini-3-flash-preview": {
+                        "input": 0.5,
+                        "output": 3,
+                        "cache_read": 0.05,
+                        "cache_write": 0.083333
+                    },
+                    "google/gemini-3-pro-image": {
+                        "input": 2,
+                        "output": 12,
+                        "cache_read": 0.2,
+                        "cache_write": 0.375
+                    },
+                    "google/gemini-3-pro-image-preview": {
+                        "input": 2,
+                        "output": 12,
+                        "cache_read": 0.2,
+                        "cache_write": 0.375
+                    },
+                    "google/gemini-3.1-flash-image": {
+                        "input": 0.5,
+                        "output": 3,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemini-3.1-flash-image-preview": {
+                        "input": 0.5,
+                        "output": 3,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemini-3.1-flash-lite": {
+                        "input": 0.25,
+                        "output": 1.5,
+                        "cache_read": 0.025,
+                        "cache_write": 0.083333
+                    },
+                    "google/gemini-3.1-flash-lite-image": {
+                        "input": 0.25,
+                        "output": 1.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemini-3.1-flash-lite-preview": {
+                        "input": 0.25,
+                        "output": 1.5,
+                        "cache_read": 0.025,
+                        "cache_write": 0.083333
+                    },
+                    "google/gemini-3.1-pro-preview": {
+                        "input": 2,
+                        "output": 12,
+                        "cache_read": 0.2,
+                        "cache_write": 0.375
+                    },
+                    "google/gemini-3.1-pro-preview-customtools": {
+                        "input": 2,
+                        "output": 12,
+                        "cache_read": 0.2,
+                        "cache_write": 0.375
+                    },
+                    "google/gemini-3.5-flash": {
+                        "input": 1.5,
+                        "output": 9,
+                        "cache_read": 0.15,
+                        "cache_write": 0.083333
+                    },
+                    "google/gemini-3.5-flash-lite": {
+                        "input": 0.3,
+                        "output": 2.5,
+                        "cache_read": 0.03,
+                        "cache_write": 0.083333
+                    },
+                    "google/gemini-3.6-flash": {
+                        "input": 0.75,
+                        "output": 3.75,
+                        "cache_read": 0.075,
+                        "cache_write": 0.041667
+                    },
+                    "google/gemini-3.7-flash": {
+                        "input": 0.75,
+                        "output": 3.75,
+                        "cache_read": 0.075,
+                        "cache_write": 0.041667
+                    },
+                    "google/gemini-3.8-flash": {
+                        "input": 0.75,
+                        "output": 3.75,
+                        "cache_read": 0.075,
+                        "cache_write": 0.041667
+                    },
+                    "google/gemini-4-argon": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 0.1875
+                    },
+                    "google/gemini-4-carbon": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 0.1875
+                    },
+                    "google/gemini-4-hydrogen": {
+                        "input": 1.5,
+                        "output": 7.5,
+                        "cache_read": 0.075,
+                        "cache_write": 0.083333
+                    },
+                    "google/gemini-4-neon": {
+                        "input": 3,
+                        "output": 15,
+                        "cache_read": 0.15,
+                        "cache_write": 0.083333
+                    },
+                    "google/gemini-nano-banana-2.1": {
+                        "input": 1.5,
+                        "output": 7.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemini-omni-1.1-flash": {
+                        "input": 1.5,
+                        "output": 9,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemini-omni-1.2-flash": {
+                        "input": 1.5,
+                        "output": 9,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemma-2-27b-it": {
+                        "input": 0.65,
+                        "output": 0.65,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemma-3-12b-it": {
+                        "input": 0.05,
+                        "output": 0.15,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemma-3-27b-it": {
+                        "input": 0.08,
+                        "output": 0.16,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemma-3-4b-it": {
+                        "input": 0.04,
+                        "output": 0.05,
+                        "cache_read": 0.02,
+                        "cache_write": null
+                    },
+                    "google/gemma-4-26b-a4b-it": {
+                        "input": 0.09,
+                        "output": 0.3,
+                        "cache_read": 0.05,
+                        "cache_write": null
+                    },
+                    "google/gemma-4-26b-a4b-it:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemma-4-31b-it": {
+                        "input": 0.2,
+                        "output": 0.4,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/gemma-4-31b-it:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/lyria-3-clip-preview": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "google/lyria-3-pro-preview": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "gryphe/mythomax-l2-13b": {
+                        "input": 0.3,
+                        "output": 0.5,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "ibm-granite/granite-4.2-8b": {
+                        "input": 0.06,
+                        "output": 0.15,
+                        "cache_read": 0.015,
+                        "cache_write": null
+                    },
+                    "inclusionai/ling-3.0-flash": {
+                        "input": 0.021,
+                        "output": 0.063,
+                        "cache_read": 0.0042,
+                        "cache_write": null
+                    },
+                    "inclusionai/ling-3.0-flash-vl": {
+                        "input": 0.06,
+                        "output": 0.18,
+                        "cache_read": 0.012,
+                        "cache_write": null
+                    },
+                    "inclusionai/ling-3.0-tiny": {
+                        "input": 0.015,
+                        "output": 0.045,
+                        "cache_read": 0.003,
+                        "cache_write": null
+                    },
+                    "inclusionai/ling-3.1-flash": {
+                        "input": 0.06,
+                        "output": 0.18,
+                        "cache_read": 0.012,
+                        "cache_write": null
+                    },
+                    "inclusionai/ling-3.2-flash:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "inference-net/schematron-v2-small": {
+                        "input": 0.05,
+                        "output": 0.23,
+                        "cache_read": 0.05,
+                        "cache_write": null
+                    },
+                    "inference-net/schematron-v2-turbo": {
+                        "input": 0.03,
+                        "output": 0.15,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "kt/midm-k-3.0-pro": {
+                        "input": 0.2,
+                        "output": 0.8,
+                        "cache_read": 0.04,
+                        "cache_write": null
+                    },
+                    "liquid/lfm-2.5-24b-a2b": {
+                        "input": 0.05,
+                        "output": 0.7,
+                        "cache_read": 0.025,
+                        "cache_write": null
+                    },
+                    "liquid/lfm-3-1.7b": {
+                        "input": 0.08,
+                        "output": 0.2,
+                        "cache_read": 0.02,
+                        "cache_write": null
+                    },
+                    "liquid/lfm-3-1.7b:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "mancer/weaver": {
+                        "input": 0.3,
+                        "output": 0.5,
+                        "cache_read": 0.3,
+                        "cache_write": null
+                    },
+                    "meta-llama/llama-3.1-70b-instruct": {
+                        "input": 0.72,
+                        "output": 0.72,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "meta-llama/llama-3.1-8b-instruct": {
+                        "input": 0.02,
+                        "output": 0.04,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "meta-llama/llama-3.2-3b-instruct": {
+                        "input": 0.05,
+                        "output": 0.33,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "meta-llama/llama-3.3-70b-instruct": {
+                        "input": 0.71,
+                        "output": 0.71,
+                        "cache_read": 0.71,
+                        "cache_write": null
+                    },
+                    "meta-llama/llama-4-maverick": {
+                        "input": 0.35,
+                        "output": 1,
+                        "cache_read": 0.17,
+                        "cache_write": null
+                    },
+                    "meta-llama/llama-4-scout": {
+                        "input": 0.1,
+                        "output": 0.3,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "meta-llama/llama-guard-4-12b": {
+                        "input": 0.18,
+                        "output": 0.18,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "meta/muse-ember": {
+                        "input": 0.1,
+                        "output": 0.5,
+                        "cache_read": 0.004,
+                        "cache_write": 0.125
+                    },
+                    "meta/muse-glimmer-30b": {
+                        "input": 0.35,
+                        "output": 1.5,
+                        "cache_read": 0.04,
+                        "cache_write": null
+                    },
+                    "meta/muse-spark-1.1": {
+                        "input": 1.25,
+                        "output": 4.25,
+                        "cache_read": 0.15,
+                        "cache_write": null
+                    },
+                    "meta/muse-spark-1.2": {
+                        "input": 1.25,
+                        "output": 4.25,
+                        "cache_read": 0.15,
+                        "cache_write": null
+                    },
+                    "meta/muse-spark-1.2-contributor": {
+                        "input": 0.1,
+                        "output": 0.2,
+                        "cache_read": 0.002,
+                        "cache_write": null
+                    },
+                    "meta/muse-spark-1.3": {
+                        "input": 1.25,
+                        "output": 4.25,
+                        "cache_read": 0.15,
+                        "cache_write": null
+                    },
+                    "meta/muse-spark-1.3-contributor": {
+                        "input": 0.1,
+                        "output": 0.2,
+                        "cache_read": 0.002,
+                        "cache_write": null
+                    },
+                    "meta/muse-spark-open": {
+                        "input": 1.25,
+                        "output": 4.25,
+                        "cache_read": 0.15,
+                        "cache_write": null
+                    },
+                    "meta/muse-wonder": {
+                        "input": 4,
+                        "output": 20,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "microsoft/phi-4": {
+                        "input": 0.07,
+                        "output": 0.14,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "minimax/minimax-m2.5": {
+                        "input": 0.27,
+                        "output": 0.95,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "minimax/minimax-m2.7": {
+                        "input": 0.6,
+                        "output": 1.8,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "minimax/minimax-m3": {
+                        "input": 0.23,
+                        "output": 0.96,
+                        "cache_read": 0.05,
+                        "cache_write": null
+                    },
+                    "minimax/minimax-m3.1-flash": {
+                        "input": 0.135,
+                        "output": 0.54,
+                        "cache_read": 0.0135,
+                        "cache_write": null
+                    },
+                    "mistralai/codestral-2508": {
+                        "input": 0.3,
+                        "output": 0.9,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "mistralai/devstral-2512": {
+                        "input": 0.4,
+                        "output": 2,
+                        "cache_read": 0.04,
+                        "cache_write": null
+                    },
+                    "mistralai/ministral-14b-2512": {
+                        "input": 0.2,
+                        "output": 0.2,
+                        "cache_read": 0.02,
+                        "cache_write": null
+                    },
+                    "mistralai/ministral-3b-2512": {
+                        "input": 0.1,
+                        "output": 0.1,
+                        "cache_read": 0.01,
+                        "cache_write": null
+                    },
+                    "mistralai/ministral-8b-2512": {
+                        "input": 0.15,
+                        "output": 0.15,
+                        "cache_read": 0.015,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-large": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-large-2407": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-large-2512": {
+                        "input": 0.5,
+                        "output": 1.5,
+                        "cache_read": 0.05,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-large-4-0": {
+                        "input": 0.7,
+                        "output": 2.1,
+                        "cache_read": 0.07,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-medium-3": {
+                        "input": 0.44,
+                        "output": 2.2,
+                        "cache_read": 0.044,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-medium-3-5": {
+                        "input": 1.5,
+                        "output": 7.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-medium-3.1": {
+                        "input": 0.44,
+                        "output": 2.2,
+                        "cache_read": 0.044,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-nemo": {
+                        "input": 0.029,
+                        "output": 0.03,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-saba": {
+                        "input": 0.2,
+                        "output": 0.6,
+                        "cache_read": 0.02,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-small-24b-instruct-2501": {
+                        "input": 0.05,
+                        "output": 0.08,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-small-2603": {
+                        "input": 0.15,
+                        "output": 0.6,
+                        "cache_read": 0.015,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-small-3.1-24b-instruct": {
+                        "input": 0.351,
+                        "output": 0.555,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "mistralai/mistral-small-3.2-24b-instruct": {
+                        "input": 0.075,
+                        "output": 0.2,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "mistralai/mixtral-8x22b-instruct": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "mistralai/pixtral-large-2502": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "mistralai/voxtral-small-24b-2507": {
+                        "input": 0.1,
+                        "output": 0.3,
+                        "cache_read": 0.01,
+                        "cache_write": null
+                    },
+                    "moondream/moondream3-preview": {
+                        "input": 0.3,
+                        "output": 2.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "moondream/moondream3.1-9b-a2b": {
+                        "input": 0.3,
+                        "output": 2.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "moonshotai/kimi-k2": {
+                        "input": 0.57,
+                        "output": 2.3,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "moonshotai/kimi-k2-0905": {
+                        "input": 0.6,
+                        "output": 2.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "moonshotai/kimi-k2-thinking": {
+                        "input": 0.6,
+                        "output": 2.5,
+                        "cache_read": 0.15,
+                        "cache_write": null
+                    },
+                    "moonshotai/kimi-k2.5": {
+                        "input": 0.5,
+                        "output": 2.5,
+                        "cache_read": 0.15,
+                        "cache_write": null
+                    },
+                    "moonshotai/kimi-k2.6": {
+                        "input": 0.65,
+                        "output": 3.41,
+                        "cache_read": 0.15,
+                        "cache_write": null
+                    },
+                    "moonshotai/kimi-k2.7-code": {
+                        "input": 0.6,
+                        "output": 3,
+                        "cache_read": 0.12,
+                        "cache_write": null
+                    },
+                    "moonshotai/kimi-k3": {
+                        "input": 0.192,
+                        "output": 16,
+                        "cache_read": 0.182,
+                        "cache_write": null
+                    },
+                    "moonshotai/kimi-k3.1-pro": {
+                        "input": 0.2403,
+                        "output": 8.4023,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "morph/morph-v3-fast": {
+                        "input": 0.8,
+                        "output": 1.2,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "morph/morph-v3-large": {
+                        "input": 0.9,
+                        "output": 1.9,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "motif-technologies/motif-3": {
+                        "input": 0.3,
+                        "output": 1.2,
+                        "cache_read": 0.06,
+                        "cache_write": null
+                    },
+                    "nex-agi/nex-n2.5-mini": {
+                        "input": 0.025,
+                        "output": 0.1,
+                        "cache_read": 0.0025,
+                        "cache_write": null
+                    },
+                    "nex-agi/nex-n2.5-pro": {
+                        "input": 0.075,
+                        "output": 0.25,
+                        "cache_read": 0.015,
+                        "cache_write": null
+                    },
+                    "nex-agi/nex-n2.6": {
+                        "input": 0.12,
+                        "output": 0.4,
+                        "cache_read": 0.024,
+                        "cache_write": null
+                    },
+                    "nousresearch/hermes-4-405b": {
+                        "input": 1,
+                        "output": 3,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "nvidia/nemotron-3-nano-30b-a3b": {
+                        "input": 0.06,
+                        "output": 0.24,
+                        "cache_read": 0.012,
+                        "cache_write": null
+                    },
+                    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "nvidia/nemotron-3-super-120b-a12b": {
+                        "input": 0.075,
+                        "output": 0.4,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "nvidia/nemotron-3-ultra-550b-a55b": {
+                        "input": 0.5,
+                        "output": 2.2,
+                        "cache_read": 0.1,
+                        "cache_write": null
+                    },
+                    "nvidia/nemotron-3-ultra-550b-a55b:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "nvidia/nemotron-3.5-content-safety": {
+                        "input": 0.2,
+                        "output": 0.2,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "nvidia/nemotron-3.5-lightning": {
+                        "input": 0.07,
+                        "output": 0.2,
+                        "cache_read": 0.04,
+                        "cache_write": null
+                    },
+                    "nvidia/nemotron-3.5-lightning:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "nvidia/nemotron-3.5-super-vl": {
+                        "input": 0.15,
+                        "output": 0.47,
+                        "cache_read": 0.02,
+                        "cache_write": null
+                    },
+                    "nvidia/nemotron-3.5-super-vl:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-3.5-turbo-0613": {
+                        "input": 1,
+                        "output": 2,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-3.5-turbo-16k": {
+                        "input": 3,
+                        "output": 4,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-4": {
+                        "input": 30,
+                        "output": 60,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-4.1": {
+                        "input": 2,
+                        "output": 8,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "openai/gpt-4.1-mini": {
+                        "input": 0.4,
+                        "output": 1.6,
+                        "cache_read": 0.1,
+                        "cache_write": null
+                    },
+                    "openai/gpt-4.1-nano": {
+                        "input": 0.1,
+                        "output": 0.4,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "openai/gpt-4o": {
+                        "input": 2.5,
+                        "output": 10,
+                        "cache_read": 1.25,
+                        "cache_write": null
+                    },
+                    "openai/gpt-4o-2024-05-13": {
+                        "input": 5,
+                        "output": 15,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-4o-2024-08-06": {
+                        "input": 2.5,
+                        "output": 10,
+                        "cache_read": 1.25,
+                        "cache_write": null
+                    },
+                    "openai/gpt-4o-2024-11-20": {
+                        "input": 2.5,
+                        "output": 10,
+                        "cache_read": 1.25,
+                        "cache_write": null
+                    },
+                    "openai/gpt-4o-mini": {
+                        "input": 0.15,
+                        "output": 0.6,
+                        "cache_read": 0.075,
+                        "cache_write": null
+                    },
+                    "openai/gpt-4o-mini-2024-07-18": {
+                        "input": 0.15,
+                        "output": 0.6,
+                        "cache_read": 0.075,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5": {
+                        "input": 1.25,
+                        "output": 10,
+                        "cache_read": 0.125,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5-image": {
+                        "input": 10,
+                        "output": 10,
+                        "cache_read": 1.25,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5-image-mini": {
+                        "input": 2.5,
+                        "output": 2,
+                        "cache_read": 0.25,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5-mini": {
+                        "input": 0.25,
+                        "output": 2,
+                        "cache_read": 0.025,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5-nano": {
+                        "input": 0.05,
+                        "output": 0.4,
+                        "cache_read": 0.005,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5-pro": {
+                        "input": 15,
+                        "output": 120,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.1": {
+                        "input": 1.25,
+                        "output": 10,
+                        "cache_read": 0.125,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.1-codex": {
+                        "input": 1.25,
+                        "output": 10,
+                        "cache_read": 0.13,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.1-codex-max": {
+                        "input": 1.25,
+                        "output": 10,
+                        "cache_read": 0.125,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.1-codex-mini": {
+                        "input": 0.25,
+                        "output": 2,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.2": {
+                        "input": 1.75,
+                        "output": 14,
+                        "cache_read": 0.175,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.2-codex": {
+                        "input": 1.75,
+                        "output": 14,
+                        "cache_read": 0.175,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.2-pro": {
+                        "input": 21,
+                        "output": 168,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.3-codex": {
+                        "input": 1.75,
+                        "output": 14,
+                        "cache_read": 0.175,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.4": {
+                        "input": 2.5,
+                        "output": 15,
+                        "cache_read": 0.25,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.4-image-2": {
+                        "input": 8,
+                        "output": 15,
+                        "cache_read": 2,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.4-mini": {
+                        "input": 0.75,
+                        "output": 4.5,
+                        "cache_read": 0.075,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.4-nano": {
+                        "input": 0.2,
+                        "output": 1.25,
+                        "cache_read": 0.02,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.4-pro": {
+                        "input": 30,
+                        "output": 180,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.5": {
+                        "input": 5,
+                        "output": 30,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.5-pro": {
+                        "input": 30,
+                        "output": 180,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-5.6-luna": {
+                        "input": 0.2,
+                        "output": 1.2,
+                        "cache_read": 0.02,
+                        "cache_write": 0.25
+                    },
+                    "openai/gpt-5.6-luna-pro": {
+                        "input": 0.2,
+                        "output": 1.2,
+                        "cache_read": 0.02,
+                        "cache_write": 0.25
+                    },
+                    "openai/gpt-5.6-sol": {
+                        "input": 4,
+                        "output": 20,
+                        "cache_read": 0.4,
+                        "cache_write": 5
+                    },
+                    "openai/gpt-5.6-sol-pro": {
+                        "input": 4,
+                        "output": 20,
+                        "cache_read": 0.4,
+                        "cache_write": 5
+                    },
+                    "openai/gpt-5.6-terra": {
+                        "input": 2,
+                        "output": 12,
+                        "cache_read": 0.2,
+                        "cache_write": 2.5
+                    },
+                    "openai/gpt-5.6-terra-pro": {
+                        "input": 2,
+                        "output": 12,
+                        "cache_read": 0.2,
+                        "cache_write": 2.5
+                    },
+                    "openai/gpt-6-astra": {
+                        "input": 10,
+                        "output": 50,
+                        "cache_read": 1,
+                        "cache_write": 12.5
+                    },
+                    "openai/gpt-6-astra-pro": {
+                        "input": 10,
+                        "output": 50,
+                        "cache_read": 1,
+                        "cache_write": 12.5
+                    },
+                    "openai/gpt-6-luna": {
+                        "input": 0.1,
+                        "output": 0.5,
+                        "cache_read": 0.01,
+                        "cache_write": 0.125
+                    },
+                    "openai/gpt-6-luna-pro": {
+                        "input": 0.1,
+                        "output": 0.5,
+                        "cache_read": 0.01,
+                        "cache_write": 0.125
+                    },
+                    "openai/gpt-6-sol": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.2,
+                        "cache_write": 2.5
+                    },
+                    "openai/gpt-6-sol-pro": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.2,
+                        "cache_write": 2.5
+                    },
+                    "openai/gpt-6.1-sol": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 2.5
+                    },
+                    "openai/gpt-6.1-sol-pro": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 2.5
+                    },
+                    "openai/gpt-6.1-terra": {
+                        "input": 1,
+                        "output": 5,
+                        "cache_read": 0.05,
+                        "cache_write": 1.25
+                    },
+                    "openai/gpt-6.1-terra-pro": {
+                        "input": 1,
+                        "output": 5,
+                        "cache_read": 0.05,
+                        "cache_write": 1.25
+                    },
+                    "openai/gpt-6.2-astra": {
+                        "input": 8,
+                        "output": 40,
+                        "cache_read": 0.4,
+                        "cache_write": 10
+                    },
+                    "openai/gpt-6.2-astra-pro": {
+                        "input": 8,
+                        "output": 40,
+                        "cache_read": 0.4,
+                        "cache_write": 10
+                    },
+                    "openai/gpt-6.2-sol": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 2.5
+                    },
+                    "openai/gpt-6.2-sol-pro": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 2.5
+                    },
+                    "openai/gpt-audio": {
+                        "input": 2.5,
+                        "output": 10,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-audio-mini": {
+                        "input": 0.6,
+                        "output": 2.4,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-chat-latest": {
+                        "input": 5,
+                        "output": 30,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "openai/gpt-oss-120b": {
+                        "input": 0.05,
+                        "output": 0.25,
+                        "cache_read": 0.05,
+                        "cache_write": null
+                    },
+                    "openai/gpt-oss-20b": {
+                        "input": 0.03,
+                        "output": 0.13,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "openai/gpt-oss-safeguard-20b": {
+                        "input": 0.075,
+                        "output": 0.3,
+                        "cache_read": 0.0375,
+                        "cache_write": null
+                    },
+                    "openai/o3": {
+                        "input": 2,
+                        "output": 8,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "openai/o3-pro": {
+                        "input": 20,
+                        "output": 80,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openrouter/auto": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openrouter/bodybuilder": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openrouter/free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openrouter/fusion": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openrouter/pareto-code": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "particle-ai/particle-1": {
+                        "input": 0.07,
+                        "output": 0.5,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "particle-ai/particle-1:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "perceptron/perceptron-mk1": {
+                        "input": 0.15,
+                        "output": 1.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "perceptron/perceptron-mk1.5": {
+                        "input": 0.15,
+                        "output": 1.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "perplexity/sonar": {
+                        "input": 1,
+                        "output": 1,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "perplexity/sonar-deep-research": {
+                        "input": 2,
+                        "output": 8,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "perplexity/sonar-pro": {
+                        "input": 3,
+                        "output": 15,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "perplexity/sonar-pro-search": {
+                        "input": 3,
+                        "output": 15,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "perplexity/sonar-reasoning-pro": {
+                        "input": 2,
+                        "output": 8,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "prism-ml/ternary-bonsai-2-27b": {
+                        "input": 0.075,
+                        "output": 0.5,
+                        "cache_read": 0.0375,
+                        "cache_write": null
+                    },
+                    "prism-ml/ternary-bonsai-2-9b": {
+                        "input": 0.08,
+                        "output": 0.13,
+                        "cache_read": 0.04,
+                        "cache_write": null
+                    },
+                    "qwen/qwen-2.5-72b-instruct": {
+                        "input": 0.36,
+                        "output": 0.4,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen-2.5-coder-32b-instruct": {
+                        "input": 0.66,
+                        "output": 1,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen-plus": {
+                        "input": 0.26,
+                        "output": 0.78,
+                        "cache_read": 0.052,
+                        "cache_write": 0.325
+                    },
+                    "qwen/qwen2.5-vl-72b-instruct": {
+                        "input": 0.8,
+                        "output": 1,
+                        "cache_read": 0.4,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-14b": {
+                        "input": 0.12,
+                        "output": 0.24,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-235b-a22b-2507": {
+                        "input": 0.14,
+                        "output": 0.8,
+                        "cache_read": 0.05,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-235b-a22b-thinking-2507": {
+                        "input": 0.45,
+                        "output": 3.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-30b-a3b": {
+                        "input": 0.12,
+                        "output": 0.5,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-30b-a3b-instruct-2507": {
+                        "input": 0.1,
+                        "output": 0.3,
+                        "cache_read": 0.1,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-32b": {
+                        "input": 0.08,
+                        "output": 0.28,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-coder": {
+                        "input": 0.3,
+                        "output": 1,
+                        "cache_read": 0.1,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-coder-30b-a3b-instruct": {
+                        "input": 0.07,
+                        "output": 0.28,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-coder-flash": {
+                        "input": 0.195,
+                        "output": 0.975,
+                        "cache_read": 0.039,
+                        "cache_write": 0.24375
+                    },
+                    "qwen/qwen3-coder-next": {
+                        "input": 0.12,
+                        "output": 0.8,
+                        "cache_read": 0.07,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-next-80b-a3b-instruct": {
+                        "input": 0.1,
+                        "output": 1.1,
+                        "cache_read": 0.07,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-vl-235b-a22b-instruct": {
+                        "input": 0.21,
+                        "output": 1.9,
+                        "cache_read": 0.1,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-vl-30b-a3b-instruct": {
+                        "input": 0.15,
+                        "output": 0.6,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3-vl-8b-instruct": {
+                        "input": 0.25,
+                        "output": 0.75,
+                        "cache_read": 0.12,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.5-122b-a10b": {
+                        "input": 0.26,
+                        "output": 2.08,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.5-27b": {
+                        "input": 0.26,
+                        "output": 2.6,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.5-35b-a3b": {
+                        "input": 0.14,
+                        "output": 1,
+                        "cache_read": 0.05,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.5-397b-a17b": {
+                        "input": 0.45,
+                        "output": 3,
+                        "cache_read": 0.22,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.5-9b": {
+                        "input": 0.17,
+                        "output": 0.25,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.5-flash-02-23": {
+                        "input": 0.065,
+                        "output": 0.26,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.5-plus-02-15": {
+                        "input": 0.26,
+                        "output": 1.56,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.5-plus-20260420": {
+                        "input": 0.3,
+                        "output": 1.8,
+                        "cache_read": null,
+                        "cache_write": 0.375
+                    },
+                    "qwen/qwen3.6-27b": {
+                        "input": 0.32,
+                        "output": 3.2,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.6-35b-a3b": {
+                        "input": 0.05,
+                        "output": 0.7,
+                        "cache_read": 0.025,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.6-flash": {
+                        "input": 0.1875,
+                        "output": 1.125,
+                        "cache_read": null,
+                        "cache_write": 0.234375
+                    },
+                    "qwen/qwen3.6-plus": {
+                        "input": 0.325,
+                        "output": 1.95,
+                        "cache_read": null,
+                        "cache_write": 0.40625
+                    },
+                    "qwen/qwen3.7-flash": {
+                        "input": 0.03,
+                        "output": 0.13,
+                        "cache_read": 0.006,
+                        "cache_write": 0.038
+                    },
+                    "qwen/qwen3.7-max": {
+                        "input": 1.475,
+                        "output": 4.425,
+                        "cache_read": 0.295,
+                        "cache_write": 1.84375
+                    },
+                    "qwen/qwen3.7-plus": {
+                        "input": 0.32,
+                        "output": 1.28,
+                        "cache_read": 0.064,
+                        "cache_write": 0.4
+                    },
+                    "qwen/qwen3.8-2.4t-a95b": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.25,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.8-27b": {
+                        "input": 0.035,
+                        "output": 1.5,
+                        "cache_read": 0.0175,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.8-flash": {
+                        "input": 0.15,
+                        "output": 0.47,
+                        "cache_read": 0.016,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.8-max-0902": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.25,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.8-max-prime": {
+                        "input": 4,
+                        "output": 12,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.8-omni-flash": {
+                        "input": 0.15,
+                        "output": 0.47,
+                        "cache_read": 0.016,
+                        "cache_write": null
+                    },
+                    "qwen/qwen4-max": {
+                        "input": 1.425,
+                        "output": 4.275,
+                        "cache_read": 0.07125,
+                        "cache_write": 1.78125
+                    },
+                    "radixark/daisyrose-27b": {
+                        "input": 0.15,
+                        "output": 1.875,
+                        "cache_read": 0.0375,
+                        "cache_write": null
+                    },
+                    "recursive/flint-v1.0:free": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "reflection/beam-1.0-501b-a23b": {
+                        "input": 0.25,
+                        "output": 1,
+                        "cache_read": 0.05,
+                        "cache_write": null
+                    },
+                    "rekaai/reka-edge": {
+                        "input": 0.1,
+                        "output": 0.1,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "rekaai/reka-flash-3": {
+                        "input": 0.1,
+                        "output": 0.2,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "relace/relace-apply-3": {
+                        "input": 0.85,
+                        "output": 1.25,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "relace/relace-search": {
+                        "input": 1,
+                        "output": 3,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "ricursiveai/ripple-65b-preview": {
+                        "input": 0.1,
+                        "output": 0.3,
+                        "cache_read": 0.025,
+                        "cache_write": null
+                    },
+                    "sakana/fugu-max": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.25,
+                        "cache_write": null
+                    },
+                    "sakana/fugu-ultra": {
+                        "input": 5,
+                        "output": 30,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "sakana/fugu-ultra-v2": {
+                        "input": 5,
+                        "output": 30,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "sakana/sakana-namazu": {
+                        "input": 0.95,
+                        "output": 4,
+                        "cache_read": 0.15,
+                        "cache_write": null
+                    },
+                    "sao10k/l3-lunaris-8b": {
+                        "input": 0.04,
+                        "output": 0.05,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "sao10k/l3.1-euryale-70b": {
+                        "input": 0.85,
+                        "output": 0.85,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "scaledown/extract": {
+                        "input": 0.04,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "scaledown/summarize": {
+                        "input": 0.04,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "stepfun/step-3.7-flash": {
+                        "input": 0.2,
+                        "output": 1.15,
+                        "cache_read": 0.04,
+                        "cache_write": null
+                    },
+                    "stepfun/step-5-preview": {
+                        "input": 1,
+                        "output": 2.7,
+                        "cache_read": 0.1,
+                        "cache_write": null
+                    },
+                    "tencent/hy-mt2-1.8b": {
+                        "input": 0.044,
+                        "output": 0.177,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "tencent/hy-mt2-30b-a3b": {
+                        "input": 0.074,
+                        "output": 0.295,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "tencent/hy-mt2-7b": {
+                        "input": 0.074,
+                        "output": 0.295,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "tencent/hy3": {
+                        "input": 0.14,
+                        "output": 0.58,
+                        "cache_read": 0.035,
+                        "cache_write": null
+                    },
+                    "tencent/hy4": {
+                        "input": 0.417,
+                        "output": 1.2505,
+                        "cache_read": 0.021,
+                        "cache_write": null
+                    },
+                    "tencent/hy4-flash": {
+                        "input": 0.035,
+                        "output": 0.1405,
+                        "cache_read": 0.0015,
+                        "cache_write": null
+                    },
+                    "tencent/hy4-preview": {
+                        "input": 0.834,
+                        "output": 2.501,
+                        "cache_read": 0.042,
+                        "cache_write": null
+                    },
+                    "thedrummer/cydonia-24b-v4.1": {
+                        "input": 0.3,
+                        "output": 0.5,
+                        "cache_read": 0.15,
+                        "cache_write": null
+                    },
+                    "thedrummer/skyfall-36b-v2": {
+                        "input": 0.55,
+                        "output": 0.8,
+                        "cache_read": 0.25,
+                        "cache_write": null
+                    },
+                    "thedrummer/unslopnemo-12b": {
+                        "input": 0.4,
+                        "output": 0.4,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "thinkingmachines/inkling": {
+                        "input": 1,
+                        "output": 4.05,
+                        "cache_read": 0.17,
+                        "cache_write": null
+                    },
+                    "thinkingmachines/inkling-2-mini": {
+                        "input": 0.075,
+                        "output": 0.3,
+                        "cache_read": 0.015,
+                        "cache_write": null
+                    },
+                    "thinkingmachines/inkling-2-small": {
+                        "input": 0.3,
+                        "output": 1,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "thinkingmachines/inkling-small": {
+                        "input": 0.45,
+                        "output": 1.2,
+                        "cache_read": 0.1,
+                        "cache_write": null
+                    },
+                    "unbiased/pareto-26.10": {
+                        "input": 0.8,
+                        "output": 3.2,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "unbiased/pareto-26.10-preview": {
+                        "input": 0.8,
+                        "output": 3.2,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "unbiased/pareto-26.9": {
+                        "input": 2.5,
+                        "output": 7.5,
+                        "cache_read": 0.25,
+                        "cache_write": null
+                    },
+                    "undi95/remm-slerp-l2-13b": {
+                        "input": 0.3,
+                        "output": 0.5,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "upstage/solar-mini4": {
+                        "input": 0.05,
+                        "output": 0.2,
+                        "cache_read": 0.005,
+                        "cache_write": null
+                    },
+                    "upstage/solar-pro4": {
+                        "input": 0.15,
+                        "output": 0.6,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "writer/palmyra-x5": {
+                        "input": 0.6,
+                        "output": 6,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "x-ai/grok-4.20": {
+                        "input": 1.25,
+                        "output": 2.5,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "x-ai/grok-4.20-multi-agent": {
+                        "input": 1.25,
+                        "output": 2.5,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "x-ai/grok-4.3": {
+                        "input": 1.25,
+                        "output": 2.5,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "x-ai/grok-4.5": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.3,
+                        "cache_write": null
+                    },
+                    "x-ai/grok-4.6": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "x-ai/grok-4.7": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "xiaomi/mimo-v2.5": {
+                        "input": 0.4,
+                        "output": 2,
+                        "cache_read": 0.08,
+                        "cache_write": null
+                    },
+                    "xiaomi/mimo-v2.5-pro": {
+                        "input": 0.48,
+                        "output": 1.8,
+                        "cache_read": 0.096,
+                        "cache_write": null
+                    },
+                    "xiaomi/mimo-v2.6-flash": {
+                        "input": 0.14,
+                        "output": 0.28,
+                        "cache_read": 0.0028,
+                        "cache_write": null
+                    },
+                    "xiaomi/mimo-v2.6-pro": {
+                        "input": 0.435,
+                        "output": 0.87,
+                        "cache_read": 0.0036,
+                        "cache_write": null
+                    },
+                    "xiaomi/mimo-v2.6-pro-ultraspeed": {
+                        "input": 4.35,
+                        "output": 8.7,
+                        "cache_read": 0.036,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-4.5": {
+                        "input": 0.6,
+                        "output": 2.2,
+                        "cache_read": 0.11,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-4.5-air": {
+                        "input": 0.13,
+                        "output": 0.85,
+                        "cache_read": 0.025,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-4.5v": {
+                        "input": 0.6,
+                        "output": 1.8,
+                        "cache_read": 0.11,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-4.6": {
+                        "input": 0.5,
+                        "output": 2,
+                        "cache_read": 0.1,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-4.6v": {
+                        "input": 0.3,
+                        "output": 0.9,
+                        "cache_read": 0.055,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-4.7": {
+                        "input": 0.6,
+                        "output": 2.2,
+                        "cache_read": 0.11,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-4.7-flash": {
+                        "input": 0.0605,
+                        "output": 0.4,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-5": {
+                        "input": 1,
+                        "output": 3.2,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-5-turbo": {
+                        "input": 1.2,
+                        "output": 4,
+                        "cache_read": 0.24,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-5.1": {
+                        "input": 1.4,
+                        "output": 4.4,
+                        "cache_read": 0.26,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-5.2": {
+                        "input": 0.62,
+                        "output": 2.42,
+                        "cache_read": 0.14,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-5.3": {
+                        "input": 0.0699,
+                        "output": 1.4,
+                        "cache_read": 0.0689,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-5.3-flash": {
+                        "input": 0.0399,
+                        "output": 0.074,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-5.3-flashx": {
+                        "input": 0.37,
+                        "output": 1.25,
+                        "cache_read": 0.075,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-5.3-flashx-legal": {
+                        "input": 0.37,
+                        "output": 1.25,
+                        "cache_read": 0.075,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-5.3-prime": {
+                        "input": 1.68,
+                        "output": 5.28,
+                        "cache_read": 0.336,
+                        "cache_write": null
+                    },
+                    "z-ai/glm-5v-turbo": {
+                        "input": 1.2,
+                        "output": 4,
+                        "cache_read": 0.24,
+                        "cache_write": null
+                    },
+                    "~anthropic/claude-fable-latest": {
+                        "input": 8,
+                        "output": 40,
+                        "cache_read": 0.2,
+                        "cache_write": 10
+                    },
+                    "~anthropic/claude-haiku-latest": {
+                        "input": 0.1,
+                        "output": 0.5,
+                        "cache_read": 0.01,
+                        "cache_write": 0.125
+                    },
+                    "~anthropic/claude-opus-latest": {
+                        "input": 4,
+                        "output": 20,
+                        "cache_read": 0.2,
+                        "cache_write": 5
+                    },
+                    "~anthropic/claude-sonnet-latest": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 2.5
+                    },
+                    "~deepseek/deepseek-flash-latest": {
+                        "input": 0.036,
+                        "output": 0.5,
+                        "cache_read": 0.01,
+                        "cache_write": null
+                    },
+                    "~deepseek/deepseek-pro-latest": {
+                        "input": 0.0999,
+                        "output": 5,
+                        "cache_read": 0.0999,
+                        "cache_write": null
+                    },
+                    "~deepseek/deepseek-v4-flash-latest": {
+                        "input": 0.0434,
+                        "output": 0.3,
+                        "cache_read": 0.035,
+                        "cache_write": null
+                    },
+                    "~google/gemini-flash-latest": {
+                        "input": 1.5,
+                        "output": 7.5,
+                        "cache_read": 0.075,
+                        "cache_write": 0.083333
+                    },
+                    "~google/gemini-pro-latest": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 0.1875
+                    },
+                    "~moonshotai/kimi-latest": {
+                        "input": 0.1824,
+                        "output": 11.0055,
+                        "cache_read": 0.18,
+                        "cache_write": null
+                    },
+                    "~openai/gpt-astra-latest": {
+                        "input": 8,
+                        "output": 40,
+                        "cache_read": 0.4,
+                        "cache_write": 10
+                    },
+                    "~openai/gpt-luna-latest": {
+                        "input": 0.1,
+                        "output": 0.5,
+                        "cache_read": 0.01,
+                        "cache_write": 0.125
+                    },
+                    "~openai/gpt-mini-latest": {
+                        "input": 0.75,
+                        "output": 4.5,
+                        "cache_read": 0.075,
+                        "cache_write": null
+                    },
+                    "~openai/gpt-sol-latest": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 2.5
+                    },
+                    "~openai/gpt-terra-latest": {
+                        "input": 1,
+                        "output": 5,
+                        "cache_read": 0.05,
+                        "cache_write": 1.25
+                    },
+                    "~unbiased/pareto-latest": {
+                        "input": 0.8,
+                        "output": 3.2,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "~x-ai/grok-latest": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.5,
+                        "cache_write": 0
+                    },
+                    "~z-ai/glm-flash-latest": {
+                        "input": 0.0399,
+                        "output": 0.074,
+                        "cache_read": 0.03,
+                        "cache_write": null
+                    },
+                    "~z-ai/glm-latest": {
+                        "input": 0.0699,
+                        "output": 1.4,
+                        "cache_read": 0.0689,
+                        "cache_write": null
+                    }
+                }
             }
         }
     }

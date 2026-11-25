@@ -26,26 +26,6 @@
                     {
                         "id": "1015",
                         "title": "#1015 feat(openai):  add support for the “text_verbosity” parameter in structured output (@Jimerson21)"
-                    },
-                    {
-                        "id": "1007",
-                        "title": "#1007 Systemic tool-call normalization bug: multiple providers crash with raw TypeError on missing or scalar arguments (@ruttydm)"
-                    },
-                    {
-                        "id": "1006",
-                        "title": "#1006 OpenRouter ToolCallMap throws TypeError on malformed JSON arguments instead of a handled provider error (@ruttydm)"
-                    },
-                    {
-                        "id": "990",
-                        "title": "#990 DeepSeek streaming: HTTP client buffers full response body (missing stream option on Guzzle/Laravel HTTP) (@Jeo-Meek)"
-                    },
-                    {
-                        "id": "966",
-                        "title": "#966 Groq streaming: ToolCall construction crashes when tool call ID is null in stream delta (@rezaulhreza)"
-                    },
-                    {
-                        "id": "962",
-                        "title": "#962 OpenAI FineTuned models support structure mode (@danielsimkus)"
                     }
                 ]
             }
@@ -54,8 +34,56 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "#1054 fix(deepseek,perplexity): stream the response body instead of buffering it (@skybleak333)",
+                "latest": "#1066 fix(deepseek): send the reasoning of a streamed tool call turn back (@skybleak333)",
                 "entries": [
+                    {
+                        "id": "1066",
+                        "title": "#1066 fix(deepseek): send the reasoning of a streamed tool call turn back (@skybleak333)"
+                    },
+                    {
+                        "id": "1065",
+                        "title": "#1065 fix(elevenlabs): send the model given to using() for text to speech (@skybleak333)"
+                    },
+                    {
+                        "id": "1064",
+                        "title": "#1064 fix(deepseek): send the max tokens of structured requests as max_tokens (@skybleak333)"
+                    },
+                    {
+                        "id": "1063",
+                        "title": "#1063 fix(perplexity): send the system prompt and text chunks Perplexity accepts (@skybleak333)"
+                    },
+                    {
+                        "id": "1062",
+                        "title": "#1062 fix(gemini): end a stream with an error when Gemini sends an error chunk (@skybleak333)"
+                    },
+                    {
+                        "id": "1061",
+                        "title": "#1061 fix(mistral): report a validation error instead of failing with a TypeError (@skybleak333)"
+                    },
+                    {
+                        "id": "1060",
+                        "title": "#1060 fix(openai): map the file citations of the code interpreter (@skybleak333)"
+                    },
+                    {
+                        "id": "1059",
+                        "title": "#1059 fix(ollama): run every tool call of a streamed step (@skybleak333)"
+                    },
+                    {
+                        "id": "1058",
+                        "title": "#1058 fix(mistral): read the x-ratelimit-* headers Mistral sends (@skybleak333)"
+                    },
+                    {
+                        "id": "1057",
+                        "title": "#1057 fix(voyageai): send text-only input of a multimodal model to /multimodalembeddings (@skybleak333)"
+                    },
+                    {
+                        "id": "1056",
+                        "title": "#1056 fix: read the rate limit reset durations of OpenAI and Groq (@skybleak333)"
+                    },
+                    {
+                        "id": "1055",
+                        "title": "#1055 fix(tool): resolve the handle() dependencies of Laravel MCP tools (@skybleak333)"
+                    },
                     {
                         "id": "1054",
                         "title": "#1054 fix(deepseek,perplexity): stream the response body instead of buffering it (@skybleak333)"
@@ -127,54 +155,6 @@
                     {
                         "id": "988",
                         "title": "#988 feat(anthropic): add fine-grained tool streaming support (@alexlampdeveloper)"
-                    },
-                    {
-                        "id": "978",
-                        "title": "#978 feature(providers): Added Vertex support (@machour)"
-                    },
-                    {
-                        "id": "960",
-                        "title": "#960 feat(xai): Add XAI image generation handler and tests (@timothymarois)"
-                    },
-                    {
-                        "id": "951",
-                        "title": "#951 Feature - Add support to batching and files API's for Anthropic and OpenAI (@joao-salomao)"
-                    },
-                    {
-                        "id": "950",
-                        "title": "#950 fix: when calling tools on xai provider with no parameters causing an api error (@ewanwalk)"
-                    },
-                    {
-                        "id": "937",
-                        "title": "#937 fix: sanitize control characters in ToolCall::arguments() before json_decode (@ruttydm)"
-                    },
-                    {
-                        "id": "932",
-                        "title": "#932 Feat: 🛠️ Add client-executed tools & human-in-the-loop tool approval flow (@vinitkadam03)"
-                    },
-                    {
-                        "id": "920",
-                        "title": "#920 Feat: 💰 Track cost in Usage value object (@vinitkadam03)"
-                    },
-                    {
-                        "id": "918",
-                        "title": "#918 feat: Add ModelsLab provider for image generation (@adhikjoshi)"
-                    },
-                    {
-                        "id": "899",
-                        "title": "#899 feat: modelslab provider integration (@devsahm)"
-                    },
-                    {
-                        "id": "897",
-                        "title": "#897 Feature/add vertex (@mdietger)"
-                    },
-                    {
-                        "id": "835",
-                        "title": "#835 add azure to prism (@Matildevoldsen)"
-                    },
-                    {
-                        "id": "810",
-                        "title": "#810 feat: Add an interface for the ability to process speech-to-text asynchronously (@dcaswel)"
                     }
                 ]
             }

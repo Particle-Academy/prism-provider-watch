@@ -11,7 +11,33 @@
                     "sonar-deep-research",
                     "sonar-pro",
                     "sonar-reasoning-pro"
-                ]
+                ],
+                "prices": {
+                    "sonar": {
+                        "input": 1,
+                        "output": 1,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "sonar-deep-research": {
+                        "input": 2,
+                        "output": 8,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "sonar-pro": {
+                        "input": 3,
+                        "output": 15,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "sonar-reasoning-pro": {
+                        "input": 2,
+                        "output": 8,
+                        "cache_read": null,
+                        "cache_write": null
+                    }
+                }
             }
         }
     }
