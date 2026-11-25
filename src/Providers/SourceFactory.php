@@ -12,7 +12,9 @@ use Prism\ProviderWatch\Sources\McpSchemaSource;
 use Prism\ProviderWatch\Sources\ModelsDevCatalog;
 use Prism\ProviderWatch\Sources\ModelsDevSource;
 use Prism\ProviderWatch\Sources\ModelsEndpointSource;
+use Prism\ProviderWatch\Sources\PackageVersionsSource;
 use Prism\ProviderWatch\Sources\Source;
+use Prism\ProviderWatch\Sources\ValidatorKeywordsSource;
 
 /**
  * Turns a plain descriptor from config/providers.php into a live Source,
@@ -76,8 +78,42 @@ final class SourceFactory
                 keep: (int) ($descriptor['keep'] ?? 5),
                 token: $this->resolveKey(['GITHUB_TOKEN', 'GH_TOKEN']) ?: null,
             ),
+            'package-versions' => new PackageVersionsSource(
+                http: $this->http,
+                id: (string) $descriptor['id'],
+                label: (string) ($descriptor['label'] ?? $descriptor['id']),
+                npm: isset($descriptor['npm']) ? (string) $descriptor['npm'] : null,
+                packagist: isset($descriptor['packagist']) ? (string) $descriptor['packagist'] : null,
+                tagRepos: array_values(array_map('strval', (array) ($descriptor['tags'] ?? []))),
+                token: $this->resolveKey(['GITHUB_TOKEN', 'GH_TOKEN']) ?: null,
+            ),
+            'validator-keywords' => new ValidatorKeywordsSource(
+                http: $this->http,
+                id: (string) $descriptor['id'],
+                label: (string) ($descriptor['label'] ?? $descriptor['id']),
+                implementations: self::implementations($descriptor['implementations'] ?? []),
+                token: $this->resolveKey(['GITHUB_TOKEN', 'GH_TOKEN']) ?: null,
+            ),
             default => throw new InvalidArgumentException("Unknown source type: {$type}"),
         };
+    }
+
+    /** @return array<string, array{repo: string, path: string, extract: string}> */
+    private static function implementations(mixed $config): array
+    {
+        $out = [];
+        foreach ((array) $config as $name => $where) {
+            if (! is_array($where)) {
+                throw new InvalidArgumentException("Implementation {$name} must be an array");
+            }
+            $out[(string) $name] = [
+                'repo' => (string) ($where['repo'] ?? ''),
+                'path' => (string) ($where['path'] ?? ''),
+                'extract' => (string) ($where['extract'] ?? ''),
+            ];
+        }
+
+        return $out;
     }
 
     /** One shared catalog across every models-dev source, so models.dev is fetched once per run. */

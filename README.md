@@ -26,7 +26,12 @@ reality allows — and it needs no keys.
 |---|---|---|
 | `models-dev` — a provider's roster from the shared **[models.dev](https://models.dev)** catalog | new / removed models (across every provider, one keyless fetch) | no |
 | `github-atom` — a repo's `releases`/`commits`/`tags` `.atom` feed | spec + SDK changes (new params, features, versions) | no |
+| `package-versions` — one package on npm, Packagist and its git tags | new / removed versions, and an npm name's first publish | no |
+| `validator-keywords` — a JSON Schema validator's source at its newest release tag | keywords each implementation starts or stops evaluating | no |
 | `models` — *(legacy)* the provider's own `/models` endpoint | new / removed model IDs | yes |
+
+Fancy's `fancy-schema` (JS and PHP) is watched with the two middle rows. Prism does not depend on it, but Fancy's
+agent-integrations validate the schemas Prism hands them with it, and it refuses any keyword it does not evaluate.
 
 Model rosters come from **models.dev** — a public, keyless catalog of ~180
 providers / 6,000+ models — fetched **once per run** and shared across every
