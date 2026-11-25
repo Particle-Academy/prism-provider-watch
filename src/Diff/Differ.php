@@ -88,7 +88,13 @@ final class Differ
         }
 
         if (isset($new->data['entries']) || isset($old->data['entries'])) {
-            return $this->diffEntries($provider, $id, $old->data['entries'] ?? [], $new->data['entries'] ?? []);
+            return $this->diffEntries(
+                $provider,
+                $id,
+                $old->data['entries'] ?? [],
+                $new->data['entries'] ?? [],
+                ($new->data['report_removed'] ?? false) === true,
+            );
         }
 
         // Unknown shape: report a single opaque change if the payload moved.
@@ -191,13 +197,19 @@ final class Differ
     }
 
     /**
+     * Entries are a rolling window for a feed (an Atom feed lists its newest few), so by default only an ADDED entry is
+     * drift: an old release scrolling out of the window is not news. A source whose entries are a complete SET, not a
+     * window, sets `report_removed` in its payload, and then an entry that disappears is reported too: a package version
+     * unpublished, a validator keyword dropped.
+     *
      * @param  array<mixed>  $old
      * @param  array<mixed>  $new
      * @return list<Change>
      */
-    private function diffEntries(string $provider, string $id, array $old, array $new): array
+    private function diffEntries(string $provider, string $id, array $old, array $new, bool $reportRemoved = false): array
     {
         $oldIds = $this->entryIds($old);
+        $added = $reportRemoved ? 'appeared upstream' : 'new release/commit/tag upstream';
 
         $changes = [];
         foreach ($new as $entry) {
@@ -206,7 +218,20 @@ final class Differ
                 continue;
             }
             $title = is_array($entry) ? (string) ($entry['title'] ?? $entryId) : $entryId;
-            $changes[] = new Change($provider, $id, ChangeType::Added, $title, 'new release/commit/tag upstream');
+            $changes[] = new Change($provider, $id, ChangeType::Added, $title, $added);
+        }
+
+        if (! $reportRemoved) {
+            return $changes;
+        }
+        $newIds = $this->entryIds($new);
+        foreach ($old as $entry) {
+            $entryId = is_array($entry) ? (string) ($entry['id'] ?? '') : '';
+            if ($entryId === '' || in_array($entryId, $newIds, true)) {
+                continue;
+            }
+            $title = is_array($entry) ? (string) ($entry['title'] ?? $entryId) : $entryId;
+            $changes[] = new Change($provider, $id, ChangeType::Removed, $title, 'no longer present upstream');
         }
 
         return $changes;

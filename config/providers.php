@@ -17,6 +17,14 @@ declare(strict_types=1);
  *   github-issues — open issues or pull requests on a repo, via the REST API.
  *                  GitHub has no Atom for these (issues.atom/pulls.atom answer
  *                  406). `repo` is owner/name, `kind` is issues|pulls.
+ *   package-versions — one package's published versions on npm (`npm`), Packagist
+ *                  (`packagist`) and the git tags of `tags` (owner/name list).
+ *                  New and removed versions are both drift.
+ *   validator-keywords — the keywords each implementation of a JSON Schema
+ *                  validator evaluates, read from its source at its newest
+ *                  release tag. `implementations` maps a name to `repo`, `path`
+ *                  and `extract` (ts-interface | php-cases). Added and dropped
+ *                  keywords are both drift.
  *   models       — (legacy) a provider's own /models endpoint (needs an API
  *                  key). Superseded by models-dev; kept available for providers
  *                  models.dev doesn't cover.
@@ -158,6 +166,38 @@ return [
                 'prism-mcp-server-ts' => 'https://raw.githubusercontent.com/Particle-Academy/prism-mcp-server-ts/main/protocol-versions.json',
                 'prism-mcp-server-py' => 'https://raw.githubusercontent.com/Particle-Academy/prism-mcp-server-py/main/protocol-versions.json',
             ]],
+        ],
+    ],
+
+    /*
+     * Fancy's JSON Schema validator, in both languages. Not a dependency: Prism owns its validators (Wish ruling,
+     * 2026-11-25), and prism-acp and prism-acp-ts check ACP messages with their own. It is watched because Fancy's
+     * agent-integrations validate the schemas Prism hands them with fancy-schema, which refuses any keyword it does not
+     * evaluate, so those schemas have to stay inside its keyword set.
+     *
+     * Two signals: a new release on any channel (npm once published, Packagist, the git tags of both repositories),
+     * and a change in which keywords each implementation evaluates at its newest release tag.
+     */
+    'fancy-schema' => [
+        'label' => 'Fancy fancy-schema (JS + PHP)',
+        'category' => 'ecosystem',
+        'why' => 'Fancy agent-integrations validate the schemas Prism hands them with fancy-schema, which refuses any keyword it does not evaluate.',
+        'prism_hints' => [
+            'repos/prism-acp-ts/test/acp-schema.ts',
+            'repos/prism-acp/tests/Support/AcpSchema.php',
+        ],
+        'sources' => [
+            ['type' => 'package-versions', 'id' => 'versions', 'label' => 'fancy-schema releases (npm, Packagist, git tags)',
+                'npm' => '@particle-academy/fancy-schema',
+                'packagist' => 'particle-academy/fancy-schema',
+                'tags' => ['Particle-Academy/fancy-schema', 'Particle-Academy/fancy-schema-php'],
+            ],
+            ['type' => 'validator-keywords', 'id' => 'validator-keywords', 'label' => 'Keywords fancy-schema evaluates, per implementation, at its newest release',
+                'implementations' => [
+                    'fancy-schema' => ['repo' => 'Particle-Academy/fancy-schema', 'path' => 'src/index.ts', 'extract' => 'ts-interface'],
+                    'fancy-schema-php' => ['repo' => 'Particle-Academy/fancy-schema-php', 'path' => 'src/Compiler.php', 'extract' => 'php-cases'],
+                ],
+            ],
         ],
     ],
 

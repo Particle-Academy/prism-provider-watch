@@ -137,9 +137,12 @@ final readonly class DriftReport
      * 78 of them across the archive against 35 contract changes — and almost
      * all of it is free-tier churn at an aggregator we do not ship.
      *
+     * `validator-keywords` is a contract too: a keyword a validator starts or stops evaluating changes which schemas
+     * it accepts, and the schemas Prism hands Fancy's agent-integrations have to stay inside what it evaluates.
+     *
      * @var list<string>
      */
-    private const CONTRACT_SOURCES = ['openapi-spec'];
+    private const CONTRACT_SOURCES = ['openapi-spec', 'validator-keywords'];
 
     public function hasDrift(): bool
     {
