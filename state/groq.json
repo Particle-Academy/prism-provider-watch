@@ -21,7 +21,93 @@
                     "qwen/qwen3.8-27b",
                     "whisper-large-v3",
                     "whisper-large-v3-turbo"
-                ]
+                ],
+                "prices": {
+                    "allam-2-7b": {
+                        "input": 0,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "canopylabs/orpheus-arabic-saudi": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "canopylabs/orpheus-v1-english": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "llama-3.1-8b-instant": {
+                        "input": 0.05,
+                        "output": 0.08,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "llama-3.3-70b-versatile": {
+                        "input": 0.59,
+                        "output": 0.79,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "meta-llama/llama-prompt-guard-2-22m": {
+                        "input": 0.03,
+                        "output": 0.03,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "meta-llama/llama-prompt-guard-2-86m": {
+                        "input": 0.04,
+                        "output": 0.04,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "openai/gpt-oss-120b": {
+                        "input": 0.15,
+                        "output": 0.6,
+                        "cache_read": 0.075,
+                        "cache_write": null
+                    },
+                    "openai/gpt-oss-20b": {
+                        "input": 0.075,
+                        "output": 0.3,
+                        "cache_read": 0.0375,
+                        "cache_write": null
+                    },
+                    "openai/gpt-oss-safeguard-20b": {
+                        "input": 0.075,
+                        "output": 0.3,
+                        "cache_read": 0.0375,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.6-27b": {
+                        "input": 0.6,
+                        "output": 3,
+                        "cache_read": 0.3,
+                        "cache_write": null
+                    },
+                    "qwen/qwen3.8-27b": {
+                        "input": 0.8,
+                        "output": 4,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "whisper-large-v3": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "whisper-large-v3-turbo": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    }
+                }
             }
         }
     }

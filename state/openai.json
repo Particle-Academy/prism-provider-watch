@@ -5,7 +5,7 @@
             "ok": true,
             "note": "",
             "data": {
-                "count": 51,
+                "count": 53,
                 "models": [
                     "chatgpt-image-latest",
                     "gpt-3.5-turbo",
@@ -43,6 +43,8 @@
                     "gpt-6-sol",
                     "gpt-6.1-sol",
                     "gpt-6.1-terra",
+                    "gpt-6.2-astra",
+                    "gpt-6.2-sol",
                     "gpt-daybreak-blue-latest",
                     "gpt-daybreak-red-latest",
                     "gpt-image-1-mini",
@@ -58,74 +60,394 @@
                     "text-embedding-3-large",
                     "text-embedding-3-small",
                     "text-embedding-ada-002"
-                ]
+                ],
+                "prices": {
+                    "chatgpt-image-latest": {
+                        "input": 5,
+                        "output": 10,
+                        "cache_read": 1.25,
+                        "cache_write": null
+                    },
+                    "gpt-3.5-turbo": {
+                        "input": 0.5,
+                        "output": 1.5,
+                        "cache_read": 0,
+                        "cache_write": null
+                    },
+                    "gpt-4": {
+                        "input": 30,
+                        "output": 60,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "gpt-4-turbo": {
+                        "input": 10,
+                        "output": 30,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "gpt-4.1": {
+                        "input": 2,
+                        "output": 8,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "gpt-4.1-mini": {
+                        "input": 0.4,
+                        "output": 1.6,
+                        "cache_read": 0.1,
+                        "cache_write": null
+                    },
+                    "gpt-4.1-nano": {
+                        "input": 0.1,
+                        "output": 0.4,
+                        "cache_read": 0.025,
+                        "cache_write": null
+                    },
+                    "gpt-4o": {
+                        "input": 2.5,
+                        "output": 10,
+                        "cache_read": 1.25,
+                        "cache_write": null
+                    },
+                    "gpt-4o-2024-05-13": {
+                        "input": 5,
+                        "output": 15,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "gpt-4o-2024-08-06": {
+                        "input": 2.5,
+                        "output": 10,
+                        "cache_read": 1.25,
+                        "cache_write": null
+                    },
+                    "gpt-4o-2024-11-20": {
+                        "input": 2.5,
+                        "output": 10,
+                        "cache_read": 1.25,
+                        "cache_write": null
+                    },
+                    "gpt-4o-mini": {
+                        "input": 0.15,
+                        "output": 0.6,
+                        "cache_read": 0.075,
+                        "cache_write": null
+                    },
+                    "gpt-5": {
+                        "input": 1.25,
+                        "output": 10,
+                        "cache_read": 0.125,
+                        "cache_write": null
+                    },
+                    "gpt-5-mini": {
+                        "input": 0.25,
+                        "output": 2,
+                        "cache_read": 0.025,
+                        "cache_write": null
+                    },
+                    "gpt-5-nano": {
+                        "input": 0.05,
+                        "output": 0.4,
+                        "cache_read": 0.005,
+                        "cache_write": null
+                    },
+                    "gpt-5-pro": {
+                        "input": 15,
+                        "output": 120,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "gpt-5.1": {
+                        "input": 1.25,
+                        "output": 10,
+                        "cache_read": 0.125,
+                        "cache_write": null
+                    },
+                    "gpt-5.2": {
+                        "input": 1.75,
+                        "output": 14,
+                        "cache_read": 0.175,
+                        "cache_write": null
+                    },
+                    "gpt-5.2-pro": {
+                        "input": 21,
+                        "output": 168,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "gpt-5.3-codex": {
+                        "input": 1.75,
+                        "output": 14,
+                        "cache_read": 0.175,
+                        "cache_write": null
+                    },
+                    "gpt-5.3-codex-spark": {
+                        "input": 1.75,
+                        "output": 14,
+                        "cache_read": 0.175,
+                        "cache_write": null
+                    },
+                    "gpt-5.4": {
+                        "input": 2.5,
+                        "output": 15,
+                        "cache_read": 0.25,
+                        "cache_write": null
+                    },
+                    "gpt-5.4-mini": {
+                        "input": 0.75,
+                        "output": 4.5,
+                        "cache_read": 0.075,
+                        "cache_write": null
+                    },
+                    "gpt-5.4-nano": {
+                        "input": 0.2,
+                        "output": 1.25,
+                        "cache_read": 0.02,
+                        "cache_write": null
+                    },
+                    "gpt-5.4-pro": {
+                        "input": 30,
+                        "output": 180,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "gpt-5.5": {
+                        "input": 5,
+                        "output": 30,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "gpt-5.5-pro": {
+                        "input": 30,
+                        "output": 180,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "gpt-5.6": {
+                        "input": 4,
+                        "output": 20,
+                        "cache_read": 0.4,
+                        "cache_write": 5
+                    },
+                    "gpt-5.6-luna": {
+                        "input": 0.2,
+                        "output": 1.2,
+                        "cache_read": 0.02,
+                        "cache_write": 0.25
+                    },
+                    "gpt-5.6-sol": {
+                        "input": 4,
+                        "output": 20,
+                        "cache_read": 0.4,
+                        "cache_write": 5
+                    },
+                    "gpt-5.6-terra": {
+                        "input": 2,
+                        "output": 12,
+                        "cache_read": 0.2,
+                        "cache_write": 2.5
+                    },
+                    "gpt-6-astra": {
+                        "input": 10,
+                        "output": 50,
+                        "cache_read": 1,
+                        "cache_write": 12.5
+                    },
+                    "gpt-6-luna": {
+                        "input": 0.1,
+                        "output": 0.5,
+                        "cache_read": 0.01,
+                        "cache_write": 0.125
+                    },
+                    "gpt-6-sol": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.2,
+                        "cache_write": 2.5
+                    },
+                    "gpt-6.1-sol": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 2.5
+                    },
+                    "gpt-6.1-terra": {
+                        "input": 1,
+                        "output": 5,
+                        "cache_read": 0.05,
+                        "cache_write": 1.25
+                    },
+                    "gpt-6.2-astra": {
+                        "input": 8,
+                        "output": 40,
+                        "cache_read": 0.4,
+                        "cache_write": 10
+                    },
+                    "gpt-6.2-sol": {
+                        "input": 2,
+                        "output": 10,
+                        "cache_read": 0.1,
+                        "cache_write": 2.5
+                    },
+                    "gpt-daybreak-blue-latest": {
+                        "input": 4,
+                        "output": 20,
+                        "cache_read": 0.4,
+                        "cache_write": 5
+                    },
+                    "gpt-daybreak-red-latest": {
+                        "input": 12.5,
+                        "output": 75,
+                        "cache_read": 1.25,
+                        "cache_write": 15.625
+                    },
+                    "gpt-image-1-mini": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "gpt-image-1.5": {
+                        "input": 5,
+                        "output": 10,
+                        "cache_read": 1.25,
+                        "cache_write": null
+                    },
+                    "gpt-image-2": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "gpt-realtime-2.1": {
+                        "input": 4,
+                        "output": 24,
+                        "cache_read": 0.4,
+                        "cache_write": null
+                    },
+                    "o1": {
+                        "input": 15,
+                        "output": 60,
+                        "cache_read": 7.5,
+                        "cache_write": null
+                    },
+                    "o1-pro": {
+                        "input": 150,
+                        "output": 600,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "o3": {
+                        "input": 2,
+                        "output": 8,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "o3-mini": {
+                        "input": 1.1,
+                        "output": 4.4,
+                        "cache_read": 0.55,
+                        "cache_write": null
+                    },
+                    "o3-pro": {
+                        "input": 20,
+                        "output": 80,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "o4-mini": {
+                        "input": 1.1,
+                        "output": 4.4,
+                        "cache_read": 0.275,
+                        "cache_write": null
+                    },
+                    "text-embedding-3-large": {
+                        "input": 0.13,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "text-embedding-3-small": {
+                        "input": 0.02,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "text-embedding-ada-002": {
+                        "input": 0.1,
+                        "output": 0,
+                        "cache_read": null,
+                        "cache_write": null
+                    }
+                }
             }
         },
         "openapi-spec": {
             "ok": true,
             "note": "",
             "data": {
-                "latest": "Replace enums with const values for event and item types",
+                "latest": "Replace enum with const for multiple string properties in API schemas",
                 "entries": [
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/b100c081884af2333bf3834308213b6dc48e182f",
-                        "title": "Replace enums with const values for event and item types"
+                        "id": "tag:github.com,2008:Grit::Commit/2a24deae6f89f84d0e88ce3c9d96c00304dca0b8",
+                        "title": "Replace enum with const for multiple string properties in API schemas"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/3a86853dfeda756c12b6b88aceeb196d078f9364",
-                        "title": "Add expires_in_seconds field to API key update response"
+                        "id": "tag:github.com,2008:Grit::Commit/5532232eae061f5d8096fa347f98beae8b043082",
+                        "title": "Simplify spend limit notification channel schema and update description"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/b50f08617fb0c9952edbba81be2e5ea78f3fa6bd",
-                        "title": "Move environment field in CreateAgentSessionParams for clarity"
+                        "id": "tag:github.com,2008:Grit::Commit/a01e36728330937352bd0ce1375fb2e6f05e40d1",
+                        "title": "Replace enum with const for project.model_permissions object types"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/69a45a53a857c87f4d2795f0c4c248834c0896af",
-                        "title": "Replace enum fields with const for fixed string values"
+                        "id": "tag:github.com,2008:Grit::Commit/bd552010cac614d44cbc27c4ae0dbfc7e0c89569",
+                        "title": "Add session budget controls and related session states"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/cd82ad68f3841d43d695e895fc25d31faa8eb0ec",
-                        "title": "Clarify truncation strategy description for model responses"
+                        "id": "tag:github.com,2008:Grit::Commit/c898c67d98dfa5b3fb258825ae82183472b8736e",
+                        "title": "Use const instead of enum for fixed object type fields"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/06c320b68e715198e7263b6d10e83a05d640b0da",
-                        "title": "Deprecate the instructions field for compaction customization"
+                        "id": "tag:github.com,2008:Grit::Commit/031dceba2c77266f42048ca75be71349b837f54d",
+                        "title": "Add new error type for unavailable audio input"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/c6522b4e0c48b88b95bb427e09268954d0213e31",
-                        "title": "Add new valid options to the petBreed enumeration"
+                        "id": "tag:github.com,2008:Grit::Commit/b9bd0d941deb65fa7d5ba82930ce4497dace7139",
+                        "title": "Clarify pagination and size limits in agent session traces listing"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/cefe9e22a7ffe5ccdb3f8097b5286cf6728d2605",
-                        "title": "Clarify error headers description in API responses"
+                        "id": "tag:github.com,2008:Grit::Commit/76a4810f6cec796923bb6f4cc874237571a6305b",
+                        "title": "Clarify behavior of 'n' parameter in completions API"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/f1510da36cbc8a37e2e170d91367f11ef3249b86",
-                        "title": "Replace enum with const for fixed string fields in webhook endpoint APIs"
+                        "id": "tag:github.com,2008:Grit::Commit/639c561be1c485ea8e1afd287c6669d62ee99e7f",
+                        "title": "Use const instead of enum for fixed object type fields"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/59f5565459caae84f43c49a738248cf2b268a70f",
-                        "title": "Add live.transport.connected webhook for Live WebRTC session start"
+                        "id": "tag:github.com,2008:Grit::Commit/e99195aefbcd2a8480982ffecbf1b6b5bd14df70",
+                        "title": "Replace enums with const for fixed object type fields"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/8d845994d29ca6ded7719b1dbb7ff24a7a0f1feb",
-                        "title": "Increase maxLength for namespace fields from 64 to 128 characters"
+                        "id": "tag:github.com,2008:Grit::Commit/b4ed1b2306d3d25de3b70eb2b31655b1f3ecf0a1",
+                        "title": "Replace enum with const for fixed object type fields"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/926a7b8133226630bac025350e84b0ca5c31d45a",
-                        "title": "Add OCI external key support in encryption key configurations"
+                        "id": "tag:github.com,2008:Grit::Commit/9ad9fe51d1a6531a47e48038d35a28d130d1f557",
+                        "title": "Simplify constant 'object' fields to use 'const' instead of 'enum'"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/16d16882db0f4a05716784a37e6a62f0b6ffa693",
-                        "title": "docs: consolidate AGENTS.md guidance (#595)"
+                        "id": "tag:github.com,2008:Grit::Commit/3f2b776659dbc759350126129baa40a16c9e0aaf",
+                        "title": "Replace enum with const for fixed event type fields"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/b4bc957c6270f0eaad1ec3dc5bbf570456a0fe52",
-                        "title": "Clarify description for image generation token usage"
+                        "id": "tag:github.com,2008:Grit::Commit/6f7876961b73328b4209f4db204b9eab7dcc4b20",
+                        "title": "Add Live speech wake policy and session pause/resume events"
                     },
                     {
-                        "id": "tag:github.com,2008:Grit::Commit/c6a8424b610b319ee9efd06b27b2f4e3452334ae",
-                        "title": "Add prompt cache lifetime option to agent sessions and turns"
+                        "id": "tag:github.com,2008:Grit::Commit/fa361566ec236d24fad012d24d8aec352cab0cc0",
+                        "title": "Change Live audio duration 'seconds' field type to integer"
                     }
                 ]
             }
@@ -134,47 +456,47 @@
             "ok": true,
             "note": "",
             "data": {
-                "latest": "v3.49.0",
+                "latest": "v3.57.0",
                 "entries": [
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.57.0",
+                        "title": "v3.57.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.56.0",
+                        "title": "v3.56.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.55.1",
+                        "title": "v3.55.1"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.55.0",
+                        "title": "v3.55.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.54.0",
+                        "title": "v3.54.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.53.0",
+                        "title": "v3.53.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.52.0",
+                        "title": "v3.52.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.51.0",
+                        "title": "v3.51.0"
+                    },
+                    {
+                        "id": "tag:github.com,2008:Repository/307213173/v3.50.0",
+                        "title": "v3.50.0"
+                    },
                     {
                         "id": "tag:github.com,2008:Repository/307213173/v3.49.0",
                         "title": "v3.49.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.48.0",
-                        "title": "v3.48.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.47.0",
-                        "title": "v3.47.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.46.0",
-                        "title": "v3.46.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.45.0",
-                        "title": "v3.45.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.44.0",
-                        "title": "v3.44.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.43.0",
-                        "title": "v3.43.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.42.1",
-                        "title": "v3.42.1"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.42.0",
-                        "title": "v3.42.0"
-                    },
-                    {
-                        "id": "tag:github.com,2008:Repository/307213173/v3.41.0",
-                        "title": "v3.41.0"
                     }
                 ]
             }

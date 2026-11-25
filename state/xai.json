@@ -5,7 +5,7 @@
             "ok": true,
             "note": "",
             "data": {
-                "count": 12,
+                "count": 11,
                 "models": [
                     "grok-4.20-0309-non-reasoning",
                     "grok-4.20-0309-reasoning",
@@ -14,12 +14,79 @@
                     "grok-4.5",
                     "grok-4.6",
                     "grok-4.7",
-                    "grok-build-0.1",
                     "grok-imagine-image",
                     "grok-imagine-video",
                     "grok-imagine-video-1.5",
                     "grok-imagine-video-1.5-lite"
-                ]
+                ],
+                "prices": {
+                    "grok-4.20-0309-non-reasoning": {
+                        "input": 1.25,
+                        "output": 2.5,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "grok-4.20-0309-reasoning": {
+                        "input": 1.25,
+                        "output": 2.5,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "grok-4.20-multi-agent-0309": {
+                        "input": 1.25,
+                        "output": 2.5,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "grok-4.3": {
+                        "input": 1.25,
+                        "output": 2.5,
+                        "cache_read": 0.2,
+                        "cache_write": null
+                    },
+                    "grok-4.5": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.3,
+                        "cache_write": null
+                    },
+                    "grok-4.6": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "grok-4.7": {
+                        "input": 2,
+                        "output": 6,
+                        "cache_read": 0.5,
+                        "cache_write": null
+                    },
+                    "grok-imagine-image": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "grok-imagine-video": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "grok-imagine-video-1.5": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    },
+                    "grok-imagine-video-1.5-lite": {
+                        "input": null,
+                        "output": null,
+                        "cache_read": null,
+                        "cache_write": null
+                    }
+                }
             }
         }
     }
